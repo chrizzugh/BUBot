@@ -48,6 +48,17 @@
             ]
         },
         {
+            "tag": "The Grade of Incomplete (INC)",
+            "patterns": [
+                "What is the grade of incomplete?",
+                "Grade of incomplete",
+                "INC"
+            ],
+            "responses": [
+                "An “INC” grade indicates incomplete course work and may be awarded to a graduate or an undergraduate student only when a small portion of the student’s work is incomplete and only when the student is otherwise earning a passing mark. Until removed, the “INC” is not included in the computation of the students GWA. Student with incomplete (INC) grade of the previous semester are given one school year for completion of subjects; otherwise it will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s). In the event that the concerned professor(s) cannot be contacted (due to resignation, retirement, death, etc.), the Dean is empowered to make decisions for the concerned professor(s) in consultation with the Department Chair."
+            ]
+        },
+        {
             "tag": "Graduation with Honors",
             "patterns": [
                 "What qualifies as suma cum laude?",
