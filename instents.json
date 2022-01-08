@@ -7,7 +7,7 @@
                 "Maximum Residency Rule"
             ],
             "responses": [
-                "Residence refers to the number of years or terms required of a student to finish a course. An undergraduate student must finish the requirements of a course in any college within a period of actual residence equivalent to a maximum of the prescribed length of the program plus one year pursuant to the other provisions of the Universal Access to Quality Tertiary Education Act of 2017."
+                "Residence refers to the number of years or terms required of a student to finish a course.\\nAn undergraduate student must finish the requirements of a course in any college within a period of actual residence equivalent to a maximum of the prescribed length of the program plus one year pursuant to the other provisions of the Universal Access to Quality Tertiary Education Act of 2017."
             ]
         },
         {
@@ -18,36 +18,51 @@
                 "Grade conversion"
             ],
             "responses": [
-                "The University shall have a uniform grading system using number grades from 1.0 to 5.0, where 1.0 is the highest. The detailed grading system is as follows:",
+                "The University shall have a uniform grading system using number grades from 1.0 to 5.0, where 1.0 is the highest. The detailed grading system is as follows: \\n",
                 {
                     "Adjectival Rating": {
-                        "Outstanding": ["1.0", "1.1", "1.2", "1.3", "1.4"],
-                        "Superior": ["1.5", "1.6", "1.7"],
-                        "Very Satifactory": [
-                            "1.8",
-                            "1.9",
-                            "2.0",
-                            "2.1",
-                            "2.2",
-                            "2.3",
-                            "2.4",
-                            "2.5"
+                        "Outstanding": [
+                            "1.0\\n",
+                            "1.1\\n",
+                            "1.2\\n",
+                            "1.3\\n",
+                            "1.4\\n"
                         ],
-                        "Satisfactory": ["2.6", "2.7", "2.8"],
-                        "Fair/Average": ["2.9", "3.0"],
-                        "Poor": ["3.1-4.0"]
+                        "Superior": ["1.5\\n", "1.6\\n", "1.7\\n"],
+                        "Very Satifactory": [
+                            "1.8\\n",
+                            "1.9\\n",
+                            "2.0\\n",
+                            "2.1\\n",
+                            "2.2\\n",
+                            "2.3\\n",
+                            "2.4\\n",
+                            "2.5\\n"
+                        ],
+                        "Satisfactory": ["2.6\\n", "2.7\\n", "2.8\\n"],
+                        "Fair/Average": ["2.9\\n", "3.0\\n"],
+                        "Poor": ["3.1-4.0\\n"]
                     },
 
                     "Equivalent": [
-                        ["99-100", "98", "97", "96", "95"],
-                        ["94", "93", "92"],
-                        ["91", "90", "89", "88", "87", "86", "85", "84"],
-                        ["82-83", "80-81", "78-79"],
-                        ["76-77", "75 (Passing)"],
+                        ["99-100\\n", "98\\n", "97\\n", "96\\n", "95\\n"],
+                        ["94\\n", "93\\n", "92\\n"],
                         [
-                            "Below 75 Conditional (lowest possible mid-term rating)"
+                            "91\\n",
+                            "90\\n",
+                            "89\\n",
+                            "88\\n",
+                            "87\\n",
+                            "86\\n",
+                            "85\\n",
+                            "84\\n"
                         ],
-                        ["Failure (lowest possible final rating)"]
+                        ["82-83\\n", "80-81\\n", "78-79\\n"],
+                        ["76-77\\n", "75 (Passing)\\n"],
+                        [
+                            "Below 75 Conditional (lowest possible mid-term rating)\\n"
+                        ],
+                        ["Failure (lowest possible final rating)\\n"]
                     ]
                 }
             ]
@@ -59,7 +74,7 @@
                 "Graduation requirements"
             ],
             "responses": [
-                "A student shall be recommended for graduation only after you have satisfied all academic and other requirements prescribed for graduation. Candidates for graduation who began their studies under a curriculum ten (10) years back shall be governed by the following: -Those who have completed all the requirements of the curriculum but did not apply for, nor were granted the corresponding degree or title shall have their graduation approved, as of the date they should have originally graduated. -Those who have completed all but two or three subjects required by the curriculum shall be made to follow either the revised curriculum or the curriculum enforced from the time they first enrolled in the University to the present. -All candidates for graduation must have their deficiencies removed and their records cleared not later than five weeks before the end of their last semester/term in the program, with the exception of the subjects in which they are currently enrolled. No student shall be allowed to graduate from the University unless you are in residence during the last two terms/semesters of his course."
+                "A student shall be recommended for graduation only after you have satisfied all academic and other requirements prescribed for graduation. Candidates for graduation who began their studies under a curriculum ten (10) years back shall be governed by the following:\\n -Those who have completed all the requirements of the curriculum but did not apply for, nor were granted the corresponding degree or title shall have their graduation approved, as of the date they should have originally graduated.\\n -Those who have completed all but two or three subjects required by the curriculum shall be made to follow either the revised curriculum or the curriculum enforced from the time they first enrolled in the University to the present. \\n-All candidates for graduation must have their deficiencies removed and their records cleared not later than five weeks before the end of their last semester/term in the program, with the exception of the subjects in which they are currently enrolled. No student shall be allowed to graduate from the University unless you are in residence during the last two terms/semesters of his course."
             ]
         },
         {
@@ -165,7 +180,7 @@
                 "Graduate students"
             ],
             "responses": [
-                "Undergraduate students are classified as regular, irregular, non-regular, and foreign. A Regular Undergraduate Student is one who have organized a program of study for a bachelor’s degree, or undergraduate diploma/certificate, is registered for formal academic credits, and carries the subjects called for by the curriculum for which you are registered in a given semester. An Irregular Student is one who is registered for formal academic credits, but does not carry the full semester load called for by the curriculum for which you are registered in a given semester. A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken. Classified as non- regular students are the following: -Non-degree students with credits -Cross registrants with credits -Special students without credits. A Foreign Student is one who is a citizen /subject or resident of another country whose admission to the University is contingent upon the compliance of the requirements of the National Government, after qualifying for admission and submission of all the documentary and other requirements of the University. Students are also classified, for purposes of registration, as follows: First year student - one who have not finished the prescribed subjects for the first year of your curriculum or twenty-five (25) percent of the total number of units required for the entire four-year degree course, or twenty (20) percent in the case of a five-year degree course. Sophomore - one who have completed the prescribed subjects for the first year of your curriculum or have finished not less than twenty- five (25) percent of the total number of units required by your entire four-year degree course or not less than twenty (20) percent but not more than forty (40) percent of the total number of units required for the five-year degree course. Junior - one who have completed the prescribed subjects for the first two years of your curriculum or have finished not less than fifty (50) percent but not more than seventy-five (75) percent of the total number of units required for the entire four-year degree course, or not less than forty (40) percent but not more than sixty (60) percent of the total number of units required for the five-year degree course. Senior - one who have completed the prescribed subjects for the first, second, and third year of your curriculum, or have finished seventy-five (75) percent of the total number of units required for the entire four-year degree course. A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. In the case of a five-year degree course/program, one is classified as a senior student if you have finished the prescribed subjects for the first, second, third, and fourth years of his curriculum, or have completed not less than eighty percent (80%) of the total number of units required for the course.                "
+                "Undergraduate students are classified as regular, irregular, non-regular, and foreign. A Regular Undergraduate Student is one who have organized a program of study for a bachelor’s degree, or undergraduate diploma/certificate, is registered for formal academic credits, and carries the subjects called for by the curriculum for which you are registered in a given semester. An Irregular Student is one who is registered for formal academic credits, but does not carry the full semester load called for by the curriculum for which you are registered in a given semester. A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken. Classified as non- regular students are the following:\\n -Non-degree students with credits\\n -Cross registrants with credits\\n -Special students without credits. A Foreign Student is one who is a citizen /subject or resident of another country whose admission to the University is contingent upon the compliance of the requirements of the National Government, after qualifying for admission and submission of all the documentary and other requirements of the University. Students are also classified, for purposes of registration, as follows:\\n First year student - one who have not finished the prescribed subjects for the first year of your curriculum or twenty-five (25) percent of the total number of units required for the entire four-year degree course, or twenty (20) percent in the case of a five-year degree course.\\n Sophomore - one who have completed the prescribed subjects for the first year of your curriculum or have finished not less than twenty- five (25) percent of the total number of units required by your entire four-year degree course or not less than twenty (20) percent but not more than forty (40) percent of the total number of units required for the five-year degree course.\\n Junior - one who have completed the prescribed subjects for the first two years of your curriculum or have finished not less than fifty (50) percent but not more than seventy-five (75) percent of the total number of units required for the entire four-year degree course, or not less than forty (40) percent but not more than sixty (60) percent of the total number of units required for the five-year degree course.\\n Senior - one who have completed the prescribed subjects for the first, second, and third year of your curriculum, or have finished seventy-five (75) percent of the total number of units required for the entire four-year degree course. A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. In the case of a five-year degree course/program, one is classified as a senior student if you have finished the prescribed subjects for the first, second, third, and fourth years of his curriculum, or have completed not less than eighty percent (80%) of the total number of units required for the course."
             ]
         }
     ]

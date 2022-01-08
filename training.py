@@ -8,6 +8,8 @@ import random
 import json
 import pandas as pd
 import pickle
+import langdetect as ld
+
 
 #opening dataset
 intents = pd.read_json('intents.json')
@@ -35,6 +37,11 @@ classes = sorted(list(set(classes)))
 print(len(documents),"documents")
 print(len(classes), "classes", classes)
 print(len(words), "unique stemmed words", words)
+
+
+#language detection
+words = ld.detect_langs(words)
+
 
 #creating training data
 training = []
@@ -65,7 +72,7 @@ net = tflearn.fully_connected(net, 10)
 net = tflearn.fully_connected(net, 10)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
-model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
+model = tflearn.lstm(net, tensorboard_dir='tflearn_logs') #change to lstm
 model.fit(train_x, train_y, n_epoch = 1000, batch_size=8, show_metric=True)
 
 model.save('model.tflearn')
