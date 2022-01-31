@@ -1,6 +1,416 @@
 {
     "intents": [
         {
+            "tag": "greeting",
+            "patterns": [
+                "Hi there",
+                "How are you",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hello, thanks for asking",
+                "Good to see you!",
+                "Hi there, how can I help?"
+            ]
+        },
+
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting to you, bye",
+                "Till next time"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ]
+        },
+
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, can't understand you",
+                "Please give me more info",
+                "Not sure I understand"
+            ]
+        },
+
+        {
+            "tag": "options",
+            "patterns": [
+                "How you could help me?",
+                "What you can do?",
+                "What help you provide?",
+                "How you can be helpful?",
+                "What support is offered"
+            ],
+            "responses": [
+                "Hi! I'm BUbot. I can answer your queries about Bicol University :)"
+            ]
+        },
+
+        {
+            "tag": "library_card_application",
+            "patterns": [
+                "How to apply for a library card?",
+                "How to get a Library Card?",
+                "What should I do to get a Library Card?",
+                "What are the requirements for getting a library card?"
+            ],
+            "responses": [
+                "You must secure an application form the unit/college librarian concerned by presenting the Certificate of Registration (COR). The library cards will then be issued in due time after the students have submitted the duly accomplished form together with two copies of recent 1x1 ID photos"
+            ]
+        },
+
+        {
+            "tag": "use_of_library_card",
+            "patterns": [
+                "How should I use the Library Card?",
+                "What is the purpose of my Library Card?",
+                ""
+            ],
+            "responses": [
+                "Your library card shall be used as an identification and passport when entering the unit/college libraries and in borrowing book/s for overnight or over-weekend use."
+            ]
+        },
+
+        {
+            "tag": "use_of_library_card1",
+            "patterns": ["What is the validity of my Library Card?", ""],
+            "responses": [
+                "The library card issued to will be used throughout your stay in the University and is non-transferrable."
+            ]
+        },
+
+        {
+            "tag": "borrowing_procedure",
+            "patterns": [
+                "How can I borrow a book from the Library?",
+                "How to borrow a book from the Library?"
+            ],
+            "responses": [
+                "To borrow a book you may present to the Librarian-in-charge the book with the signed book card together with the currently validated library card."
+            ]
+        },
+
+        {
+            "tag": "borrowing_procedure1",
+            "patterns": [
+                "Can I borrow a book or other materials for someone else in the Library?"
+            ],
+            "responses": [
+                "No, you can't borrow and/or sign for books and other library materials on behalf of someone else."
+            ]
+        },
+
+        {
+            "tag": "availment_of_library_facilities",
+            "patterns": [
+                "Can I borrow other materials than books?",
+                "What other materials can I borrow?"
+            ],
+            "responses": [
+                "You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY. A Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."
+            ]
+        },
+
+        {
+            "tag": "availment_of_library_facilities1",
+            "patterns": [
+                "Can I borrow dissertations, theses, manuscripts and feasibility studies?"
+            ],
+            "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+        },
+
+        {
+            "tag": "availment_of_library_facilities2",
+            "patterns": [
+                "Can I photocopy dissertations, theses, manuscripts and feasibility studies?",
+                "Am I allowed to photocopy dissertations, theses, manuscripts and feasibility studies?"
+            ],
+            "responses": [
+                "No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."
+            ]
+        },
+
+        {
+            "tag": "availment_of_library_facilities3",
+            "patterns": [
+                "When should I return a borrowed book?",
+                "How many days am I allowed to keep the book I borrowed?",
+                "What time should I return the borrowed books?"
+            ],
+            "responses": [
+                "A Reserved book may be borrowed for overnight or week-end use at the last hour before closing time to be returned on or before 9:00 A.M. the following school day"
+            ]
+        },
+
+        {
+            "tag": "availment_of_library_facilities4",
+            "patterns": [
+                "How many books can I borrow at once?",
+                "Can I borrow more than one book?"
+            ],
+            "responses": [
+                "You can borrow a maximum of two (2) Non-reserved Circulation books for overnight or weekend use to be returned on or before 9:00 A.M. the following school day."
+            ]
+        },
+
+        {
+            "tag": "library_hours",
+            "patterns": [
+                "What are the university library hours?",
+                "What time does the university library open?",
+                "What time does the university library closes?"
+            ],
+            "responses": [
+                "The university library is open on Mondays-Friday from 8:00 AM - 7:00 PM and on Saturdays from 8:00 AM - 5:00 PM"
+            ]
+        },
+
+        {
+            "tag": "library_hours1",
+            "patterns": [
+                "Is the university library open during Saturdays?",
+                "Is the university library open on weekends?"
+            ],
+            "responses": [
+                "Yes, the university library is open during Saturdays from 8:00 AM - 5:00 PM"
+            ]
+        },
+
+        {
+            "tag": "other_researchers",
+            "patterns": [
+                "Are outsiders allowed to enter the university library?",
+                "I am not a Bicol University student, am I allowed to visit the university library?"
+            ],
+            "responses": [
+                "Researchers who are not bona fide students of the University may be allowed to use the library information resources/facilities of the different unit/college libraries upon payment of a library fee; wherein the amount to be paid depends on the classification of the researcher or external user. Just present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"
+            ]
+        },
+
+        {
+            "tag": "medical_and_dental_services",
+            "patterns": [
+                "What medical services does the BU Medical Clinic offers?",
+                "What medical services can I get from BU Medical Clinic?"
+            ],
+            "responses": [
+                "The Medical & Dental Clinic provides the basic health services to the students and personnel namely: \\n 1. Conduct of Physical Health Examination;\\n2. Giving attention to daily consultations and treatments;\\n3. Issuance of medical certificates;\\n4. Giving attention to emergency cases/during athletics;\\5. Making referrals of special cases to proper authorities;\\n6. Conduct of lectures/counseling on management of illness; and\\n7. Establishment of linkages among other health agencies."
+            ]
+        },
+
+        {
+            "tag": "medical_and_dental_services1",
+            "patterns": [
+                "What dental services does the BU Dental Clinic offers?",
+                "What dental services can I get from BU Dental Clinic?"
+            ],
+            "responses": [
+                "The Medical and Dental Clinic provides services like:\\n1. Conduct of Annual Dental Examination for Elementary, High School & Senior High School Students;\\n2. Giving attention to dental consultations and treatments;\\n3. Performance of oral prophylaxis;\\n4. Performance of dental extraction;\\n5. Making referrals of special cases to proper authorities; 6. Conduct of chair side instruction/ lectures; and\\n6. Issuance of dental certificates."
+            ]
+        },
+
+        {
+            "tag": "medical_and_dental_services2",
+            "patterns": [
+                "How can I avail the medical and dental services from BU Medical and Dental Clinic?",
+                "What are the requirements in availing medical and dental services from BU Medical and Dental Clinic?"
+            ],
+            "responses": [
+                "You are required to present your university ID to avail of these free health services."
+            ]
+        },
+
+        {
+            "tag": "medical_and_dental_services3",
+            "patterns": [
+                "What are the university Medical and Dental Clinic hours?",
+                "What time does the university Medical and Dental Clinic open?",
+                "What time does the university Medical and Dental Clinic closes?"
+            ],
+            "responses": [
+                "The university Medical and Dental Clinic is open from Monday to Friday (8:00-12:00 AM, 1:00-8:00 PM) and Saturday (8:00-12:00 AM)."
+            ]
+        },
+
+        {
+            "tag": "minor_offenses",
+            "patterns": [
+                "What are the minor offenses for violating the university rules and regulation?",
+                "What are the sanctions or penalties for violating the university rules and regulation?"
+            ],
+            "responses": [
+                "First Offense - Reprimand\\nSecond Offense - Written Warning\\nThird Offense - Community Service\\nFourth Offense - Suspension for 7 to 14 days"
+            ]
+        },
+
+        {
+            "tag": "major_offenses",
+            "patterns": ["What are the offenses for bullying?"],
+            "responses": [
+                "First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Suspension of 6 months and 1 day to 1 year"
+            ]
+        },
+
+        {
+            "tag": "major_offenses1",
+            "patterns": [
+                "What are the offenses for Carrying of firearms and other Dangerous Weapons?"
+            ],
+            "responses": [
+                "First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses2",
+            "patterns": [
+                "What are the offenses for Creating Disorder or Disturbance within the University?"
+            ],
+            "responses": [
+                "First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses3",
+            "patterns": [
+                "What are the offenses for Destruction of Any Property of the University, Its Guests, Employees or Students?"
+            ],
+            "responses": [
+                "First Offense - Suspension of 1 week - 6 months and payment of the value involved and/or replacement of the damaged property\\nSecond Offense - Suspension of 6 months and 1 day to 1 year and payment of the value involved and/or replacement of the damaged property\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses4",
+            "patterns": [
+                "What are the offenses for Drinking of Alcoholic Beverages or Manifesting Drunken Behavior within the university premises?"
+            ],
+            "responses": [
+                "First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses5",
+            "patterns": [
+                "What are the offenses for Falsification of Official Document?"
+            ],
+            "responses": ["First Offense - Dismissal"]
+        },
+
+        {
+            "tag": "major_offenses6",
+            "patterns": ["What are the offenses for Gambling?"],
+            "responses": [
+                "First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses7",
+            "patterns": [
+                "What are the offenses for Hazing of any variety inside or outside the premisesof the Bicol University by any fraternity/sorority or individual or a group representing an accredited B.U. Organization?"
+            ],
+            "responses": ["First Offense - Dismissal"]
+        },
+
+        {
+            "tag": "major_offenses8",
+            "patterns": [
+                "What are the offenses for Malversation or Unlawful Disbursement of school funds?"
+            ],
+            "responses": [
+                "First Offense - Suspension 1 week - 6 months and payment of the value involved\\nSecond Offense - Suspension 6 months and 1 day to 1 year and payment of the value involved\\nThird Offense -  Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses9",
+            "patterns": ["What are the offenses for Plagiarism?"],
+            "responses": [
+                "First Offense\\n1. Written warning; or\\n2. Loss of credit for the work involved;\\n3. Reduction of grades; or\\n4. All of the foregoing penalties - depending on the extent of the act committed, subject to the discretion of the investigating commit- tee.\\n\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses10",
+            "patterns": [
+                "What are the offenses for Possession of prohibited drugs or chemicals?"
+            ],
+            "responses": [
+                "First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses11",
+            "patterns": ["What are the offenses for Photo or Video Voyeurism?"],
+            "responses": [
+                "First Offense - Suspension 6 months and 1 day to 1 year\\nSecond Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses12",
+            "patterns": ["What are the offenses for Sexual Harassment?"],
+            "responses": [
+                "First Offense - Suspension of not more than 30 calendar days\\nSecond Offense - Suspension of 1 to 2 semesters\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses13",
+            "patterns": ["What are the offenses for Stalking?"],
+            "responses": [
+                "First Offense - Reprimand\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses14",
+            "patterns": [
+                "What are the offenses for Theft of property belonging to the University community or a guest of the University?"
+            ],
+            "responses": [
+                "First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+
+        {
+            "tag": "major_offenses15",
+            "patterns": [
+                "What are the offenses for Unauthorized solicitation of contribution/ donation using the name of the University?"
+            ],
+            "responses": [
+                "First Offense - Suspension 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"
+            ]
+        },
+        {
             "tag": "Maximum Residency Rule",
             "patterns": [
                 "How long can I stay in Bicol University?",
