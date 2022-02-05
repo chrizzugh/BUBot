@@ -1,891 +1,886 @@
-{"intents": [
-    
-    {"tag": "greeting",
-        "patterns": ["Hi there","How are you","Is anyone there?","Hey","Hola","Hello","Good day"],
-        "responses": ["Hello, thanks for asking","Good to see you!","Hi there, how can I help?"]
-    },
-
-    {"tag": "goodbye",
-        "patterns": ["Bye","See you later","Goodbye","Nice chatting to you, bye","Till next time"],
-        "responses": ["See you!","Have a nice day","Bye! Come back again soon."]
-    },
-
-    {"tag": "thanks",
-        "patterns": ["Thanks","Thank you","That's helpful","Awesome, thanks","Thanks for helping me"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-
-    {"tag": "noanswer",
-        "patterns": [],
-        "responses": ["Sorry, can't understand you","Please give me more info","Not sure I understand"]
-    },
-
-    {"tag": "options",
-        "patterns": ["How you could help me?","What you can do?","What help you provide?","How you can be helpful?","What support is offered"],
-        "responses": ["Hi! I'm BUbot. I can answer your queries about Bicol University :)"]
-    },
-
-    {"tag": "vision",
-        "patterns": ["What is the Vision of Bicol University?"],
-        "responses": ["A World-Class University Producing Leaders and Change Agents for Social Transformation and Development"]
-    },
-
-    {"tag": "mission",
-        "patterns": ["What is the Mission of Bicol Univerity?"],
-        "responses": ["The Bicol University shall give professional and technical training, and provide advanced and specialized instruction in literature, philosophy, the sciences and arts, besides providing for the promotion of scientific and technological researches"]
-    },
-
-    {"tag": "quality_policy",
-        "patterns": ["What is the Quality Policy of Bicol University?"],
-        "responses": ["Bicol University commits to continually strive for excellence in Instruction, Research and Extension by meeting the highest level of clientele satisfaction and adhering to quality standards and applicable statutory and regulatory requirements"]
-    },
-
-    {"tag": "goals_of_the_university",
-        "patterns": ["What are the goals of Bicol University"],
-        "responses": ["TOO LONG"]
-    },
-
-    {"tag": "university_president",
-        "patterns": ["Who is the President of Bicol University?"],
-        "responses": ["Arnulfo M. Mascariñas"]
-    },
-
-    {"tag": "dean_of_college_of_science",
-        "patterns": ["Who is the dean of college of science?"],
-        "responses": ["Prof. Jocelyn E. Serrano"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_science",
-        "patterns": ["How can I contact the dean of the college of science?"],
-        "responses": ["Telephone No.: (052) 481-2159 Email: jeserrano@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_college_of_arts_and_letters",
-        "patterns": ["Who is the dean of college of arts and letters?"],
-        "responses": ["Dr. Leticia M. Lopez"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_arts_and_letters",
-        "patterns": ["How can I contact the dean of the college of arts and letters?"],
-        "responses": ["Telephone No.: (052) 481-5280"]
-    },
-
-    {"tag": "dean_of_college_of_nursing",
-        "patterns": ["Who is the dean of college of nursing?"],
-        "responses": ["Dr. Jean Annette S. Ibo"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_nursing",
-        "patterns": ["How can I contact the dean of the college of nursing?"],
-        "responses": ["Telephone No.:(052) 480-0610 Email: bicoluniversity.collegeofnursing@yahoo.com"]
-    },
-
-    {"tag": "dean_of_institute_of_physical_education_sports_and_recreation",
-        "patterns": ["Who is the director of Institute of Physical Education Sports and Recreation?"],
-        "responses": ["Prof. Carina L. Sales"]
-    },
-
-    {"tag": "contact_details_of_dean_of_institute_of_physical_education_sports_and_recreation",
-        "patterns": ["How can I contact the dean of the Institute of Physical Education Sports and Recreation?"],
-        "responses": ["Telephone No. (052) 483-0758"]
-    },
-
-    {"tag": "dean_of_jesse_m_robredo_institute_of_governance_and_development",
-        "patterns": ["Who is the director of Jesse M. Robredo Institute Of Governance And Development?"],
-        "responses": ["Dr. Noemi L. Ibo"]
-    },
-
-    {"tag": "contact_details_of_dean_of_jesse_m_robredo_institute_of_governance_and_development",
-        "patterns": ["How can I contact the dean of the Jesse M. Robredo Institute Of Governance And Development?"],
-        "responses": ["No record in BU site as of the moment"]
-    },
-
-    {"tag": "dean_of_college_of_education",
-        "patterns": ["Who is the dean of College of Education?"],
-        "responses": ["Dr. Lorna M. Miña"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_education",
-        "patterns": ["How can I contact the dean of the College of Education?"],
-        "responses": ["Telephone No.: (052) 483-0487 Email: bicolmentors_08@yahoo.com or lornsmm@yahoo.com"]
-    },
-
-    {"tag": "dean_of_graduate_school",
-        "patterns": ["Who is the dean of Graduate School?"],
-        "responses": ["Dr. Herbert B. Rosana"]
-    },
-
-    {"tag": "contact_details_of_dean_of_graduate_school",
-        "patterns": ["How can I contact the dean of the Graduate School?"],
-        "responses": ["Telephone No.: (052) 481-1454 Email: bugs-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_open_university",
-        "patterns": ["Who is the dean of Open University?"],
-        "responses": ["Dr. Ramesis M. Lorino"]
-    },
-
-    {"tag": "contact_details_of_dean_of_open_university",
-        "patterns": ["How can I contact the dean of the Open University?"],
-        "responses": ["No record in BU site as of the moment."]
-    },
-
-    {"tag": "dean_of_college_of_medicine",
-        "patterns": ["Who is the dean of College of Medicine?"],
-        "responses": ["Dr. Ruben Caragay"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_medicine",
-        "patterns": ["How can I contact the dean of the College of Medicine?"],
-        "responses": ["Telephone No. (052) 742-0076 Email: rncaragay@bicol-u.edu.ph or bucm-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_college_of_law",
-        "patterns": ["Who is the dean of College of Law?"],
-        "responses": ["Atty. Hardy B. Aquende"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_law",
-        "patterns": ["How can I contact the dean of the College of Law?"],
-        "responses": ["No record in BU site as of the moment"]
-    },
-
-    {"tag": "dean_of_college_of_business_economics_and_management",
-        "patterns": ["Who is the dean of College Of Business Economics and Management?"],
-        "responses": ["Dr. Eddie S. See "]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_business_economics_and_management",
-        "patterns": ["How can I contact the dean of the College Of Business Economics and Management?"],
-        "responses": ["Email: bucbem@bicol-u.edu.ph or ess4560@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_college_of_social_science_and_philosophy",
-        "patterns": ["Who is the dean of College of Social Science and Philosophy?"],
-        "responses": ["Atty. Alex B. Nepomuceno"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_social_science_and_philosophy",
-        "patterns": ["How can I contact the dean of the College of Social Science and Philosophy?"],
-        "responses": ["Email: abnepomuceno@bicol-u.edu.ph or bucssp-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_institute_of_architecture",
-        "patterns": ["Who is the director of Institute of Architecture?"],
-        "responses": ["Ar. Leo A. Del Rosario"]
-    },
-
-    {"tag": "contact_details_of_dean_of_institute_of_architecture",
-        "patterns": ["How can I contact the director of the Institute of Architecture?"],
-        "responses": ["Telephone No.: (052) 742-6728   Email: ronacionaljr@bicol-u.edu.ph or buia@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_college_of_engineering",
-        "patterns": ["Who is the dean of College of Engineering?"],
-        "responses": ["Engr. Amelia A. Gonzales"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_engineering",
-        "patterns": ["How can I contact the dean of the College of Engineering?"],
-        "responses": ["Telephone No.: (052) 742-4091    Email: bucengdean@gmail.com or abbg0116@yahoo.com"]
-    },
-
-    {"tag": "dean_of_college_of_industrial_technology",
-        "patterns": ["Who is the dean of College of Industrial Technology?"],
-        "responses": ["Dr. Jonathan Arroco"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_industrial_technology",
-        "patterns": ["How can I contact the dean of the College of Industrial Technology?"],
-        "responses": ["Telephone No.: (052) 480-4595   Email: jcarroco@bicol-u.edu.ph or bucit-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_college_of_agriculture_and_forestry",
-        "patterns": ["Who is the dean of the College of Agriculture and Forestry?"],
-        "responses": ["Prof. Domingo Ll. Nace"]
-    },
-
-    {"tag": "contact_details_of_dean_of_college_of_agriculture_and_forestry",
-        "patterns": ["How can I contact the dean of the College of Agriculture and Forestry?"],
-        "responses": ["Telephone No.: (052) 484-6336   Email: bucaf100@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_tabaco_campus",
-        "patterns": ["Who is the dean of the Bicol University Tabaco Campus?"],
-        "responses": ["Dr. Maria Giselle N. Mortega"]
-    },
-
-    {"tag": "contact_details_of_dean_of_tabaco_campus",
-        "patterns": ["How can I contact the dean of the Bicol University Tabaco Campus?"],
-        "responses": ["Telephone No. (052) 487-5247 or (052) 257-7090 or (052) 830-0012  Email: butc-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_polangui_campus",
-        "patterns": ["Who is the dean of the Bicol University Polangui Campus?"],
-        "responses": ["Prof. Mary Joy B. Catangui "]
-    },
-
-    {"tag": "contact_details_of_dean_of_Polangui_campus",
-        "patterns": ["How can I contact the dean of the Bicol University Polangui Campus?"],
-        "responses": ["Telephone No.: (052) 437-2852 or (052)212-5498 or (052) 835-0560  Email: bupc-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "dean_of_gubat_campus",
-        "patterns": ["Who is the director of the Bicol University Gubat Campus?"],
-        "responses": ["Dr. Rosemarie R. Jadie"]
-    },
-
-    {"tag": "contact_details_of_dean_of_gubat_campus",
-        "patterns": ["How can I contact the director of the Bicol University Gubat Campus?"],
-        "responses": ["Telephone No.: (056)311-1145 Email: rrjadie@bicol-u.edu.ph or bugc-dean@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_graduate_school",
-        "patterns": ["Who is the registrar of Graduate School?"],
-        "responses": ["Ms. Veronica O. Gomez"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_graduate_school",
-        "patterns": ["How can I contact the registrar of Graduate School?"],
-        "responses": ["Telephone No.: (052) 481-7881    Email: vogomez@bicol-u.edu.ph or bugsreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_agriculture_and_forestry",
-        "patterns": ["Who is the registrar of College of Agriculture and Forestry?"],
-        "responses": ["Ms. Ada O. Camba"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_agriculture_and_forestry",
-        "patterns": ["How can I contact the registrar of College of College of Agriculture and Forestry?"],
-        "responses": ["Email: ancamba@bicol-u.edu.ph or bucafreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_social_science_and_philosophy",
-        "patterns": ["Who is the registrar of College of Social Science and Philosophy?"],
-        "responses": ["Ms. Catherine D. Lagata"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_social_science_and_philosophy",
-        "patterns": ["How can I contact the registrar of College of Social Science and Philosophy?"],
-        "responses": ["Email: cdlagata@bicol-u.edu.ph or bucsspreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_business_economics_and_management",
-        "patterns": ["Who is the registrar of College of Business Economics and Management?"],
-        "responses": ["Mr. Salvador M. Abiño"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_business_economics_and_management",
-        "patterns": ["How can I contact the registrar of College of Business Economics and Management?"],
-        "responses": ["Email: smabino@bicol-u.edu.ph or bucbemreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_education",
-        "patterns": ["Who is the registrar of College of Education?"],
-        "responses": ["Ms. Jane B. Siapno"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_education",
-        "patterns": ["How can I contact the registrar of College of Education?"],
-        "responses": ["Telephone No.: (052) 481-5975    Email: jbsiapno@bicol-u.edu.ph or buce.registrar@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_engineering",
-        "patterns": ["Who is the registrar of College of Engineering?"],
-        "responses": ["Ms. Ruby L. Rivero"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_engineering",
-        "patterns": ["How can I contact the registrar of College of Engineering?"],
-        "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph or bucengreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_nursing",
-        "patterns": ["Who is the registrar of College of collegeof Nursing?"],
-        "responses": ["Ms. Teresita P. Baloloy"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_nursing",
-        "patterns": ["How can I contact the registrar of College of Nursing?"],
-        "responses": ["Telephone No.: (052) 480-2760    Email: bucnreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_industrial_technology",
-        "patterns": ["Who is the registrar of College of Industrial Technology?"],
-        "responses": ["Ms. Ana B. Del Ayre"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_industrial_technology",
-        "patterns": ["How can I contact the registrar of College of Industrial Technology?"],
-        "responses": ["Telephone No.: (052) 431-1053    Email: abdelayre@bicol-u.edu.ph or bucitreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_arts_and_letters",
-        "patterns": ["Who is the registrar of College of Arts and Letters?"],
-        "responses": ["Mr. Antonio R. Lleva"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_arts_and_letters",
-        "patterns": ["How can I contact the registrar of College of Arts and Letters?"],
-        "responses": ["Telephone No.: (052) 481-6192    Email: arlleva@bicol-u.edu.ph or bucalreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_science",
-        "patterns": ["Who is the registrar of College of Science?"],
-        "responses": ["Ms. Sharlene A. Mendizabal"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_science",
-        "patterns": ["How can I contact the registrar of College of Science?"],
-        "responses": ["Telephone No.: 481-1455    Email: bucsreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_medicine",
-        "patterns": ["Who is the registrar of College of Medicine?"],
-        "responses": ["Ms. Sheila Marie Magalona"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_medicine",
-        "patterns": ["How can I contact the registrar of College of Medicine?"],
-        "responses": ["Telephone No.: (052) 480-0700    Email: smmmagalona@bicol-u.edu.ph or bucmreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_college_of_law",
-        "patterns": ["Who is the registrar of College of Law?"],
-        "responses": ["No record BU site as of the moment."]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_college_of_law",
-        "patterns": ["How can I contact the registrar of College of Law?"],
-        "responses": ["No record BU site as of the moment."]
-    },
-
-    {"tag": "registrar_of_the_institute_of_physical_education_sports_and_recreation",
-        "patterns": ["Who is the registrar of College of Institute of Physical Education Sports and Recreation?"],
-        "responses": ["No record BU site as of the moment."]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_institute_of_physical_education_sports_and_recreation",
-        "patterns": ["How can I contact the registrar of College of Institute of Physical Education Sports and Recreation?"],
-        "responses": ["No record BU site as of the moment."]
-    },
-
-    {"tag": "registrar_of_the_institute_of_architecture",
-        "patterns": ["Who is the registrar of Institute of Architecture?"],
-        "responses": ["Ms. Ruby L. Rivero"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_institute_of_architecture",
-        "patterns": ["How can I contact the registrar of Institute of Architecture?"],
-        "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_polangui_campus",
-        "patterns": ["Who is the registrar of Polangui Campus?"],
-        "responses": ["Ms. Lily Lolo"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_the_polangui_campus",
-        "patterns": ["How can I contact the registrar of Polangui Campus?"],
-        "responses": ["Email: lrlolo@bicol-u.edu.ph or bupcreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_tabaco_campus",
-        "patterns": ["Who is the registrar of Tabaco Campus?"],
-        "responses": ["Ms. Wilhelmina B. Henson"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_Tabaco_Campus",
-        "patterns": ["How can I contact the registrar of Tabaco Campus?"],
-        "responses": ["Email: wbhenson@bicol-u.edu.ph or butcreg@bicol-u.edu.ph"]
-    },
-
-    {"tag": "registrar_of_the_gubat_campus",
-        "patterns": ["Who is the registrar of Gubat Campus?"],
-        "responses": ["Ms. Maria Rechel M .Marcaida"]
-    },
-
-    {"tag": "contact_details_of_registrar_of_Gubat Campus",
-        "patterns": ["How can I contact the registrar of Gubat Campus"],
-        "responses": ["No record in BU site as of the moment"]
-    },
-
-    {"tag": "admission_to_undergraduate_programs",
-        "patterns": ["Can I enroll to undegraduate programs in BU?"],
-        "responses": ["Admission to the undergraduate programs leading to an award of a diploma or baccalaureate degree is selective. To qualify for admission, incoming students need to pass the BUCET"]
-    },
-
-    {"tag": "reason_for_selective_admission",
-        "patterns": ["Why do Bicol University follow selective admission for undegraduate programs?"],
-        "responses": ["To promote quality and excellence in tertiary education"]
-    },
-
-    {"tag": "bucet",
-        "patterns": ["What is BUCET"],
-        "responses": ["It is a three-hour examination consisting of sub-tests in Language proficiency in English, Mathematics, Science and Reading Comprehension. "]
-    },
-
-    {"tag": "how_to_quality_for_admission",
-        "patterns": ["How can I qualify for freshmen admission?"],
-        "responses": ["Admission is based on the applicant’s Bicol University College Entrance Test (BUCET) Composite Rating consisting of the BUCET score and his/her general weighted average (GWA) in the grade 9 to 11"]
-    },
-
-    {"tag": "general_requirements_for_bucet",
-        "patterns": ["High school seniors expecting to graduate at the end of the school year; OR Senior high school graduates who have not taken and/are not taking any college subject/s; AND Holders of Philippines Educational Placement Test/ Alternative Learning System (PEPT/ALS) certificates who are eligible for admission to college."],
-        "responses": [""]
-    },
-
-    {"tag": "bucet_cutoff_rating",
-        "patterns": ["What is the cut-off rating for BUCET?"],
-        "responses": ["The BUCET cut-off rating for the Licensure and Non-licensure courses shall be recommended by the Admissions Office."]
-    },
-
-    {"tag": "transfer_students",
-        "patterns": ["Can I transfer to Bicol University?"],
-        "responses": ["Admission of transferees is contingent upon the availability of slots in the College the applicants are seeking transfer to, upon which the Dean of the College shall declare the slot open or available."]
-    },
-
-    {"tag": "transfer_instructions",
-        "patterns": ["How can I transfer to Bicol University?"],
-        "responses": ["Transferees' application for transfer must reach the Office of Admissions in due time prior to the registration period together with the letter of intent for transfer."]
-    },
-
-    {"tag": "transfer_requirements",
-        "patterns": ["What are the requirements for admission of transferees?"],
-        "responses": ["Certification from the Dean/Director of availability of place/slot in the College/Unit; Certification of grades duly signed by the Registrar of the original school bearing the school's seal; or Official transcript of records (OTR) from the last school attended; and Certificate of honorable dismissal"]
-    },
-
-    {"tag": "transfer_fee",
-        "patterns": ["Is there a fee need to be settled to process my trasnfer requirements to Bicol University?"],
-        "responses": ["Processing of the transferees’ documents shall commence upon payment of processing fee inclusive of aptitude testing which some colleges require."]
-    },
-
-    {"tag": "interview_for_transfer_applicants",
-        "patterns": ["Do I need to undergo interviews as transfer applicant?"],
-        "responses": ["Applicants for transfer may still go through an interview in the college/unit they intend to transfer to or be subjected to other college/program requirements."]
-    },
-
-    {"tag": "eligibility_for_admission of transferees",
-        "patterns": ["How can I be eligible for transfer admission to Bicol University?"],
-        "responses": ["Eligibility for admission of transferees shall be determined by the result of multiple assessment procedures, including Course-program aptitude test, if required by the College/Unit/Department; Grade point average (GPA) of 2.0 or 89%; No failing grade in any of the courses taken; Applicant shall not have finished more than twenty-five percent (25%) of the units required for the course; Interview; and/or Other assessment procedure(s) required by the College/Unit/Department. "]
-    },
-
-    {"tag": "transfer_credits",
-        "patterns": ["Will the university recognize my units earned from my previous college if I transfer?"],
-        "responses": ["Only course units earned from colleges/universities with the same program accreditation level as Bicol University or higher or those who are duly recognized by CHED will be credited."]
-    },
-
-    {"tag": "transfer_credit_limits",
-        "patterns": ["What is the limit of transfer credits in Bicol University?"],
-        "responses": ["Transfer credits, however, shall not exceed twenty-five percent (25%) of the total number of units required for the course."]
-    },
-
-    {"tag": "admission_of_graduates_of_tvl_courses",
-        "patterns": ["Can I be admitted to Bicol University if I am a graduate of Technical-Vocational course?"],
-        "responses": ["Admission of graduates of terminal technical-vocational courses shall be assessed on a case-to- case basis. The documentary requirements and conditions set for transfer students shall apply to them."]
-    },
-
-    {"tag": "shifters",
-        "patterns": ["How can I shift from one course program to another?"],
-        "responses": ["Students are allowed to shift subject for availability of place/slot in the college/unit they are seeking transfer to. Students shall vie for the places/slots along with transferees from outside the University"]
-    },
-
-    {"tag": "requirements_for_shifting",
-        "patterns": ["What are the requirements in shifting to another course?"],
-        "responses": ["Letter of intent to transfer specifying, among others, the reason for request for transfer; Certification from the Dean/Director of the availability of slot; and Certification of grades duly signed by the College/Unit Registrar."]
-    },
-
-    {"tag": "processing_fee_for_shifters",
-        "patterns": ["Is there a fee for shifting a course program?"],
-        "responses": ["Conditions required of transferees from outside the University shall apply to the shifters including the payment of processing fee of Php 100.00."]
-    },
-
-    {"tag": "returning_students",
-        "patterns": ["How can I be readmitted to Bicol University after I stopped schooling?"],
-        "responses": ["Old students who stopped schooling due to ill health or any other valid reason can seek re- admission by presenting medical or other documents to support his/her reason/s for dropping out of school."]
-    },
-
-    {"tag": "reason_for_declining_the admission_of_returning_student",
-        "patterns": ["Can I not be readmitted to Bicol University after I stopped schooling?"],
-        "responses": ["The college/ unit reserves the right to refuse enrollment/re-admission of old/ returning student on account of proofs of his/her violation of the school's rules and regulations and/or academic deficiency."]
-    },
-
-    {"tag": "requirements_for_students_returning_from_leave_ob_abscence",
-        "patterns": ["How to be re-admitted upon returning from leave of absence?"],
-        "responses": ["A student returning from leave of absence shall present supporting papers or documents"]
-    },
-
-    {"tag": "requirements_for_returning_old_students",
-        "patterns": ["What are the requirements for returning old students?"],
-        "responses": ["An old student may be re-admitted upon presentation of his/her clearance duly signed by school officials concerned."]
-    },
-
-    {"tag": "general_requirements_for_undergraduate_foreign_students",
-        "patterns": ["What are the requirements for admission of undergraduate foreign students?"],
-        "responses": ["Original Transcript of Records (OTR); Personal Data; Affidavit of Support; Alien Certificate of Registration (ACR); Results of Test on English as a Foreign Language (TOEFL); Approved study permit from CHED; and an application fee of $50.00"]
-    },
-
-    {"tag": "requirements_of_foreign_high_school_graduates_to_bicol_university",
-        "patterns": ["What are the requirements for admission of students from other nations who have graduated from high schools abroad?"],
-        "responses": ["Certification of completion of a secondary curriculum where the applicant had his/her secondary education;Certification of proficiency in English based on the TOEFL score (for non-native speakers of English); Qualifying in the BUCET or any of the following International Foreign-based examination in lieu of the BUCET such as: Scholastic Aptitude Test (SAT) Advanced with a minimum combined score of 1200 in Mathematics, Critical Reading and Writing sub-test areas."]
-    },
-
-    {"tag": "schedule_of_registration",
-        "patterns": ["When can I register for admission?"],
-        "responses": ["Qualified applicants for admission should register within the period of registration."]
-    },
-
-    {"tag": "how_to_register_for_admission",
-        "patterns": ["How can I register for admission?"],
-        "responses": ["Registration includes filling out the prescribed forms and paying the required fees. Students enrolled during the preceding semester including summer session are re-enrolled upon being cleared by the Dean and other officials concerned."]
-    },
-
-    {"tag": "late_registration",
-        "patterns": ["Can I enrol after the scheduled registration?"],
-        "responses": ["No student shall be registered in any subject after the last day of late registration in the school calendar."]
-    },
-
-    {"tag": "maximum_residency_rule",
-        "patterns": ["How long can I stay in Bicol University?","Maximum Residency Rule"],
-        "responses": ["An undergraduate student must finish the requirements of a course in any college within a period of actual residence equivalent to a maximum of the prescribed length of the program plus one year pursuant to the other provisions of the Universal Access to Quality Tertiary Education Act of 2017."]
-    },
-    
-    {"tag": "examinations",
-            "patterns": ["What are the types of exams?"],
-            "responses": ["Two regular written examinations, the mid-term and the final examinations, are prescribed every semester/ term. Other written, oral or practical examinations are also given at the discretion of the subject instructor.\\n Regular examinations are administered by the subject instructors with the assistance of the proctors.\\n \\n Make-up Examination\\n Examination missed for justifiable reasons may be made up within the same term at the discretion of the subject instructor concerned. "]
-    },
-    
-    {"tag": "grading_system",
-        "patterns": ["What is the grading system?","Grading system","Grade conversion"],
-        "responses": ["The detailed grading system is as follows:\\n",
-                {
-                    "Adjectival Rating": {
-                        "Outstanding": [
-                            "1.0\\n",
-                            "1.1\\n",
-                            "1.2\\n",
-                            "1.3\\n",
-                            "1.4\\n"
-                        ],
-                        "Superior": ["1.5\\n", "1.6\\n", "1.7\\n"],
-                        "Very Satifactory": [
-                            "1.8\\n",
-                            "1.9\\n",
-                            "2.0\\n",
-                            "2.1\\n",
-                            "2.2\\n",
-                            "2.3\\n",
-                            "2.4\\n",
-                            "2.5\\n"
-                        ],
-                        "Satisfactory": ["2.6\\n", "2.7\\n", "2.8\\n"],
-                        "Fair/Average": ["2.9\\n", "3.0\\n"],
-                        "Poor": ["3.1-4.0\\n"]
-                    },
-
-                    "Equivalent": [
-                        ["99-100\\n", "98\\n", "97\\n", "96\\n", "95\\n"],
-                        ["94\\n", "93\\n", "92\\n"],
-                        ["91\\n", "90\\n", "89\\n", "88\\n", "87\\n", "86\\n", "85\\n", "84\\n"],
-                        ["82-83\\n", "80-81\\n", "78-79\\n"],
-                        ["76-77\\n", "75 (Passing)\\n"],
-                        ["Below 75 Conditional (lowest possible mid-term rating)\\n"],
-                        ["Failure (lowest possible final rating)\\n \\n"]
-                    ]
+[{"tag": "greeting",
+    "patterns": ["Hi there","How are you","Is anyone there?","Hey","Hola","Hello","Good day"],
+    "responses": ["Hello, thanks for asking","Good to see you!","Hi there, how can I help?"]
+},
+
+{"tag": "goodbye",
+    "patterns": ["Bye","See you later","Goodbye","Nice chatting to you, bye","Till next time"],
+    "responses": ["See you!","Have a nice day","Bye! Come back again soon."]
+},
+
+{"tag": "thanks",
+    "patterns": ["Thanks","Thank you","That's helpful","Awesome, thanks","Thanks for helping me"],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"]
+},
+
+{"tag": "noanswer",
+    "patterns": [],
+    "responses": ["Sorry, can't understand you","Please give me more info","Not sure I understand"]
+},
+
+{"tag": "options",
+    "patterns": ["How you could help me?","What you can do?","What help you provide?","How you can be helpful?","What support is offered"],
+    "responses": ["Hi! I'm BUbot. I can answer your queries about Bicol University :)"]
+},   
+
+{"tag": "vision",
+    "patterns": ["What is the Vision of Bicol University?"],
+    "responses": ["A World-Class University Producing Leaders and Change Agents for Social Transformation and Development"]
+},
+
+{"tag": "mission",
+    "patterns": ["What is the Mission of Bicol Univerity?"],
+    "responses": ["The Bicol University shall give professional and technical training, and provide advanced and specialized instruction in literature, philosophy, the sciences and arts, besides providing for the promotion of scientific and technological researches"]
+},
+
+{"tag": "quality_policy",
+    "patterns": ["What is the Quality Policy of Bicol University?"],
+    "responses": ["Bicol University commits to continually strive for excellence in Instruction, Research and Extension by meeting the highest level of clientele satisfaction and adhering to quality standards and applicable statutory and regulatory requirements"]
+},
+
+{"tag": "goals_of_the_university",
+    "patterns": ["What are the goals of Bicol University"],
+    "responses": ["TOO LONG"]
+},
+
+{"tag": "university_president",
+    "patterns": ["Who is the President of Bicol University?"],
+    "responses": ["Arnulfo M. Mascariñas"]
+},
+
+{"tag": "dean_of_college_of_science",
+    "patterns": ["Who is the dean of college of science?"],
+    "responses": ["Prof. Jocelyn E. Serrano"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_science",
+    "patterns": ["How can I contact the dean of the college of science?"],
+    "responses": ["Telephone No.: (052) 481-2159 Email: jeserrano@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_college_of_arts_and_letters",
+    "patterns": ["Who is the dean of college of arts and letters?"],
+    "responses": ["Dr. Leticia M. Lopez"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_arts_and_letters",
+    "patterns": ["How can I contact the dean of the college of arts and letters?"],
+    "responses": ["Telephone No.: (052) 481-5280"]
+},
+
+{"tag": "dean_of_college_of_nursing",
+    "patterns": ["Who is the dean of college of nursing?"],
+    "responses": ["Dr. Jean Annette S. Ibo"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_nursing",
+    "patterns": ["How can I contact the dean of the college of nursing?"],
+    "responses": ["Telephone No.:(052) 480-0610 Email: bicoluniversity.collegeofnursing@yahoo.com"]
+},
+
+{"tag": "dean_of_institute_of_physical_education_sports_and_recreation",
+    "patterns": ["Who is the director of Institute of Physical Education Sports and Recreation?"],
+    "responses": ["Prof. Carina L. Sales"]
+},
+
+{"tag": "contact_details_of_dean_of_institute_of_physical_education_sports_and_recreation",
+    "patterns": ["How can I contact the dean of the Institute of Physical Education Sports and Recreation?"],
+    "responses": ["Telephone No. (052) 483-0758"]
+},
+
+{"tag": "dean_of_jesse_m_robredo_institute_of_governance_and_development",
+    "patterns": ["Who is the director of Jesse M. Robredo Institute Of Governance And Development?"],
+    "responses": ["Dr. Noemi L. Ibo"]
+},
+
+{"tag": "contact_details_of_dean_of_jesse_m_robredo_institute_of_governance_and_development",
+    "patterns": ["How can I contact the dean of the Jesse M. Robredo Institute Of Governance And Development?"],
+    "responses": ["No record in BU site as of the moment"]
+},
+
+{"tag": "dean_of_college_of_education",
+    "patterns": ["Who is the dean of College of Education?"],
+    "responses": ["Dr. Lorna M. Miña"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_education",
+    "patterns": ["How can I contact the dean of the College of Education?"],
+    "responses": ["Telephone No.: (052) 483-0487 Email: bicolmentors_08@yahoo.com or lornsmm@yahoo.com"]
+},
+
+{"tag": "dean_of_graduate_school",
+    "patterns": ["Who is the dean of Graduate School?"],
+    "responses": ["Dr. Herbert B. Rosana"]
+},
+
+{"tag": "contact_details_of_dean_of_graduate_school",
+    "patterns": ["How can I contact the dean of the Graduate School?"],
+    "responses": ["Telephone No.: (052) 481-1454 Email: bugs-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_open_university",
+    "patterns": ["Who is the dean of Open University?"],
+    "responses": ["Dr. Ramesis M. Lorino"]
+},
+
+{"tag": "contact_details_of_dean_of_open_university",
+    "patterns": ["How can I contact the dean of the Open University?"],
+    "responses": ["No record in BU site as of the moment."]
+},
+
+{"tag": "dean_of_college_of_medicine",
+    "patterns": ["Who is the dean of College of Medicine?"],
+    "responses": ["Dr. Ruben Caragay"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_medicine",
+    "patterns": ["How can I contact the dean of the College of Medicine?"],
+    "responses": ["Telephone No. (052) 742-0076 Email: rncaragay@bicol-u.edu.ph or bucm-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_college_of_law",
+    "patterns": ["Who is the dean of College of Law?"],
+    "responses": ["Atty. Hardy B. Aquende"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_law",
+    "patterns": ["How can I contact the dean of the College of Law?"],
+    "responses": ["No record in BU site as of the moment"]
+},
+
+{"tag": "dean_of_college_of_business_economics_and_management",
+    "patterns": ["Who is the dean of College Of Business Economics and Management?"],
+    "responses": ["Dr. Eddie S. See "]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_business_economics_and_management",
+    "patterns": ["How can I contact the dean of the College Of Business Economics and Management?"],
+    "responses": ["Email: bucbem@bicol-u.edu.ph or ess4560@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_college_of_social_science_and_philosophy",
+    "patterns": ["Who is the dean of College of Social Science and Philosophy?"],
+    "responses": ["Atty. Alex B. Nepomuceno"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_social_science_and_philosophy",
+    "patterns": ["How can I contact the dean of the College of Social Science and Philosophy?"],
+    "responses": ["Email: abnepomuceno@bicol-u.edu.ph or bucssp-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_institute_of_architecture",
+    "patterns": ["Who is the director of Institute of Architecture?"],
+    "responses": ["Ar. Leo A. Del Rosario"]
+},
+
+{"tag": "contact_details_of_dean_of_institute_of_architecture",
+    "patterns": ["How can I contact the director of the Institute of Architecture?"],
+    "responses": ["Telephone No.: (052) 742-6728   Email: ronacionaljr@bicol-u.edu.ph or buia@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_college_of_engineering",
+    "patterns": ["Who is the dean of College of Engineering?"],
+    "responses": ["Engr. Amelia A. Gonzales"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_engineering",
+    "patterns": ["How can I contact the dean of the College of Engineering?"],
+    "responses": ["Telephone No.: (052) 742-4091    Email: bucengdean@gmail.com or abbg0116@yahoo.com"]
+},
+
+{"tag": "dean_of_college_of_industrial_technology",
+    "patterns": ["Who is the dean of College of Industrial Technology?"],
+    "responses": ["Dr. Jonathan Arroco"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_industrial_technology",
+    "patterns": ["How can I contact the dean of the College of Industrial Technology?"],
+    "responses": ["Telephone No.: (052) 480-4595   Email: jcarroco@bicol-u.edu.ph or bucit-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_college_of_agriculture_and_forestry",
+    "patterns": ["Who is the dean of the College of Agriculture and Forestry?"],
+    "responses": ["Prof. Domingo Ll. Nace"]
+},
+
+{"tag": "contact_details_of_dean_of_college_of_agriculture_and_forestry",
+    "patterns": ["How can I contact the dean of the College of Agriculture and Forestry?"],
+    "responses": ["Telephone No.: (052) 484-6336   Email: bucaf100@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_tabaco_campus",
+    "patterns": ["Who is the dean of the Bicol University Tabaco Campus?"],
+    "responses": ["Dr. Maria Giselle N. Mortega"]
+},
+
+{"tag": "contact_details_of_dean_of_tabaco_campus",
+    "patterns": ["How can I contact the dean of the Bicol University Tabaco Campus?"],
+    "responses": ["Telephone No. (052) 487-5247 or (052) 257-7090 or (052) 830-0012  Email: butc-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_polangui_campus",
+    "patterns": ["Who is the dean of the Bicol University Polangui Campus?"],
+    "responses": ["Prof. Mary Joy B. Catangui "]
+},
+
+{"tag": "contact_details_of_dean_of_Polangui_campus",
+    "patterns": ["How can I contact the dean of the Bicol University Polangui Campus?"],
+    "responses": ["Telephone No.: (052) 437-2852 or (052)212-5498 or (052) 835-0560  Email: bupc-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "dean_of_gubat_campus",
+    "patterns": ["Who is the director of the Bicol University Gubat Campus?"],
+    "responses": ["Dr. Rosemarie R. Jadie"]
+},
+
+{"tag": "contact_details_of_dean_of_gubat_campus",
+    "patterns": ["How can I contact the director of the Bicol University Gubat Campus?"],
+    "responses": ["Telephone No.: (056)311-1145 Email: rrjadie@bicol-u.edu.ph or bugc-dean@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_graduate_school",
+    "patterns": ["Who is the registrar of Graduate School?"],
+    "responses": ["Ms. Veronica O. Gomez"]
+},
+
+{"tag": "contact_details_of_registrar_of_graduate_school",
+    "patterns": ["How can I contact the registrar of Graduate School?"],
+    "responses": ["Telephone No.: (052) 481-7881    Email: vogomez@bicol-u.edu.ph or bugsreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_agriculture_and_forestry",
+    "patterns": ["Who is the registrar of College of Agriculture and Forestry?"],
+    "responses": ["Ms. Ada O. Camba"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_agriculture_and_forestry",
+    "patterns": ["How can I contact the registrar of College of College of Agriculture and Forestry?"],
+    "responses": ["Email: ancamba@bicol-u.edu.ph or bucafreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_social_science_and_philosophy",
+    "patterns": ["Who is the registrar of College of Social Science and Philosophy?"],
+    "responses": ["Ms. Catherine D. Lagata"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_social_science_and_philosophy",
+    "patterns": ["How can I contact the registrar of College of Social Science and Philosophy?"],
+    "responses": ["Email: cdlagata@bicol-u.edu.ph or bucsspreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_business_economics_and_management",
+    "patterns": ["Who is the registrar of College of Business Economics and Management?"],
+    "responses": ["Mr. Salvador M. Abiño"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_business_economics_and_management",
+    "patterns": ["How can I contact the registrar of College of Business Economics and Management?"],
+    "responses": ["Email: smabino@bicol-u.edu.ph or bucbemreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_education",
+    "patterns": ["Who is the registrar of College of Education?"],
+    "responses": ["Ms. Jane B. Siapno"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_education",
+    "patterns": ["How can I contact the registrar of College of Education?"],
+    "responses": ["Telephone No.: (052) 481-5975    Email: jbsiapno@bicol-u.edu.ph or buce.registrar@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_engineering",
+    "patterns": ["Who is the registrar of College of Engineering?"],
+    "responses": ["Ms. Ruby L. Rivero"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_engineering",
+    "patterns": ["How can I contact the registrar of College of Engineering?"],
+    "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph or bucengreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_nursing",
+    "patterns": ["Who is the registrar of College of collegeof Nursing?"],
+    "responses": ["Ms. Teresita P. Baloloy"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_nursing",
+    "patterns": ["How can I contact the registrar of College of Nursing?"],
+    "responses": ["Telephone No.: (052) 480-2760    Email: bucnreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_industrial_technology",
+    "patterns": ["Who is the registrar of College of Industrial Technology?"],
+    "responses": ["Ms. Ana B. Del Ayre"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_industrial_technology",
+    "patterns": ["How can I contact the registrar of College of Industrial Technology?"],
+    "responses": ["Telephone No.: (052) 431-1053    Email: abdelayre@bicol-u.edu.ph or bucitreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_arts_and_letters",
+    "patterns": ["Who is the registrar of College of Arts and Letters?"],
+    "responses": ["Mr. Antonio R. Lleva"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_arts_and_letters",
+    "patterns": ["How can I contact the registrar of College of Arts and Letters?"],
+    "responses": ["Telephone No.: (052) 481-6192    Email: arlleva@bicol-u.edu.ph or bucalreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_science",
+    "patterns": ["Who is the registrar of College of Science?"],
+    "responses": ["Ms. Sharlene A. Mendizabal"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_science",
+    "patterns": ["How can I contact the registrar of College of Science?"],
+    "responses": ["Telephone No.: 481-1455    Email: bucsreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_medicine",
+    "patterns": ["Who is the registrar of College of Medicine?"],
+    "responses": ["Ms. Sheila Marie Magalona"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_medicine",
+    "patterns": ["How can I contact the registrar of College of Medicine?"],
+    "responses": ["Telephone No.: (052) 480-0700    Email: smmmagalona@bicol-u.edu.ph or bucmreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_college_of_law",
+    "patterns": ["Who is the registrar of College of Law?"],
+    "responses": ["No record BU site as of the moment."]
+},
+
+{"tag": "contact_details_of_registrar_of_the_college_of_law",
+    "patterns": ["How can I contact the registrar of College of Law?"],
+    "responses": ["No record BU site as of the moment."]
+},
+
+{"tag": "registrar_of_the_institute_of_physical_education_sports_and_recreation",
+    "patterns": ["Who is the registrar of College of Institute of Physical Education Sports and Recreation?"],
+    "responses": ["No record BU site as of the moment."]
+},
+
+{"tag": "contact_details_of_registrar_of_the_institute_of_physical_education_sports_and_recreation",
+    "patterns": ["How can I contact the registrar of College of Institute of Physical Education Sports and Recreation?"],
+    "responses": ["No record BU site as of the moment."]
+},
+
+{"tag": "registrar_of_the_institute_of_architecture",
+    "patterns": ["Who is the registrar of Institute of Architecture?"],
+    "responses": ["Ms. Ruby L. Rivero"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_institute_of_architecture",
+    "patterns": ["How can I contact the registrar of Institute of Architecture?"],
+    "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_polangui_campus",
+    "patterns": ["Who is the registrar of Polangui Campus?"],
+    "responses": ["Ms. Lily Lolo"]
+},
+
+{"tag": "contact_details_of_registrar_of_the_polangui_campus",
+    "patterns": ["How can I contact the registrar of Polangui Campus?"],
+    "responses": ["Email: lrlolo@bicol-u.edu.ph or bupcreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_tabaco_campus",
+    "patterns": ["Who is the registrar of Tabaco Campus?"],
+    "responses": ["Ms. Wilhelmina B. Henson"]
+},
+
+{"tag": "contact_details_of_registrar_of_Tabaco_Campus",
+    "patterns": ["How can I contact the registrar of Tabaco Campus?"],
+    "responses": ["Email: wbhenson@bicol-u.edu.ph or butcreg@bicol-u.edu.ph"]
+},
+
+{"tag": "registrar_of_the_gubat_campus",
+    "patterns": ["Who is the registrar of Gubat Campus?"],
+    "responses": ["Ms. Maria Rechel M .Marcaida"]
+},
+
+{"tag": "contact_details_of_registrar_of_Gubat Campus",
+    "patterns": ["How can I contact the registrar of Gubat Campus"],
+    "responses": ["No record in BU site as of the moment"]
+},
+
+{"tag": "admission_to_undergraduate_programs",
+    "patterns": ["Can I enroll to undegraduate programs in BU?"],
+    "responses": ["Admission to the undergraduate programs leading to an award of a diploma or baccalaureate degree is selective. To qualify for admission, incoming students need to pass the BUCET"]
+},
+
+{"tag": "reason_for_selective_admission",
+    "patterns": ["Why do Bicol University follow selective admission for undegraduate programs?"],
+    "responses": ["To promote quality and excellence in tertiary education"]
+},
+
+{"tag": "bucet",
+    "patterns": ["What is BUCET"],
+    "responses": ["It is a three-hour examination consisting of sub-tests in Language proficiency in English, Mathematics, Science and Reading Comprehension. "]
+},
+
+{"tag": "how_to_quality_for_admission",
+    "patterns": ["How can I qualify for freshmen admission?"],
+    "responses": ["Admission is based on the applicant’s Bicol University College Entrance Test (BUCET) Composite Rating consisting of the BUCET score and his/her general weighted average (GWA) in the grade 9 to 11"]
+},
+
+{"tag": "general_requirements_for_bucet",
+    "patterns": ["High school seniors expecting to graduate at the end of the school year; OR Senior high school graduates who have not taken and/are not taking any college subject/s; AND Holders of Philippines Educational Placement Test/ Alternative Learning System (PEPT/ALS) certificates who are eligible for admission to college."],
+    "responses": [""]
+},
+
+{"tag": "bucet_cutoff_rating",
+    "patterns": ["What is the cut-off rating for BUCET?"],
+    "responses": ["The BUCET cut-off rating for the Licensure and Non-licensure courses shall be recommended by the Admissions Office."]
+},
+
+{"tag": "transfer_students",
+    "patterns": ["Can I transfer to Bicol University?"],
+    "responses": ["Admission of transferees is contingent upon the availability of slots in the College the applicants are seeking transfer to, upon which the Dean of the College shall declare the slot open or available."]
+},
+
+{"tag": "transfer_instructions",
+    "patterns": ["How can I transfer to Bicol University?"],
+    "responses": ["Transferees' application for transfer must reach the Office of Admissions in due time prior to the registration period together with the letter of intent for transfer."]
+},
+
+{"tag": "transfer_requirements",
+    "patterns": ["What are the requirements for admission of transferees?"],
+    "responses": ["Certification from the Dean/Director of availability of place/slot in the College/Unit; Certification of grades duly signed by the Registrar of the original school bearing the school's seal; or Official transcript of records (OTR) from the last school attended; and Certificate of honorable dismissal"]
+},
+
+{"tag": "transfer_fee",
+    "patterns": ["Is there a fee need to be settled to process my trasnfer requirements to Bicol University?"],
+    "responses": ["Processing of the transferees’ documents shall commence upon payment of processing fee inclusive of aptitude testing which some colleges require."]
+},
+
+{"tag": "interview_for_transfer_applicants",
+    "patterns": ["Do I need to undergo interviews as transfer applicant?"],
+    "responses": ["Applicants for transfer may still go through an interview in the college/unit they intend to transfer to or be subjected to other college/program requirements."]
+},
+
+{"tag": "eligibility_for_admission of transferees",
+    "patterns": ["How can I be eligible for transfer admission to Bicol University?"],
+    "responses": ["Eligibility for admission of transferees shall be determined by the result of multiple assessment procedures, including Course-program aptitude test, if required by the College/Unit/Department; Grade point average (GPA) of 2.0 or 89%; No failing grade in any of the courses taken; Applicant shall not have finished more than twenty-five percent (25%) of the units required for the course; Interview; and/or Other assessment procedure(s) required by the College/Unit/Department. "]
+},
+
+{"tag": "transfer_credits",
+    "patterns": ["Will the university recognize my units earned from my previous college if I transfer?"],
+    "responses": ["Only course units earned from colleges/universities with the same program accreditation level as Bicol University or higher or those who are duly recognized by CHED will be credited."]
+},
+
+{"tag": "transfer_credit_limits",
+    "patterns": ["What is the limit of transfer credits in Bicol University?"],
+    "responses": ["Transfer credits, however, shall not exceed twenty-five percent (25%) of the total number of units required for the course."]
+},
+
+{"tag": "admission_of_graduates_of_tvl_courses",
+    "patterns": ["Can I be admitted to Bicol University if I am a graduate of Technical-Vocational course?"],
+    "responses": ["Admission of graduates of terminal technical-vocational courses shall be assessed on a case-to- case basis. The documentary requirements and conditions set for transfer students shall apply to them."]
+},
+
+{"tag": "shifters",
+    "patterns": ["How can I shift from one course program to another?"],
+    "responses": ["Students are allowed to shift subject for availability of place/slot in the college/unit they are seeking transfer to. Students shall vie for the places/slots along with transferees from outside the University"]
+},
+
+{"tag": "requirements_for_shifting",
+    "patterns": ["What are the requirements in shifting to another course?"],
+    "responses": ["Letter of intent to transfer specifying, among others, the reason for request for transfer; Certification from the Dean/Director of the availability of slot; and Certification of grades duly signed by the College/Unit Registrar."]
+},
+
+{"tag": "processing_fee_for_shifters",
+    "patterns": ["Is there a fee for shifting a course program?"],
+    "responses": ["Conditions required of transferees from outside the University shall apply to the shifters including the payment of processing fee of Php 100.00."]
+},
+
+{"tag": "returning_students",
+    "patterns": ["How can I be readmitted to Bicol University after I stopped schooling?"],
+    "responses": ["Old students who stopped schooling due to ill health or any other valid reason can seek re- admission by presenting medical or other documents to support his/her reason/s for dropping out of school."]
+},
+
+{"tag": "reason_for_declining_the admission_of_returning_student",
+    "patterns": ["Can I not be readmitted to Bicol University after I stopped schooling?"],
+    "responses": ["The college/ unit reserves the right to refuse enrollment/re-admission of old/ returning student on account of proofs of his/her violation of the school's rules and regulations and/or academic deficiency."]
+},
+
+{"tag": "requirements_for_students_returning_from_leave_ob_abscence",
+    "patterns": ["How to be re-admitted upon returning from leave of absence?"],
+    "responses": ["A student returning from leave of absence shall present supporting papers or documents"]
+},
+
+{"tag": "requirements_for_returning_old_students",
+    "patterns": ["What are the requirements for returning old students?"],
+    "responses": ["An old student may be re-admitted upon presentation of his/her clearance duly signed by school officials concerned."]
+},
+
+{"tag": "general_requirements_for_undergraduate_foreign_students",
+    "patterns": ["What are the requirements for admission of undergraduate foreign students?"],
+    "responses": ["Original Transcript of Records (OTR); Personal Data; Affidavit of Support; Alien Certificate of Registration (ACR); Results of Test on English as a Foreign Language (TOEFL); Approved study permit from CHED; and an application fee of $50.00"]
+},
+
+{"tag": "requirements_of_foreign_high_school_graduates_to_bicol_university",
+    "patterns": ["What are the requirements for admission of students from other nations who have graduated from high schools abroad?"],
+    "responses": ["Certification of completion of a secondary curriculum where the applicant had his/her secondary education;Certification of proficiency in English based on the TOEFL score (for non-native speakers of English); Qualifying in the BUCET or any of the following International Foreign-based examination in lieu of the BUCET such as: Scholastic Aptitude Test (SAT) Advanced with a minimum combined score of 1200 in Mathematics, Critical Reading and Writing sub-test areas."]
+},
+
+{"tag": "schedule_of_registration",
+    "patterns": ["When can I register for admission?"],
+    "responses": ["Qualified applicants for admission should register within the period of registration."]
+},
+
+{"tag": "how_to_register_for_admission",
+    "patterns": ["How can I register for admission?"],
+    "responses": ["Registration includes filling out the prescribed forms and paying the required fees. Students enrolled during the preceding semester including summer session are re-enrolled upon being cleared by the Dean and other officials concerned."]
+},
+
+{"tag": "late_registration",
+    "patterns": ["Can I enrol after the scheduled registration?"],
+    "responses": ["No student shall be registered in any subject after the last day of late registration in the school calendar."]
+},
+
+{"tag": "maximum_residency_rule",
+    "patterns": ["How long can I stay in Bicol University?","Maximum Residency Rule"],
+    "responses": ["An undergraduate student must finish the requirements of a course in any college within a period of actual residence equivalent to a maximum of the prescribed length of the program plus one year pursuant to the other provisions of the Universal Access to Quality Tertiary Education Act of 2017."]
+},
+
+{"tag": "examinations",
+        "patterns": ["What are the types of exams?"],
+        "responses": ["Two regular written examinations, the mid-term and the final examinations, are prescribed every semester/ term. Other written, oral or practical examinations are also given at the discretion of the subject instructor.\\n Regular examinations are administered by the subject instructors with the assistance of the proctors.\\n \\n Make-up Examination\\n Examination missed for justifiable reasons may be made up within the same term at the discretion of the subject instructor concerned. "]
+},
+
+{"tag": "grading_system",
+    "patterns": ["What is the grading system?","Grading system","Grade conversion"],
+    "responses": ["The detailed grading system is as follows:\\n",
+            {
+                "Adjectival Rating": {
+                    "Outstanding": [
+                        "1.0\\n",
+                        "1.1\\n",
+                        "1.2\\n",
+                        "1.3\\n",
+                        "1.4\\n"
+                    ],
+                    "Superior": ["1.5\\n", "1.6\\n", "1.7\\n"],
+                    "Very Satifactory": [
+                        "1.8\\n",
+                        "1.9\\n",
+                        "2.0\\n",
+                        "2.1\\n",
+                        "2.2\\n",
+                        "2.3\\n",
+                        "2.4\\n",
+                        "2.5\\n"
+                    ],
+                    "Satisfactory": ["2.6\\n", "2.7\\n", "2.8\\n"],
+                    "Fair/Average": ["2.9\\n", "3.0\\n"],
+                    "Poor": ["3.1-4.0\\n"]
                 },
-                "The passing grade in the Graduate School is 3.0, but a graduate student has to maintain a general weighted average of 2.0, otherwise, s/he will not be allowed to take the comprehensive examination and will subsequently be disqualified from earning the degree. A student who incurred a FAILING MARK in his/her course work may be allowed to retake the subject not more than two times."
-            ]
-        },
 
-        {"tag": "the_grade_of_incomplete",
-            "patterns": ["What is the grade of incomplete?","Grade of incomplete","INC"],
-            "responses": ["An “INC” grade indicates incomplete course work and may be awarded to a graduate or an undergraduate student only when a small portion of the student’s work is incomplete and only when the student is otherwise earning a passing mark. Until removed, the “INC” is not included in the computation of the students GWA. "]
-        },
+                "Equivalent": [
+                    ["99-100\\n", "98\\n", "97\\n", "96\\n", "95\\n"],
+                    ["94\\n", "93\\n", "92\\n"],
+                    ["91\\n", "90\\n", "89\\n", "88\\n", "87\\n", "86\\n", "85\\n", "84\\n"],
+                    ["82-83\\n", "80-81\\n", "78-79\\n"],
+                    ["76-77\\n", "75 (Passing)\\n"],
+                    ["Below 75 Conditional (lowest possible mid-term rating)\\n"],
+                    ["Failure (lowest possible final rating)\\n \\n"]
+                ]
+            },
+            "The passing grade in the Graduate School is 3.0, but a graduate student has to maintain a general weighted average of 2.0, otherwise, s/he will not be allowed to take the comprehensive examination and will subsequently be disqualified from earning the degree. A student who incurred a FAILING MARK in his/her course work may be allowed to retake the subject not more than two times."
+        ]
+    },
 
-        {"tag": "the_grade_of_incomplete01",
-            "patterns": ["Can INC grade be removed?","How to remove my INC grade?"],
-            "responses": ["You must contact your professor on how to remove your INC grade. Student with incomplete (INC) grade of the previous semester are given one school year for completion of subjects; otherwise it will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s)."]
-        },
+{"tag": "the_grade_of_incomplete",
+    "patterns": ["What is the grade of incomplete?","Grade of incomplete","INC"],
+    "responses": ["An “INC” grade indicates incomplete course work and may be awarded to a graduate or an undergraduate student only when a small portion of the student’s work is incomplete and only when the student is otherwise earning a passing mark. Until removed, the “INC” is not included in the computation of the students GWA. "]
+},
 
-        {"tag": "the_grade_of_incomplete02",
-            "patterns": ["I can't contact my professor that gave me an INC grade"],
-            "responses": ["In the event that the concerned professor(s) cannot be contacted (due to resignation, retirement, death, etc.), the Dean is empowered to make decisions for the concerned professor(s) in consultation with the Department Chair."]
-        },
-        
-        {"tag": "graduation_requirements",
-            "patterns": ["What are the graduation requirements?","Graduation requirements"],
-            "responses": ["A student shall be recommended for graduation only after you have satisfied all academic and other requirements prescribed for graduation. No student shall be allowed to graduate from the University unless you are in residence during the last two terms/semesters of his course."]
-        },
+{"tag": "the_grade_of_incomplete01",
+    "patterns": ["Can INC grade be removed?","How to remove my INC grade?"],
+    "responses": ["You must contact your professor on how to remove your INC grade. Student with incomplete (INC) grade of the previous semester are given one school year for completion of subjects; otherwise it will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s)."]
+},
 
-        {"tag": "graduation_with_honors",
-            "patterns": ["What qualifies as suma cum laude?","What qualifies as magna cum laude?","What qualifies as cum laude?","Qualifications for honors"],
-            "responses": ["The University shall award the following:\\nSumma Cum Laude with GWA ≤ 1.25\\nMagna Cum Laude with 1.25 < GWA ≤ 1.45\\nCum Laude with 1.45 < GWA ≤ 1.75 \\ Given that the student have carried the regular load per semester as prescribed in the curriculum for their course, have registered for formal academic credits and carried the subjects called for by the curriculum for which you is registered in a given semester. In case of a graduating student who meets the required general weighted average (GWA) but fails to meet other requirements for the graduation with honors, the award shall be 'with ACADEMIC DISTINCTION'."]
-        },
+{"tag": "the_grade_of_incomplete02",
+    "patterns": ["I can't contact my professor that gave me an INC grade"],
+    "responses": ["In the event that the concerned professor(s) cannot be contacted (due to resignation, retirement, death, etc.), the Dean is empowered to make decisions for the concerned professor(s) in consultation with the Department Chair."]
+},
 
-        {"tag": "graduation_with_honors01",
-            "patterns": ["What are the qualifications for Academic Distinction?"],
-            "responses": ["In the computation of the final average of a graduating student who is a candidate for academic distinction, only grades/ credits earned towards the degree shall be considered, provided you have no grade lower than 3.0 in any of the subjects regardless of whether that subject was taken in the University or elsewhere. If you were a transferee, you must have completed in the Bicol University at least seventy-five (75%) of the total number of units prescribed in your curriculum and must be in residence for at least six (6) semesters/terms immediately preceding graduation. "]
-        },
+{"tag": "graduation_requirements",
+    "patterns": ["What are the graduation requirements?","Graduation requirements"],
+    "responses": ["A student shall be recommended for graduation only after you have satisfied all academic and other requirements prescribed for graduation. No student shall be allowed to graduate from the University unless you are in residence during the last two terms/semesters of his course."]
+},
 
-        {"tag": "nonacademic_awards_or_incentives",
-            "patterns": ["Non-Academic Awards and Incentives for graduating students"],
-            "responses": ["The University also gives due recognition to a graduating student who excels in your academics, leadership, service and sports activities. Likewise, to winners in the regional, national competitions and to the topnotchers in board examinations."]
-        },
+{"tag": "graduation_with_honors",
+    "patterns": ["What qualifies as suma cum laude?","What qualifies as magna cum laude?","What qualifies as cum laude?","Qualifications for honors"],
+    "responses": ["The University shall award the following:\\nSumma Cum Laude with GWA ≤ 1.25\\nMagna Cum Laude with 1.25 < GWA ≤ 1.45\\nCum Laude with 1.45 < GWA ≤ 1.75 \\ Given that the student have carried the regular load per semester as prescribed in the curriculum for their course, have registered for formal academic credits and carried the subjects called for by the curriculum for which you is registered in a given semester. In case of a graduating student who meets the required general weighted average (GWA) but fails to meet other requirements for the graduation with honors, the award shall be 'with ACADEMIC DISTINCTION'."]
+},
 
-        {"tag": "ladderized_type_program_recognition",
-            "patterns": ["Academic excellence award","Ladderized Type Program Recognition"],
-            "responses": ["The University, in recognition of academic excellence among students pursuing degree courses with ladderized/ladder-type programs, shall award them the following based on the computation of the general weighted average (GWA) of subjects taken as prescribed in the ladder program you are pursuing. The awards or recognition will be given in the College Recognition Program. With highest honor with GWA ≤ 1.25. With higher honor with 1.25 < GWA ≤ 1.45, With high honor with 1.45 < GWA ≤ 1.75, Candidates for this recognition/ award shall be evaluated by the College Evaluation Committee on Graduation with Honors."]
-        },
+{"tag": "graduation_with_honors01",
+    "patterns": ["What are the qualifications for Academic Distinction?"],
+    "responses": ["In the computation of the final average of a graduating student who is a candidate for academic distinction, only grades/ credits earned towards the degree shall be considered, provided you have no grade lower than 3.0 in any of the subjects regardless of whether that subject was taken in the University or elsewhere. If you were a transferee, you must have completed in the Bicol University at least seventy-five (75%) of the total number of units prescribed in your curriculum and must be in residence for at least six (6) semesters/terms immediately preceding graduation. "]
+},
 
-        {"tag": "transcript_diploma",
-            "patterns": ["Trascript","Diploma","Application for transcript of records","TOR","Students records"],
-            "responses": ["Since records of students are confidential, information is released only at the request of the student, or of the appropriate institutions and/or officials. Application for transcript of records must be accompanied by the student's clearance and official receipt of transcript payment."]
-        },
+{"tag": "nonacademic_awards_or_incentives",
+    "patterns": ["Non-Academic Awards and Incentives for graduating students"],
+    "responses": ["The University also gives due recognition to a graduating student who excels in your academics, leadership, service and sports activities. Likewise, to winners in the regional, national competitions and to the topnotchers in board examinations."]
+},
 
-        {"tag": "opening_of_cost_recovery_courses",
-            "patterns": ["What are the procedures for cost recovery?","Approval of cost recovery"],
-            "responses": ["The approval of requests shall adhere to the following procedures:\\n 1. Opening of courses on cost recovery basis shall be considered upon request of the following:\\n a. Graduating students with deficiency(ies) whose needed course(s) are not programmed for the semester, and\\n b. Irregular students who need to take the course to fit the mainstream of students in the appropriate curriculum year.\\n \\n 2. Request for opening of courses not aligned with the semestral course offerings based on the regular curriculum year schedule shall be done by the concerned students not later than two weeks before enrollment.\\n 3. Students’ request shall be addressed to the Dean and endorsed by the Program Adviser and/ or Department Chairperson.\\n 4. Same endorsement shall carry the Program Adviser’s or Department Chairperson’s recommendation of the Professor/ Instructor to teach the course, indicating the full student cost.\\n 5. The Professor/Instructor shall be designated by the Dean considering primarily his/ her academic preparation, teaching load which not exceed 30 units, and his/ her willingness to teach the course on cost recovery basis.\\n 6. In case of students with failures (a rating of 5.0), the faculty to be assigned to teach the requested course should not be the same faculty who gave the failing mark.\\n 7. The professor/instructor shall be compensated fully based on your hourly rate. The computation for payment of honorarium shall be as follows:\\n Hourly rate of faculty x no. of hours/ no. of students = Cost per student.\\n \\n 8. The fees shall be deposited to the College Trust Fund and shall be disbursed solely for the purpose.\\n 9. The payment shall be made out to the professors/instructors concerned following the usual procedure and accompanied by the needed documents.\\n 10. The usual supervision shall be exercised by the Deans/ Directors concerned to ensure that the students are given adequate instructional provision."]
-        },
+{"tag": "ladderized_type_program_recognition",
+    "patterns": ["Academic excellence award","Ladderized Type Program Recognition"],
+    "responses": ["The University, in recognition of academic excellence among students pursuing degree courses with ladderized/ladder-type programs, shall award them the following based on the computation of the general weighted average (GWA) of subjects taken as prescribed in the ladder program you are pursuing. The awards or recognition will be given in the College Recognition Program. With highest honor with GWA ≤ 1.25. With higher honor with 1.25 < GWA ≤ 1.45, With high honor with 1.45 < GWA ≤ 1.75, Candidates for this recognition/ award shall be evaluated by the College Evaluation Committee on Graduation with Honors."]
+},
 
-        {"tag": "prescribed_uniform",
-            "patterns": ["uniform"],
-            "responses": ["Students must wear the required uniform for their academic level. The design approved by the Board of Regents are disseminated upon enrollment."]
-        },
+{"tag": "transcript_diploma",
+    "patterns": ["Trascript","Diploma","Application for transcript of records","TOR","Students records"],
+    "responses": ["Since records of students are confidential, information is released only at the request of the student, or of the appropriate institutions and/or officials. Application for transcript of records must be accompanied by the student's clearance and official receipt of transcript payment."]
+},
 
-        {"tag": "credit_unit",
-            "patterns": ["Credit load","Credit unit","Units","Units per semester"],
-            "responses": ["One unit of credit shall be at least eighteen (18) full hours of instruction per semester in the form of lecture, discussion, seminar, tutorial, or equivalent field or any combination of these forms. A substantial equivalent shall be observed for other terms such as trimestral or quarterly system."]
-        },
+{"tag": "opening_of_cost_recovery_courses",
+    "patterns": ["What are the procedures for cost recovery?","Approval of cost recovery"],
+    "responses": ["The approval of requests shall adhere to the following procedures:\\n 1. Opening of courses on cost recovery basis shall be considered upon request of the following:\\n a. Graduating students with deficiency(ies) whose needed course(s) are not programmed for the semester, and\\n b. Irregular students who need to take the course to fit the mainstream of students in the appropriate curriculum year.\\n \\n 2. Request for opening of courses not aligned with the semestral course offerings based on the regular curriculum year schedule shall be done by the concerned students not later than two weeks before enrollment.\\n 3. Students’ request shall be addressed to the Dean and endorsed by the Program Adviser and/ or Department Chairperson.\\n 4. Same endorsement shall carry the Program Adviser’s or Department Chairperson’s recommendation of the Professor/ Instructor to teach the course, indicating the full student cost.\\n 5. The Professor/Instructor shall be designated by the Dean considering primarily his/ her academic preparation, teaching load which not exceed 30 units, and his/ her willingness to teach the course on cost recovery basis.\\n 6. In case of students with failures (a rating of 5.0), the faculty to be assigned to teach the requested course should not be the same faculty who gave the failing mark.\\n 7. The professor/instructor shall be compensated fully based on your hourly rate. The computation for payment of honorarium shall be as follows:\\n Hourly rate of faculty x no. of hours/ no. of students = Cost per student.\\n \\n 8. The fees shall be deposited to the College Trust Fund and shall be disbursed solely for the purpose.\\n 9. The payment shall be made out to the professors/instructors concerned following the usual procedure and accompanied by the needed documents.\\n 10. The usual supervision shall be exercised by the Deans/ Directors concerned to ensure that the students are given adequate instructional provision."]
+},
 
-        {"tag": "academic_load",
-            "patterns": ["Academic load","Academic load per semester","Academic load limit"],
-            "responses": ["The regular academic load for undergraduate students shall be that which is prescribed in the curriculum in a semester for a certain program/course. A graduating student with satisfactory academic record may be permitted to carry an additional load of one or two subjects in your last semester, provided that the total load does not exceed the maximum of thirty-three (33) units per semester, provided further that this will not contradict with any existing policy of the University; provided finally that the student concerned is a candidate for graduation at the end of the semester that the load is allowed.\\n An additional of one (1) or two (2) non major subjects may also be allowed to students who are on Student Teaching /Practicum. During the summer term, the regular load shall be nine (9) units or that which is prescribed in the curriculum, but in justifiable cases the Dean or Director may allow a higher load of not exceeding twelve (12) units. The Dean shall limit the academic load to students who are employed in the University, whether full time or part-time."]
-        },
+{"tag": "prescribed_uniform",
+    "patterns": ["uniform"],
+    "responses": ["Students must wear the required uniform for their academic level. The design approved by the Board of Regents are disseminated upon enrollment."]
+},
 
-        {"tag": "classification_of_students",
-            "patterns": ["What are the Classification of Students"],
-            "responses": ["Undergraduate students are classified as regular, irregular, non-regular, and foreign. Students are also classified, for purposes of registration as First Year, Sophomore, Junior, Senior and Pre-senior."]
-        },
+{"tag": "credit_unit",
+    "patterns": ["Credit load","Credit unit","Units","Units per semester"],
+    "responses": ["One unit of credit shall be at least eighteen (18) full hours of instruction per semester in the form of lecture, discussion, seminar, tutorial, or equivalent field or any combination of these forms. A substantial equivalent shall be observed for other terms such as trimestral or quarterly system."]
+},
 
-        {"tag": "classification_of_students01",
-            "patterns": ["Who are considered as regular students?","What are regular students?","Regular Students"],
-            "responses": ["A Regular Undergraduate Student is one who have organized a program of study for a bachelor’s degree, or undergraduate diploma/certificate, is registered for formal academic credits, and carries the subjects called for by the curriculum for which you are registered in a given semester."]
-        },
+{"tag": "academic_load",
+    "patterns": ["Academic load","Academic load per semester","Academic load limit"],
+    "responses": ["The regular academic load for undergraduate students shall be that which is prescribed in the curriculum in a semester for a certain program/course. A graduating student with satisfactory academic record may be permitted to carry an additional load of one or two subjects in your last semester, provided that the total load does not exceed the maximum of thirty-three (33) units per semester, provided further that this will not contradict with any existing policy of the University; provided finally that the student concerned is a candidate for graduation at the end of the semester that the load is allowed.\\n An additional of one (1) or two (2) non major subjects may also be allowed to students who are on Student Teaching /Practicum. During the summer term, the regular load shall be nine (9) units or that which is prescribed in the curriculum, but in justifiable cases the Dean or Director may allow a higher load of not exceeding twelve (12) units. The Dean shall limit the academic load to students who are employed in the University, whether full time or part-time."]
+},
 
-        {"tag": "classification_of_students02",
-            "patterns": ["Who are considered as irregular students?","What are irregular students?","Irregular Students"],
-            "responses": ["An Irregular Student is one who is registered for formal academic credits, but does not carry the full semester load called for by the curriculum for which you are registered in a given semester."]
-        },
+{"tag": "classification_of_students",
+    "patterns": ["What are the Classification of Students"],
+    "responses": ["Undergraduate students are classified as regular, irregular, non-regular, and foreign. Students are also classified, for purposes of registration as First Year, Sophomore, Junior, Senior and Pre-senior."]
+},
 
-        {"tag": "classification_of_students03",
-            "patterns": ["Who are considered as non-regular students?","What are non-regular students?","Non-regular Students"],
-            "responses": ["A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken. Classified as non-regular students are the following:\\n -Non-degree students with credits\\n -Cross registrants with credits\\n -Special students without credits."]
-        },
+{"tag": "classification_of_students01",
+    "patterns": ["Who are considered as regular students?","What are regular students?","Regular Students"],
+    "responses": ["A Regular Undergraduate Student is one who have organized a program of study for a bachelor’s degree, or undergraduate diploma/certificate, is registered for formal academic credits, and carries the subjects called for by the curriculum for which you are registered in a given semester."]
+},
 
-        {"tag": "classification_of_students04",
-            "patterns": ["Who are considered as foreign students?","What are foreign students?","Foreign Students"],
-            "responses": ["A Foreign Student is one who is a citizen /subject or resident of another country whose admission to the University is contingent upon the compliance of the requirements of the National Government, after qualifying for admission and submission of all the documentary and other requirements of the University."]
-        },
+{"tag": "classification_of_students02",
+    "patterns": ["Who are considered as irregular students?","What are irregular students?","Irregular Students"],
+    "responses": ["An Irregular Student is one who is registered for formal academic credits, but does not carry the full semester load called for by the curriculum for which you are registered in a given semester."]
+},
 
-        {"tag": "classification_of_students05",
-            "patterns": ["Who are considered as pre-senior students?","What are pre-senior students?","Pre-senior Students", "Pre senio Students"],
-            "responses": ["A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. In the case of a five-year degree course/program, one is classified as a senior student if you have finished the prescribed subjects for the first, second, third, and fourth years of his curriculum, or have completed not less than eighty percent (80%) of the total number of units required for the course."]
-        },
+{"tag": "classification_of_students03",
+    "patterns": ["Who are considered as non-regular students?","What are non-regular students?","Non-regular Students"],
+    "responses": ["A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken. Classified as non-regular students are the following:\\n -Non-degree students with credits\\n -Cross registrants with credits\\n -Special students without credits."]
+},
 
-        {"tag": "greeting",
-            "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-            "responses": ["Hello, thanks for asking", "Good to see you!", "Hi there, how can I help?"]
-        },
-    
-        {"tag": "goodbye",
-            "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-            "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."]
-        },
-    
-        {"tag": "thanks",
-            "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-            "responses": ["Happy to help!", "Any time!", "My pleasure"]
-        },
-        
-        {"tag": "noanswer",
-            "patterns": [],
-            "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
-        },
-    
-        {"tag": "options",
-            "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-            "responses": ["Hi! I'm BUbot. I can answer your queries about Bicol University :)"]
-        }, 
-    
-        {"tag": "library_card_application",
-            "patterns": ["How to apply for a library card?","How to get a Library Card?","What should I do to get a Library Card?","What are the requirements for getting a library card?"],
-            "responses": ["You must secure an application form the unit/college librarian concerned by presenting the Certificate of Registration (COR). The library cards will then be issued in due time after the students have submitted the duly accomplished form together with two copies of recent 1x1 ID photos"]
-        },
-    
-        {"tag": "use_of_library_card",
-            "patterns": ["How should I use the Library Card?","What is the purpose of my Library Card?",""],
-            "responses": ["Your library card shall be used as an identification and passport when entering the unit/college libraries and in borrowing book/s for overnight or over-weekend use."]
-        },
-    
-        {"tag": "use_of_library_card1",
-            "patterns": ["What is the validity of my Library Card?",""],
-            "responses": ["The library card issued to will be used throughout your stay in the University and is non-transferrable."]
-        },
-    
-        {"tag": "borrowing_procedure",
-            "patterns": ["How can I borrow a book from the Library?","How to borrow a book from the Library?"],
-            "responses": ["To borrow a book you may present to the Librarian-in-charge the book with the signed book card together with the currently validated library card."]
-        },
-    
-        {"tag": "borrowing_procedure1",
-            "patterns": ["Can I borrow a book or other materials for someone else in the Library?"],
-            "responses": ["No, you can't borrow and/or sign for books and other library materials on behalf of someone else."]
-           },
-    
-        {"tag": "availment_of_library_facilities",
-            "patterns": ["Can I borrow other materials than books?","What other materials can I borrow?"],
-            "responses": ["You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY. A Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."]
-        },    
-    
-        {"tag": "availment_of_library_facilities1",
-            "patterns": ["Can I borrow dissertations, theses, manuscripts and feasibility studies?"],
-            "responses": ["Yes, but they are FOR ROOM USE ONLY"]
-        },
-    
-        {"tag": "availment_of_library_facilities2",
-            "patterns": ["Can I photocopy dissertations, theses, manuscripts and feasibility studies?", "Am I allowed to photocopy dissertations, theses, manuscripts and feasibility studies?"],
-            "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
-        },
-    
-        {"tag": "availment_of_library_facilities3",
-            "patterns": ["When should I return a borrowed book?","How many days am I allowed to keep the book I borrowed?","What time should I return the borrowed books?"],
-            "responses": ["A Reserved book may be borrowed for overnight or week-end use at the last hour before closing time to be returned on or before 9:00 A.M. the following school day"]
-        },
-    
-        {"tag": "availment_of_library_facilities4",
-            "patterns": ["How many books can I borrow at once?","Can I borrow more than one book?"],
-            "responses": ["You can borrow a maximum of two (2) Non-reserved Circulation books for overnight or weekend use to be returned on or before 9:00 A.M. the following school day."]
-        },
-    
-        {"tag": "library_hours",
-            "patterns": ["What are the university library hours?","What time does the university library open?","What time does the university library closes?"],
-            "responses": ["The university library is open on Mondays-Friday from 8:00 AM - 7:00 PM and on Saturdays from 8:00 AM - 5:00 PM"]
-        },
-    
-        {"tag": "library_hours1",
-            "patterns": ["Is the university library open during Saturdays?","Is the university library open on weekends?"],
-            "responses": ["Yes, the university library is open during Saturdays from 8:00 AM - 5:00 PM"]
-        },
-    
-        {"tag": "other_researchers",
-            "patterns": ["Are outsiders allowed to enter the university library?","I am not a Bicol University student, am I allowed to visit the university library?"],
-            "responses": ["Researchers who are not bona fide students of the University may be allowed to use the library information resources/facilities of the different unit/college libraries upon payment of a library fee; wherein the amount to be paid depends on the classification of the researcher or external user. Just present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
-        },
-    
-        {"tag": "medical_and_dental_services",
-            "patterns": ["What medical services does the BU Medical Clinic offers?","What medical services can I get from BU Medical Clinic?"],
-            "responses": ["The Medical & Dental Clinic provides the basic health services to the students and personnel namely: \\n 1. Conduct of Physical Health Examination;\\n2. Giving attention to daily consultations and treatments;\\n3. Issuance of medical certificates;\\n4. Giving attention to emergency cases/during athletics;\\5. Making referrals of special cases to proper authorities;\\n6. Conduct of lectures/counseling on management of illness; and\\n7. Establishment of linkages among other health agencies."]
-        },
-    
-        {"tag": "medical_and_dental_services1",
-            "patterns": ["What dental services does the BU Dental Clinic offers?","What dental services can I get from BU Dental Clinic?"],
-            "responses": ["The Medical and Dental Clinic provides services like:\\n1. Conduct of Annual Dental Examination for Elementary, High School & Senior High School Students;\\n2. Giving attention to dental consultations and treatments;\\n3. Performance of oral prophylaxis;\\n4. Performance of dental extraction;\\n5. Making referrals of special cases to proper authorities; 6. Conduct of chair side instruction/ lectures; and\\n6. Issuance of dental certificates."]
-        },
-    
-        {"tag": "medical_and_dental_services2",
-            "patterns": ["How can I avail the medical and dental services from BU Medical and Dental Clinic?","What are the requirements in availing medical and dental services from BU Medical and Dental Clinic?"],
-            "responses": ["You are required to present your university ID to avail of these free health services."]
-        },
-    
-        {"tag": "medical_and_dental_services3",
-            "patterns": ["What are the university Medical and Dental Clinic hours?","What time does the university Medical and Dental Clinic open?","What time does the university Medical and Dental Clinic closes?"],
-            "responses": ["The university Medical and Dental Clinic is open from Monday to Friday (8:00-12:00 AM, 1:00-8:00 PM) and Saturday (8:00-12:00 AM)."]
-        },
-    
-        {"tag": "minor_offenses",
-            "patterns": ["What are the minor offenses for violating the university rules and regulation?","What are the sanctions or penalties for violating the university rules and regulation?"],
-            "responses": ["First Offense - Reprimand\\nSecond Offense - Written Warning\\nThird Offense - Community Service\\nFourth Offense - Suspension for 7 to 14 days"]
-        },
-    
-        {"tag": "major_offenses",
-            "patterns": ["What are the offenses for bullying?"],
-            "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Suspension of 6 months and 1 day to 1 year"]
-        },
-    
-        {"tag": "major_offenses1",
-            "patterns": ["What are the offenses for Carrying of firearms and other Dangerous Weapons?"],
-            "responses": ["First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses2",
-            "patterns": ["What are the offenses for Creating Disorder or Disturbance within the University?"],
-            "responses": ["First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-        
-        {"tag": "major_offenses3",
-            "patterns": ["What are the offenses for Destruction of Any Property of the University, Its Guests, Employees or Students?"],
-            "responses": ["First Offense - Suspension of 1 week - 6 months and payment of the value involved and/or replacement of the damaged property\\nSecond Offense - Suspension of 6 months and 1 day to 1 year and payment of the value involved and/or replacement of the damaged property\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses4",
-            "patterns": ["What are the offenses for Drinking of Alcoholic Beverages or Manifesting Drunken Behavior within the university premises?"],
-            "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses5",
-            "patterns": ["What are the offenses for Falsification of Official Document?"],
-            "responses": ["First Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses6",
-            "patterns": ["What are the offenses for Gambling?"],
-            "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses7",
-            "patterns": ["What are the offenses for Hazing of any variety inside or outside the premisesof the Bicol University by any fraternity/sorority or individual or a group representing an accredited B.U. Organization?"],
-            "responses": ["First Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses8",
-            "patterns": ["What are the offenses for Malversation or Unlawful Disbursement of school funds?"],
-            "responses": ["First Offense - Suspension 1 week - 6 months and payment of the value involved\\nSecond Offense - Suspension 6 months and 1 day to 1 year and payment of the value involved\\nThird Offense -  Dismissal"]
-        },
-    
-        {"tag": "major_offenses9",
-            "patterns": ["What are the offenses for Plagiarism?"],
-            "responses": ["First Offense\\n1. Written warning; or\\n2. Loss of credit for the work involved;\\n3. Reduction of grades; or\\n4. All of the foregoing penalties - depending on the extent of the act committed, subject to the discretion of the investigating commit- tee.\\n\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses10",
-            "patterns": ["What are the offenses for Possession of prohibited drugs or chemicals?"],
-            "responses": ["First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses11",
-            "patterns": ["What are the offenses for Photo or Video Voyeurism?"],
-            "responses": ["First Offense - Suspension 6 months and 1 day to 1 year\\nSecond Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses12",
-            "patterns": ["What are the offenses for Sexual Harassment?"],
-            "responses": ["First Offense - Suspension of not more than 30 calendar days\\nSecond Offense - Suspension of 1 to 2 semesters\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses13",
-            "patterns": ["What are the offenses for Stalking?"],
-            "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses14",
-            "patterns": ["What are the offenses for Theft of property belonging to the University community or a guest of the University?"],
-            "responses": ["First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        },
-    
-        {"tag": "major_offenses15",
-            "patterns": ["What are the offenses for Unauthorized solicitation of contribution/ donation using the name of the University?"],
-            "responses": ["First Offense - Suspension 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
-        }
+{"tag": "classification_of_students04",
+    "patterns": ["Who are considered as foreign students?","What are foreign students?","Foreign Students"],
+    "responses": ["A Foreign Student is one who is a citizen /subject or resident of another country whose admission to the University is contingent upon the compliance of the requirements of the National Government, after qualifying for admission and submission of all the documentary and other requirements of the University."]
+},
 
-    ]
-}
+{"tag": "classification_of_students05",
+    "patterns": ["Who are considered as pre-senior students?","What are pre-senior students?","Pre-senior Students", "Pre senio Students"],
+    "responses": ["A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. In the case of a five-year degree course/program, one is classified as a senior student if you have finished the prescribed subjects for the first, second, third, and fourth years of his curriculum, or have completed not less than eighty percent (80%) of the total number of units required for the course."]
+},
+
+{"tag": "greeting",
+    "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+    "responses": ["Hello, thanks for asking", "Good to see you!", "Hi there, how can I help?"]
+},
+
+{"tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+    "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."]
+},
+
+{"tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"]
+},
+
+{"tag": "noanswer",
+    "patterns": [],
+    "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+},
+
+{"tag": "options",
+    "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+    "responses": ["Hi! I'm BUbot. I can answer your queries about Bicol University :)"]
+}, 
+
+{"tag": "library_card_application",
+    "patterns": ["How to apply for a library card?","How to get a Library Card?","What should I do to get a Library Card?","What are the requirements for getting a library card?"],
+    "responses": ["You must secure an application form the unit/college librarian concerned by presenting the Certificate of Registration (COR). The library cards will then be issued in due time after the students have submitted the duly accomplished form together with two copies of recent 1x1 ID photos"]
+},
+
+{"tag": "use_of_library_card",
+    "patterns": ["How should I use the Library Card?","What is the purpose of my Library Card?",""],
+    "responses": ["Your library card shall be used as an identification and passport when entering the unit/college libraries and in borrowing book/s for overnight or over-weekend use."]
+},
+
+{"tag": "use_of_library_card1",
+    "patterns": ["What is the validity of my Library Card?",""],
+    "responses": ["The library card issued to will be used throughout your stay in the University and is non-transferrable."]
+},
+
+{"tag": "borrowing_procedure",
+    "patterns": ["How can I borrow a book from the Library?","How to borrow a book from the Library?"],
+    "responses": ["To borrow a book you may present to the Librarian-in-charge the book with the signed book card together with the currently validated library card."]
+},
+
+{"tag": "borrowing_procedure1",
+    "patterns": ["Can I borrow a book or other materials for someone else in the Library?"],
+    "responses": ["No, you can't borrow and/or sign for books and other library materials on behalf of someone else."]
+    },
+
+{"tag": "availment_of_library_facilities",
+    "patterns": ["Can I borrow other materials than books?","What other materials can I borrow?"],
+    "responses": ["You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY. A Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."]
+},    
+
+{"tag": "availment_of_library_facilities1",
+    "patterns": ["Can I borrow dissertations, theses, manuscripts and feasibility studies?"],
+    "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+},
+
+{"tag": "availment_of_library_facilities2",
+    "patterns": ["Can I photocopy dissertations, theses, manuscripts and feasibility studies?", "Am I allowed to photocopy dissertations, theses, manuscripts and feasibility studies?"],
+    "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+},
+
+{"tag": "availment_of_library_facilities3",
+    "patterns": ["When should I return a borrowed book?","How many days am I allowed to keep the book I borrowed?","What time should I return the borrowed books?"],
+    "responses": ["A Reserved book may be borrowed for overnight or week-end use at the last hour before closing time to be returned on or before 9:00 A.M. the following school day"]
+},
+
+{"tag": "availment_of_library_facilities4",
+    "patterns": ["How many books can I borrow at once?","Can I borrow more than one book?"],
+    "responses": ["You can borrow a maximum of two (2) Non-reserved Circulation books for overnight or weekend use to be returned on or before 9:00 A.M. the following school day."]
+},
+
+{"tag": "library_hours",
+    "patterns": ["What are the university library hours?","What time does the university library open?","What time does the university library closes?"],
+    "responses": ["The university library is open on Mondays-Friday from 8:00 AM - 7:00 PM and on Saturdays from 8:00 AM - 5:00 PM"]
+},
+
+{"tag": "library_hours1",
+    "patterns": ["Is the university library open during Saturdays?","Is the university library open on weekends?"],
+    "responses": ["Yes, the university library is open during Saturdays from 8:00 AM - 5:00 PM"]
+},
+
+{"tag": "other_researchers",
+    "patterns": ["Are outsiders allowed to enter the university library?","I am not a Bicol University student, am I allowed to visit the university library?"],
+    "responses": ["Researchers who are not bona fide students of the University may be allowed to use the library information resources/facilities of the different unit/college libraries upon payment of a library fee; wherein the amount to be paid depends on the classification of the researcher or external user. Just present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
+},
+
+{"tag": "medical_and_dental_services",
+    "patterns": ["What medical services does the BU Medical Clinic offers?","What medical services can I get from BU Medical Clinic?"],
+    "responses": ["The Medical & Dental Clinic provides the basic health services to the students and personnel namely: \\n 1. Conduct of Physical Health Examination;\\n2. Giving attention to daily consultations and treatments;\\n3. Issuance of medical certificates;\\n4. Giving attention to emergency cases/during athletics;\\5. Making referrals of special cases to proper authorities;\\n6. Conduct of lectures/counseling on management of illness; and\\n7. Establishment of linkages among other health agencies."]
+},
+
+{"tag": "medical_and_dental_services1",
+    "patterns": ["What dental services does the BU Dental Clinic offers?","What dental services can I get from BU Dental Clinic?"],
+    "responses": ["The Medical and Dental Clinic provides services like:\\n1. Conduct of Annual Dental Examination for Elementary, High School & Senior High School Students;\\n2. Giving attention to dental consultations and treatments;\\n3. Performance of oral prophylaxis;\\n4. Performance of dental extraction;\\n5. Making referrals of special cases to proper authorities; 6. Conduct of chair side instruction/ lectures; and\\n6. Issuance of dental certificates."]
+},
+
+{"tag": "medical_and_dental_services2",
+    "patterns": ["How can I avail the medical and dental services from BU Medical and Dental Clinic?","What are the requirements in availing medical and dental services from BU Medical and Dental Clinic?"],
+    "responses": ["You are required to present your university ID to avail of these free health services."]
+},
+
+{"tag": "medical_and_dental_services3",
+    "patterns": ["What are the university Medical and Dental Clinic hours?","What time does the university Medical and Dental Clinic open?","What time does the university Medical and Dental Clinic closes?"],
+    "responses": ["The university Medical and Dental Clinic is open from Monday to Friday (8:00-12:00 AM, 1:00-8:00 PM) and Saturday (8:00-12:00 AM)."]
+},
+
+{"tag": "minor_offenses",
+    "patterns": ["What are the minor offenses for violating the university rules and regulation?","What are the sanctions or penalties for violating the university rules and regulation?"],
+    "responses": ["First Offense - Reprimand\\nSecond Offense - Written Warning\\nThird Offense - Community Service\\nFourth Offense - Suspension for 7 to 14 days"]
+},
+
+{"tag": "major_offenses",
+    "patterns": ["What are the offenses for bullying?"],
+    "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Suspension of 6 months and 1 day to 1 year"]
+},
+
+{"tag": "major_offenses1",
+    "patterns": ["What are the offenses for Carrying of firearms and other Dangerous Weapons?"],
+    "responses": ["First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses2",
+    "patterns": ["What are the offenses for Creating Disorder or Disturbance within the University?"],
+    "responses": ["First Offense - Suspension of 1 week - 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses3",
+    "patterns": ["What are the offenses for Destruction of Any Property of the University, Its Guests, Employees or Students?"],
+    "responses": ["First Offense - Suspension of 1 week - 6 months and payment of the value involved and/or replacement of the damaged property\\nSecond Offense - Suspension of 6 months and 1 day to 1 year and payment of the value involved and/or replacement of the damaged property\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses4",
+    "patterns": ["What are the offenses for Drinking of Alcoholic Beverages or Manifesting Drunken Behavior within the university premises?"],
+    "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses5",
+    "patterns": ["What are the offenses for Falsification of Official Document?"],
+    "responses": ["First Offense - Dismissal"]
+},
+
+{"tag": "major_offenses6",
+    "patterns": ["What are the offenses for Gambling?"],
+    "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 3 months and 1 day to 6 months\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses7",
+    "patterns": ["What are the offenses for Hazing of any variety inside or outside the premisesof the Bicol University by any fraternity/sorority or individual or a group representing an accredited B.U. Organization?"],
+    "responses": ["First Offense - Dismissal"]
+},
+
+{"tag": "major_offenses8",
+    "patterns": ["What are the offenses for Malversation or Unlawful Disbursement of school funds?"],
+    "responses": ["First Offense - Suspension 1 week - 6 months and payment of the value involved\\nSecond Offense - Suspension 6 months and 1 day to 1 year and payment of the value involved\\nThird Offense -  Dismissal"]
+},
+
+{"tag": "major_offenses9",
+    "patterns": ["What are the offenses for Plagiarism?"],
+    "responses": ["First Offense\\n1. Written warning; or\\n2. Loss of credit for the work involved;\\n3. Reduction of grades; or\\n4. All of the foregoing penalties - depending on the extent of the act committed, subject to the discretion of the investigating commit- tee.\\n\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses10",
+    "patterns": ["What are the offenses for Possession of prohibited drugs or chemicals?"],
+    "responses": ["First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses11",
+    "patterns": ["What are the offenses for Photo or Video Voyeurism?"],
+    "responses": ["First Offense - Suspension 6 months and 1 day to 1 year\\nSecond Offense - Dismissal"]
+},
+
+{"tag": "major_offenses12",
+    "patterns": ["What are the offenses for Sexual Harassment?"],
+    "responses": ["First Offense - Suspension of not more than 30 calendar days\\nSecond Offense - Suspension of 1 to 2 semesters\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses13",
+    "patterns": ["What are the offenses for Stalking?"],
+    "responses": ["First Offense - Reprimand\\nSecond Offense - Suspension of 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses14",
+    "patterns": ["What are the offenses for Theft of property belonging to the University community or a guest of the University?"],
+    "responses": ["First Offense - Suspension of 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "major_offenses15",
+    "patterns": ["What are the offenses for Unauthorized solicitation of contribution/ donation using the name of the University?"],
+    "responses": ["First Offense - Suspension 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+}]
