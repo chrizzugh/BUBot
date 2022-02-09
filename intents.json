@@ -19,7 +19,7 @@
 },
 
 {"tag": "options",
-    "patterns": ["How you could help me?","What you can do?","What help you provide?","How you can be helpful?","What support is offered"],
+    "patterns": ["How you could help me?","What you can do?","What help you provide?","How you can be helpful?","What support is offered","Who are you?"],
     "responses": ["Hi! I'm BUbot. I can answer your queries about Bicol University :)"]
 },   
 
@@ -429,8 +429,8 @@
 },
 
 {"tag": "general_requirements_for_bucet",
-    "patterns": ["High school seniors expecting to graduate at the end of the school year; OR Senior high school graduates who have not taken and/are not taking any college subject/s; AND Holders of Philippines Educational Placement Test/ Alternative Learning System (PEPT/ALS) certificates who are eligible for admission to college."],
-    "responses": [""]
+    "patterns": ["Who can take the BUCET?"],
+    "responses": ["High school seniors expecting to graduate at the end of the school year; OR Senior high school graduates who have not taken and/are not taking any college subject/s; AND Holders of Philippines Educational Placement Test/ Alternative Learning System (PEPT/ALS) certificates who are eligible for admission to college."]
 },
 
 {"tag": "bucet_cutoff_rating",
@@ -545,67 +545,90 @@
 
 {"tag": "maximum_residency_rule",
     "patterns": ["How long can I stay in Bicol University?","Maximum Residency Rule"],
-    "responses": ["An undergraduate student must finish the requirements of a course in any college within a period of actual residence equivalent to a maximum of the prescribed length of the program plus one year pursuant to the other provisions of the Universal Access to Quality Tertiary Education Act of 2017."]
+    "responses": ["The maximum residensy is the prescribed length of the program plus one year pursuant to the Universal Access to Quality Tertiary Education Act of 2017."]
 },
 
 {"tag": "examinations",
         "patterns": ["What are the types of exams?"],
-        "responses": ["Two regular written examinations, the mid-term and the final examinations, are prescribed every semester/ term. Other written, oral or practical examinations are also given at the discretion of the subject instructor.\\n Regular examinations are administered by the subject instructors with the assistance of the proctors.\\n \\n Make-up Examination\\n Examination missed for justifiable reasons may be made up within the same term at the discretion of the subject instructor concerned. "]
+        "responses": ["Two regular written examinations, the mid-term and the final examinations, are prescribed every semester or term. Other written, oral or practical examinations are also given at the discretion of the subject instructor."]
 },
 
 {"tag": "grading_system",
-    "patterns": ["What is the grading system?","Grading system","Grade conversion"],
-    "responses": ["The detailed grading system is as follows:\\n",
-            {
-                "Adjectival Rating": {
-                    "Outstanding": [
-                        "1.0\\n",
-                        "1.1\\n",
-                        "1.2\\n",
-                        "1.3\\n",
-                        "1.4\\n"
-                    ],
-                    "Superior": ["1.5\\n", "1.6\\n", "1.7\\n"],
-                    "Very Satifactory": [
-                        "1.8\\n",
-                        "1.9\\n",
-                        "2.0\\n",
-                        "2.1\\n",
-                        "2.2\\n",
-                        "2.3\\n",
-                        "2.4\\n",
-                        "2.5\\n"
-                    ],
-                    "Satisfactory": ["2.6\\n", "2.7\\n", "2.8\\n"],
-                    "Fair/Average": ["2.9\\n", "3.0\\n"],
-                    "Poor": ["3.1-4.0\\n"]
-                },
+    "patterns": ["What is the grading system?","What is the rating system?"],
+    "responses": ["There are five adjectival ratings, Outstanding, Superior, Very Satisfactory, Satisfactory, Fair or Average and Poor."]
+},
 
-                "Equivalent": [
-                    ["99-100\\n", "98\\n", "97\\n", "96\\n", "95\\n"],
-                    ["94\\n", "93\\n", "92\\n"],
-                    ["91\\n", "90\\n", "89\\n", "88\\n", "87\\n", "86\\n", "85\\n", "84\\n"],
-                    ["82-83\\n", "80-81\\n", "78-79\\n"],
-                    ["76-77\\n", "75 (Passing)\\n"],
-                    ["Below 75 Conditional (lowest possible mid-term rating)\\n"],
-                    ["Failure (lowest possible final rating)\\n \\n"]
-                ]
-            },
-            "The passing grade in the Graduate School is 3.0, but a graduate student has to maintain a general weighted average of 2.0, otherwise, s/he will not be allowed to take the comprehensive examination and will subsequently be disqualified from earning the degree. A student who incurred a FAILING MARK in his/her course work may be allowed to retake the subject not more than two times."
-        ]
-    },
+{"tag": "grading_system01",
+    "patterns": ["What is an outstanding rating?","What grades are considered as outstanding?"],
+    "responses": ["Outstanding Grade is from 1.0 - 1.4 with equivalent values of 99-100, 98, 97, 96, and 95 subsequently."]
+},
+
+{"tag": "grading_system02",
+    "patterns": ["What is a superior rating?","What grades are considered as superior?"],
+    "responses": ["Superior Grade is from 1.5 - 1.7 with equivalent values of 94, 93, and 92 subsequently."]
+},
+
+{"tag": "grading_system03",
+    "patterns": ["What is a very satisfactory rating?","What grades are considered as very satisfactory?"],
+    "responses": ["Very Satisfactory Rating is from 1.8 - 2.5 with equivalent values of 91, 90, 89, 88, 87, 86, 85 and 84 subsequently."]
+},
+
+{"tag": "grading_system04",
+    "patterns": ["What is a satisfatory rating?","What grades are considered as satisfactory?"],
+    "responses": ["Satisfactory Rating is from 2.6 - 2.8 with equivalent values of 82-83, 80-81, and 78-79 subsequently."]
+},
+
+{"tag": "grading_system05",
+    "patterns": ["What is a fair or average rating?","What grades are considered as fair or average?"],
+    "responses": ["Fair or Average Rating is from 2.9 - 3.0 with equivalent values of 76-77, and 75 subsequently."]
+},
+
+{"tag": "grading_system06",
+    "patterns": ["What is a poor rating?","What grades are considered as poor?"],
+    "responses": ["Poor Rating is from 3.1 - 4.0 with equivalent values of below 75."]
+},
+
+{"tag": "grading_system07",
+    "patterns": ["What is the lowest possible grade or rating?","What rating is considered as failed or failure?"],
+    "responses": ["3.1-4.0 are the lowest possible midterm ratings and 5.0 or Failure is the lowest possible final rating"]
+},
+
+{"tag": "grading_system08",
+    "patterns": ["How many times can I retake a subject?", "Can I retake a subject?", "I failed in one subject, can I retake it?"],
+    "responses": ["If you incurred a FAILING MARK in any course work you are allowed to retake the subject not more than two times."]
+},
+
+{"tag": "grading_system09",
+    "patterns": ["What is the maintaining grade in Graduate School?"],
+    "responses": ["The passing grade in the Graduate School is 3.0, but a graduate student has to maintain a general weighted average of 2.0."]
+},
+
+{"tag": "grading_system10",
+    "patterns": ["What will happen if I did not achieve a passing grade?","What will happen if I was not able to maintain 2.0 GWA?"],
+    "responses": ["You will not be allowed to take the comprehensive examination and will subsequently be disqualified from earning the degree."]
+},
 
 {"tag": "the_grade_of_incomplete",
     "patterns": ["What is the grade of incomplete?","Grade of incomplete","INC"],
-    "responses": ["An “INC” grade indicates incomplete course work and may be awarded to a graduate or an undergraduate student only when a small portion of the student’s work is incomplete and only when the student is otherwise earning a passing mark. Until removed, the “INC” is not included in the computation of the students GWA. "]
+    "responses": ["An “INC” grade indicates incomplete course work until removed, the “INC” is not included in the computation of the students GWA."]
 },
 
 {"tag": "the_grade_of_incomplete01",
     "patterns": ["Can INC grade be removed?","How to remove my INC grade?"],
-    "responses": ["You must contact your professor on how to remove your INC grade. Student with incomplete (INC) grade of the previous semester are given one school year for completion of subjects; otherwise it will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s)."]
+    "responses": ["You must contact your professor on how to remove your INC grade."]
 },
 
 {"tag": "the_grade_of_incomplete02",
+    "patterns": ["How long can I remove my INC grade?"],
+    "responses": ["Student with incomplete (INC) grade of the previous semester are given one school year for completion of subjects."]
+},
+
+{"tag": "the_grade_of_incomplete03",
+    "patterns": ["What will happen if I cannot complete an INC grade?"],
+    "responses": ["It will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s)."]
+},
+
+{"tag": "the_grade_of_incomplete04",
     "patterns": ["I can't contact my professor that gave me an INC grade"],
     "responses": ["In the event that the concerned professor(s) cannot be contacted (due to resignation, retirement, death, etc.), the Dean is empowered to make decisions for the concerned professor(s) in consultation with the Department Chair."]
 },
@@ -616,13 +639,33 @@
 },
 
 {"tag": "graduation_with_honors",
-    "patterns": ["What qualifies as suma cum laude?","What qualifies as magna cum laude?","What qualifies as cum laude?","Qualifications for honors"],
-    "responses": ["The University shall award the following:\\nSumma Cum Laude with GWA ≤ 1.25\\nMagna Cum Laude with 1.25 < GWA ≤ 1.45\\nCum Laude with 1.45 < GWA ≤ 1.75 \\ Given that the student have carried the regular load per semester as prescribed in the curriculum for their course, have registered for formal academic credits and carried the subjects called for by the curriculum for which you is registered in a given semester. In case of a graduating student who meets the required general weighted average (GWA) but fails to meet other requirements for the graduation with honors, the award shall be 'with ACADEMIC DISTINCTION'."]
+    "patterns": ["What qualifies as suma cum laude?"],
+    "responses": ["Summa Cum Laude is awarded if your GWA ≤ 1.25, given that you have carried the regular load per semester."]
 },
 
 {"tag": "graduation_with_honors01",
+    "patterns": ["What qualifies as magna cum laude?"],
+    "responses": ["Magna Cum Laude is awarded to 1.25 < GWA ≤ 1.45, given that you have carried the regular load per semester."]
+},
+
+{"tag": "graduation_with_honors02",
+    "patterns": ["What qualifies as cum laude?"],
+    "responses": ["Cum Laude is awarded to 1.45 < GWA ≤ 1.75 , given that you have carried the regular load per semester."]
+},
+
+{"tag": "graduation_with_honors03",
+    "patterns": ["I have met the required GWA for latin honors but I failed to meet the other requirements"],
+    "responses": ["In case of a graduating student who meets the required general weighted average (GWA) but fails to meet other requirements for the graduation with honors, the award shall be 'with ACADEMIC DISTINCTION'."]
+},
+
+{"tag": "graduation_with_honors04",
     "patterns": ["What are the qualifications for Academic Distinction?"],
-    "responses": ["In the computation of the final average of a graduating student who is a candidate for academic distinction, only grades/ credits earned towards the degree shall be considered, provided you have no grade lower than 3.0 in any of the subjects regardless of whether that subject was taken in the University or elsewhere. If you were a transferee, you must have completed in the Bicol University at least seventy-five (75%) of the total number of units prescribed in your curriculum and must be in residence for at least six (6) semesters/terms immediately preceding graduation. "]
+    "responses": ["You must have no grade lower than 3.0 in any of the subjects regardless of whether that subject was taken in the University or elsewhere."]
+},
+
+{"tag": "graduation_with_honors05",
+    "patterns": ["I am a transferee, can I be awarded with academic distinction?"],
+    "responses": ["If you were a transferee, you must have completed in the Bicol University at least seventy-five (75%) of the total number of units prescribed in your curriculum and must be in residence for at least six (6) semesters/terms immediately preceding graduation."]
 },
 
 {"tag": "nonacademic_awards_or_incentives",
@@ -631,18 +674,23 @@
 },
 
 {"tag": "ladderized_type_program_recognition",
-    "patterns": ["Academic excellence award","Ladderized Type Program Recognition"],
-    "responses": ["The University, in recognition of academic excellence among students pursuing degree courses with ladderized/ladder-type programs, shall award them the following based on the computation of the general weighted average (GWA) of subjects taken as prescribed in the ladder program you are pursuing. The awards or recognition will be given in the College Recognition Program. With highest honor with GWA ≤ 1.25. With higher honor with 1.25 < GWA ≤ 1.45, With high honor with 1.45 < GWA ≤ 1.75, Candidates for this recognition/ award shall be evaluated by the College Evaluation Committee on Graduation with Honors."]
+    "patterns": ["What are the awards and recognition during college recognition?"],
+    "responses": ["With highest honor with GWA ≤ 1.25. With higher honor with 1.25 < GWA ≤ 1.45, With high honor with 1.45 < GWA ≤ 1.75"]
 },
 
 {"tag": "transcript_diploma",
-    "patterns": ["Trascript","Diploma","Application for transcript of records","TOR","Students records"],
-    "responses": ["Since records of students are confidential, information is released only at the request of the student, or of the appropriate institutions and/or officials. Application for transcript of records must be accompanied by the student's clearance and official receipt of transcript payment."]
+    "patterns": ["How to get my transcript of records and diploma?"],
+    "responses": ["Go to your respective registrars and make a request or application for transcript of records. Present your student's clearance and official receipt of transcript payment."]
 },
 
 {"tag": "opening_of_cost_recovery_courses",
     "patterns": ["What are the procedures for cost recovery?","Approval of cost recovery"],
-    "responses": ["The approval of requests shall adhere to the following procedures:\\n 1. Opening of courses on cost recovery basis shall be considered upon request of the following:\\n a. Graduating students with deficiency(ies) whose needed course(s) are not programmed for the semester, and\\n b. Irregular students who need to take the course to fit the mainstream of students in the appropriate curriculum year.\\n \\n 2. Request for opening of courses not aligned with the semestral course offerings based on the regular curriculum year schedule shall be done by the concerned students not later than two weeks before enrollment.\\n 3. Students’ request shall be addressed to the Dean and endorsed by the Program Adviser and/ or Department Chairperson.\\n 4. Same endorsement shall carry the Program Adviser’s or Department Chairperson’s recommendation of the Professor/ Instructor to teach the course, indicating the full student cost.\\n 5. The Professor/Instructor shall be designated by the Dean considering primarily his/ her academic preparation, teaching load which not exceed 30 units, and his/ her willingness to teach the course on cost recovery basis.\\n 6. In case of students with failures (a rating of 5.0), the faculty to be assigned to teach the requested course should not be the same faculty who gave the failing mark.\\n 7. The professor/instructor shall be compensated fully based on your hourly rate. The computation for payment of honorarium shall be as follows:\\n Hourly rate of faculty x no. of hours/ no. of students = Cost per student.\\n \\n 8. The fees shall be deposited to the College Trust Fund and shall be disbursed solely for the purpose.\\n 9. The payment shall be made out to the professors/instructors concerned following the usual procedure and accompanied by the needed documents.\\n 10. The usual supervision shall be exercised by the Deans/ Directors concerned to ensure that the students are given adequate instructional provision."]
+    "responses": ["You must inform your registar and fill out the cost recovery form not later than two weeks before enrollment. Keep in touch with your registrar."]
+},
+
+{"tag": "opening_of_cost_recovery_courses01",
+    "patterns": ["How much is the cost for Cost Recovery Subjects?","How much is the pay for taking cost recovery subjects?"],
+    "responses": ["The computation for payment of honorarium shall be as follows:\\n Hourly rate of faculty x no. of hours/ no. of students = Cost per student."]
 },
 
 {"tag": "prescribed_uniform",
@@ -651,13 +699,18 @@
 },
 
 {"tag": "credit_unit",
-    "patterns": ["Credit load","Credit unit","Units","Units per semester"],
-    "responses": ["One unit of credit shall be at least eighteen (18) full hours of instruction per semester in the form of lecture, discussion, seminar, tutorial, or equivalent field or any combination of these forms. A substantial equivalent shall be observed for other terms such as trimestral or quarterly system."]
+    "patterns": ["How many hours is one credit load or unit?","What is the equivalent of one credit load or unit?"],
+    "responses": ["One unit of credit shall be at least eighteen (18) full hours of instruction per semester in the form of lecture, discussion, seminar, tutorial, or equivalent field or any combination of these forms."]
 },
 
 {"tag": "academic_load",
-    "patterns": ["Academic load","Academic load per semester","Academic load limit"],
-    "responses": ["The regular academic load for undergraduate students shall be that which is prescribed in the curriculum in a semester for a certain program/course. A graduating student with satisfactory academic record may be permitted to carry an additional load of one or two subjects in your last semester, provided that the total load does not exceed the maximum of thirty-three (33) units per semester, provided further that this will not contradict with any existing policy of the University; provided finally that the student concerned is a candidate for graduation at the end of the semester that the load is allowed.\\n An additional of one (1) or two (2) non major subjects may also be allowed to students who are on Student Teaching /Practicum. During the summer term, the regular load shall be nine (9) units or that which is prescribed in the curriculum, but in justifiable cases the Dean or Director may allow a higher load of not exceeding twelve (12) units. The Dean shall limit the academic load to students who are employed in the University, whether full time or part-time."]
+    "patterns": ["How many credit units must I take per semester","What is the Academic load limit per semester"],
+    "responses": ["The regular academic load for undergraduate students shall be that which is prescribed in the curriculum in a semester for a certain program/course"]
+},
+
+{"tag": "academic_load01",
+    "patterns": ["Am I allowed to carry an additional load?"],
+    "responses": ["Only graduating students with satisfactory academic record may be permitted to carry an additional load of one or two subjects in their last semester and the total load does not exceed thirty-three (33) units per semester"]
 },
 
 {"tag": "classification_of_students",
@@ -667,7 +720,7 @@
 
 {"tag": "classification_of_students01",
     "patterns": ["Who are considered as regular students?","What are regular students?","Regular Students"],
-    "responses": ["A Regular Undergraduate Student is one who have organized a program of study for a bachelor’s degree, or undergraduate diploma/certificate, is registered for formal academic credits, and carries the subjects called for by the curriculum for which you are registered in a given semester."]
+    "responses": ["A Regular Undergraduate Student is registered for formal academic credits, and carries the subjects called for by the curriculum for which they are registered in a given semester."]
 },
 
 {"tag": "classification_of_students02",
@@ -676,18 +729,23 @@
 },
 
 {"tag": "classification_of_students03",
-    "patterns": ["Who are considered as non-regular students?","What are non-regular students?","Non-regular Students"],
-    "responses": ["A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken. Classified as non-regular students are the following:\\n -Non-degree students with credits\\n -Cross registrants with credits\\n -Special students without credits."]
+    "patterns": ["What are non-regular students?","What does Non-regular Students mean?"],
+    "responses": ["A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken."]
 },
 
 {"tag": "classification_of_students04",
-    "patterns": ["Who are considered as foreign students?","What are foreign students?","Foreign Students"],
-    "responses": ["A Foreign Student is one who is a citizen /subject or resident of another country whose admission to the University is contingent upon the compliance of the requirements of the National Government, after qualifying for admission and submission of all the documentary and other requirements of the University."]
+    "patterns": ["Who are considered as non-regular students?"],
+    "responses": ["Classified as non-regular students are the following:\\n -Non-degree students with credits\\n -Cross registrants with credits\\n -Special students without credits."]
 },
 
 {"tag": "classification_of_students05",
+    "patterns": ["Who are considered as foreign students?","What are foreign students?","Foreign Students"],
+    "responses": ["A Foreign Student is one who is a citizen /subject or resident of another country qualified for admission and submitted all the documentary and other requirements of the University."]
+},
+
+{"tag": "classification_of_students06",
     "patterns": ["Who are considered as pre-senior students?","What are pre-senior students?","Pre-senior Students", "Pre senio Students"],
-    "responses": ["A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. In the case of a five-year degree course/program, one is classified as a senior student if you have finished the prescribed subjects for the first, second, third, and fourth years of his curriculum, or have completed not less than eighty percent (80%) of the total number of units required for the course."]
+    "responses": ["A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. "]
 },
 
 {"tag": "greeting",
@@ -742,7 +800,7 @@
 
 {"tag": "availment_of_library_facilities",
     "patterns": ["Can I borrow other materials than books?","What other materials can I borrow?"],
-    "responses": ["You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY. A Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."]
+    "responses": ["You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY."]
 },    
 
 {"tag": "availment_of_library_facilities1",
@@ -765,6 +823,11 @@
     "responses": ["You can borrow a maximum of two (2) Non-reserved Circulation books for overnight or weekend use to be returned on or before 9:00 A.M. the following school day."]
 },
 
+{"tag": "availment_of_library_facilities5",
+    "patterns": ["Can I borrow a book for a week?", "What books can I borrow for one week?"],
+    "responses": ["A Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."]
+},
+
 {"tag": "library_hours",
     "patterns": ["What are the university library hours?","What time does the university library open?","What time does the university library closes?"],
     "responses": ["The university library is open on Mondays-Friday from 8:00 AM - 7:00 PM and on Saturdays from 8:00 AM - 5:00 PM"]
@@ -777,7 +840,12 @@
 
 {"tag": "other_researchers",
     "patterns": ["Are outsiders allowed to enter the university library?","I am not a Bicol University student, am I allowed to visit the university library?"],
-    "responses": ["Researchers who are not bona fide students of the University may be allowed to use the library information resources/facilities of the different unit/college libraries upon payment of a library fee; wherein the amount to be paid depends on the classification of the researcher or external user. Just present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
+    "responses": ["Yes, but must pay for a library fee depending on the classification of the researcher or external user."]
+},
+
+{"tag": "other_researchers01",
+    "patterns": ["What are the requirements for outsiders in entering the university library?"],
+    "responses": ["Present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
 },
 
 {"tag": "medical_and_dental_services",
