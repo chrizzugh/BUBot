@@ -95,7 +95,7 @@
 
 {"tag": "contact_details_of_dean_of_jesse_m_robredo_institute_of_governance_and_development",
     "patterns": ["How can I contact the dean of the Jesse M. Robredo Institute Of Governance And Development?"],
-    "responses": ["No record in BU site as of the moment"]
+    "responses": ["You can contact the registrar through Email: jmrigdreg@bicol-u.edu.ph Contact Number: 09177056069"]
 },
 
 {"tag": "dean_of_college_of_education",
@@ -105,7 +105,7 @@
 
 {"tag": "contact_details_of_dean_of_college_of_education",
     "patterns": ["How can I contact the dean of the College of Education?"],
-    "responses": ["Telephone No.: (052) 483-0487 Email: bicolmentors_08@yahoo.com or lornsmm@yahoo.com"]
+    "responses": ["Telephone No.: (052) 483-0487 Contact Number: 09177057364 Email: bicolmentors_08@yahoo.com or lornsmm@yahoo.com"]
 },
 
 {"tag": "dean_of_graduate_school",
@@ -124,8 +124,8 @@
 },
 
 {"tag": "contact_details_of_dean_of_open_university",
-    "patterns": ["How can I contact the dean of the Open University?"],
-    "responses": ["No record in BU site as of the moment."]
+    "patterns": ["How can I contact the registrar of BUCS and Open University?"],
+    "responses": ["Email: bugsreg@bicol-u.edu.ph\\nContact Number: 09177055730"]
 },
 
 {"tag": "dean_of_college_of_medicine",
@@ -255,7 +255,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_agriculture_and_forestry",
     "patterns": ["How can I contact the registrar of College of College of Agriculture and Forestry?"],
-    "responses": ["Email: ancamba@bicol-u.edu.ph or bucafreg@bicol-u.edu.ph"]
+    "responses": ["Email: ancamba@bicol-u.edu.ph or bucafreg@bicol-u.edu.ph Contact Number: 09177074727"]
 },
 
 {"tag": "registrar_of_the_college_of_social_science_and_philosophy",
@@ -265,7 +265,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_social_science_and_philosophy",
     "patterns": ["How can I contact the registrar of College of Social Science and Philosophy?"],
-    "responses": ["Email: cdlagata@bicol-u.edu.ph or bucsspreg@bicol-u.edu.ph"]
+    "responses": ["Email: cdlagata@bicol-u.edu.ph or bucsspreg@bicol-u.edu.ph Contact Number: 09177056257"]
 },
 
 {"tag": "registrar_of_the_college_of_business_economics_and_management",
@@ -275,7 +275,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_business_economics_and_management",
     "patterns": ["How can I contact the registrar of College of Business Economics and Management?"],
-    "responses": ["Email: smabino@bicol-u.edu.ph or bucbemreg@bicol-u.edu.ph"]
+    "responses": ["Email: smabino@bicol-u.edu.ph or bucbemreg@bicol-u.edu.ph Contact Number: 09177062631"]
 },
 
 {"tag": "registrar_of_the_college_of_education",
@@ -295,7 +295,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_engineering",
     "patterns": ["How can I contact the registrar of College of Engineering?"],
-    "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph or bucengreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 742-4091 Contact Number: 09177074629 Email: rlrivero@bicol-u.edu.ph or bucengreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_nursing",
@@ -305,7 +305,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_nursing",
     "patterns": ["How can I contact the registrar of College of Nursing?"],
-    "responses": ["Telephone No.: (052) 480-2760    Email: bucnreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 480-2760 Contact Number: 09177067147 Email: bucnreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_industrial_technology",
@@ -315,7 +315,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_industrial_technology",
     "patterns": ["How can I contact the registrar of College of Industrial Technology?"],
-    "responses": ["Telephone No.: (052) 431-1053    Email: abdelayre@bicol-u.edu.ph or bucitreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 431-1053 Contact Number: 09177074692 Email: abdelayre@bicol-u.edu.ph or bucitreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_arts_and_letters",
@@ -325,7 +325,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_arts_and_letters",
     "patterns": ["How can I contact the registrar of College of Arts and Letters?"],
-    "responses": ["Telephone No.: (052) 481-6192    Email: arlleva@bicol-u.edu.ph or bucalreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 481-6192 Contact Number: 09177056069 Email: arlleva@bicol-u.edu.ph or bucalreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_science",
@@ -335,7 +335,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_science",
     "patterns": ["How can I contact the registrar of College of Science?"],
-    "responses": ["Telephone No.: 481-1455    Email: bucsreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: 481-1455 Contact Nunber: 09177062085 Email: bucsreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_medicine",
@@ -345,7 +345,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_medicine",
     "patterns": ["How can I contact the registrar of College of Medicine?"],
-    "responses": ["Telephone No.: (052) 480-0700    Email: smmmagalona@bicol-u.edu.ph or bucmreg@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 480-0700  Contact No: 09177038383 Email: smmmagalona@bicol-u.edu.ph or bucmreg@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_college_of_law",
@@ -355,7 +355,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_college_of_law",
     "patterns": ["How can I contact the registrar of College of Law?"],
-    "responses": ["No record BU site as of the moment."]
+    "responses": ["Email: buclreg@bicol-u.edu.ph Contact Number: 09177056069"]
 },
 
 {"tag": "registrar_of_the_institute_of_physical_education_sports_and_recreation",
@@ -365,7 +365,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_institute_of_physical_education_sports_and_recreation",
     "patterns": ["How can I contact the registrar of College of Institute of Physical Education Sports and Recreation?"],
-    "responses": ["No record BU site as of the moment."]
+    "responses": ["Email: buipesrreg@bicol-u.edu.ph Contact Number: 09177038383"]
 },
 
 {"tag": "registrar_of_the_institute_of_architecture",
@@ -375,7 +375,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_institute_of_architecture",
     "patterns": ["How can I contact the registrar of Institute of Architecture?"],
-    "responses": ["Telephone No.: (052) 742-4091    Email: rlrivero@bicol-u.edu.ph"]
+    "responses": ["Telephone No.: (052) 742-4091 Contact Number: 09177074692 Email: rlrivero@bicol-u.edu.ph"]
 },
 
 {"tag": "registrar_of_the_polangui_campus",
@@ -385,7 +385,7 @@
 
 {"tag": "contact_details_of_registrar_of_the_polangui_campus",
     "patterns": ["How can I contact the registrar of Polangui Campus?"],
-    "responses": ["Email: lrlolo@bicol-u.edu.ph or bupcreg@bicol-u.edu.ph"]
+    "responses": ["Email: lrlolo@bicol-u.edu.ph or bupcreg@bicol-u.edu.ph Contact Number: 09177060268"]
 },
 
 {"tag": "registrar_of_the_tabaco_campus",
@@ -395,7 +395,7 @@
 
 {"tag": "contact_details_of_registrar_of_Tabaco_Campus",
     "patterns": ["How can I contact the registrar of Tabaco Campus?"],
-    "responses": ["Email: wbhenson@bicol-u.edu.ph or butcreg@bicol-u.edu.ph"]
+    "responses": ["Email: wbhenson@bicol-u.edu.ph or butcreg@bicol-u.edu.ph Contact Number: 09177062154"]
 },
 
 {"tag": "registrar_of_the_gubat_campus",
@@ -405,7 +405,7 @@
 
 {"tag": "contact_details_of_registrar_of_Gubat Campus",
     "patterns": ["How can I contact the registrar of Gubat Campus"],
-    "responses": ["No record in BU site as of the moment"]
+    "responses": ["Email: bugcreg@bicol-u.edu.ph Contact Number: 09176284307"]
 },
 
 {"tag": "admission_to_undergraduate_programs",
@@ -421,6 +421,36 @@
 {"tag": "bucet",
     "patterns": ["What is BUCET"],
     "responses": ["It is a three-hour examination consisting of sub-tests in Language proficiency in English, Mathematics, Science and Reading Comprehension. "]
+},
+
+{"tag": "bucet01",
+    "patterns": ["When is the schedule for BUCET?"],
+    "responses": ["As of now BUCET is temporarily halted. Instead, BUCESS has been adopted for the admission because of the pandemic."]
+},
+
+{"tag": "bucet03",
+    "patterns": ["What are the requirements for BUCESS"],
+    "responses": ["Applicants must accomplish the Student Application Portfolio found in this link bit.ly/3ry0PTl and attach original copies of the documents"]
+},
+
+{"tag": "bucet04",
+    "patterns": ["What are the documents needed for admission?","Requirements for enrollment"],
+    "responses": ["BUCESS Result, SHS Report Card, Medical and Dental Forms, PSA Birth Certificate, Good Moral Certificate, Police Clearance, Long Brown Envelope, 2 Long Folders, 2 pcs 2x2 pictures, Mailing envelope with mailing stamps worth 40 pesos"]
+},
+
+{"tag": "bucet05",
+    "patterns": ["Where to send my admission requirements?","Where are the drop off points for admission requirements?"],
+    "responses": ["Send your documents to the Office of the University Registrar, Bicol University, Legazpi City. Designated drop boxes are located in BUTC, BUGC, BUPC and BUCAF."]
+},
+
+{"tag": "bucet06",
+    "patterns": ["How to set an appointment at the university registrar's office?"],
+    "responses": ["Access the form through this link, https://bu-uro.appointlet.com and fill up the necessary information."]
+},
+
+{"tag": "bucet07",
+    "patterns": ["Contact information of the University Registrar's Office"],
+    "responses": ["Email: bu-uro@bicol-u.edu.ph or bu-uro@yahoo.com"]
 },
 
 {"tag": "how_to_quality_for_admission",
@@ -840,12 +870,27 @@
 
 {"tag": "other_researchers",
     "patterns": ["Are outsiders allowed to enter the university library?","I am not a Bicol University student, am I allowed to visit the university library?"],
-    "responses": ["Yes, but must pay for a library fee depending on the classification of the researcher or external user."]
+    "responses": ["Yes, but must set an appointment 2-3 days prior and pay for a library fee depending on the classification of the researcher or external user."]
 },
 
 {"tag": "other_researchers01",
-    "patterns": ["What are the requirements for outsiders in entering the university library?"],
+    "patterns": ["How to book an appointment in the library for outsiders and external researchers?"],
+    "responses": ["You may book an appointment through:\\ntinyurl.com/ULseatreseravation\\nbu-library@bicol-u.edu.ph\\nhttps://www.facebook.com/aklatangunibersidad.bicol\\n09053782611"]
+},
+
+{"tag": "other_researchers02",
+    "patterns": ["How much is the library fee for outsiders or external researchers?"],
+    "responses": ["Researcher’s fee\\n(1) Undergraduate – PhP 30.00/day\\n(2) Graduate – PhP 50.00/day\\n(3) Walk-in/Non-academe based – PhP 100.00/day"]
+},
+
+{"tag": "other_researchers03",
+    "patterns": ["What are the requirements for outsiders or external researchers in entering the university library?"],
     "responses": ["Present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
+},
+
+{"tag": "other_researchers04",
+    "patterns": ["Bicol University Library website"],
+    "responses": ["Here's the link to the website: https://sites.google.com/bicol-u.edu.ph/buls/home"]
 },
 
 {"tag": "medical_and_dental_services",
@@ -951,4 +996,14 @@
 {"tag": "major_offenses15",
     "patterns": ["What are the offenses for Unauthorized solicitation of contribution/ donation using the name of the University?"],
     "responses": ["First Offense - Suspension 1 week to 6 months\\nSecond Offense - Suspension 6 months and 1 day to 1 year\\nThird Offense - Dismissal"]
+},
+
+{"tag": "bu_icto",
+    "patterns": ["How to contact the BU ICTO?","Contact Number of BU ICTO", "Email Address of BU Information and Communications Technology Office"],
+    "responses": ["Email: bu-icto@bicol-u.edu.ph or ictohelpdesk@bicol-u.edu.ph Contact Number: 09686883046"]
+},
+
+{"tag": "bu_icto01",
+    "patterns": ["I have a problem with my BU email", "I have a problem with my ORS"],
+    "responses": ["Please contact the BU ICTO for your technical concerns. You can also fill up this form https://forms.gle/QDvNLK8eCSDWxs3r9"]
 }]
