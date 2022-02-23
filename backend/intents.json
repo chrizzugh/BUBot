@@ -1087,5 +1087,106 @@
     {"tag": "scholarships",
         "patterns": ["What are the scholarship opportunities for students?"],
         "responses": ["There are a total of 31 Externally-Funded Scholarships. You can inquire directly at the OSAS for available scholarship and their requirements."]
+    },
+
+    {"tag": "who_is_BU",
+        "patterns": ["Core values of Bicol University"],
+        "responses": ["Scholarship, Leadership, Character, and Service are its core values"]
+    },
+
+    {"tag": "governing_board",
+        "patterns": ["What is board of regents?"],
+        "responses": ["The Board of Regents is the highest policymaking body of a chartered State University."]
+    },
+
+    {"tag": "governing_board02",
+        "patterns": ["Are students represented in the board of regents?"],
+        "responses": ["The duly elected Chairperson of the Bicol University Student Council who shall serve as the Student Regent represents the Students in the Board of Regents."]
+    },
+
+    {"tag": "cross_registration",
+        "patterns": ["Are students allowed to do a cross registration within the university?"],
+        "responses": ["Yes, a student who needs to register in two or more colleges within the University must seek the permission of his/her College Dean in writing."]
+    },
+
+    {"tag": "cross_registration01",
+        "patterns": ["What to write in permission letter for cross registration?"],
+        "responses": ["The written permission should state the total number unit-credits for which a student may register in two or more colleges in the University and should not exceed that which is prescribed in the curriculum for his/her course."]
+    },
+
+    {"tag": "cross_registration02",
+        "patterns": ["Are students outside bicol university allowed to do a cross registration?"],
+        "responses": ["A student registered in an institution outside the University who wishes to cross- register in the Bicol University must present a permit from his/her Dean or registrar."]
+    },
+
+    {"tag": "cross_registration03",
+        "patterns": ["What to write in cross registration permission letter for students outside bicol university?"],
+        "responses": ["The permit should state in writing the total number of units which the student is allowed and the subjects that s/he is authorized to take."]
+    },
+
+    {"tag": "cross_registration04",
+        "patterns": ["Are bicol university students allowed to do a cross registration outside the university?"],
+        "responses": ["The University gives no credit for any course taken by any of its students in any other institution outside the University unless the taking of such course was authorized by the College Dean and the University Registrar."]
+    },
+
+    {"tag": "changing_of_subjects",
+        "patterns": ["Are students allowed to change their subjects?"],
+        "responses": ["Yes, changing of subjects shall be within a week after the close of registration and shall only be allowed upon payment of the corresponding fee and letter approved by the college dean. "]
+    },
+
+    {"tag": "adding_of_subjects",
+        "patterns": ["Are students allowed to add subjects to their academic load?"],
+        "responses": ["Yes, addiing of subjects shall be within a week after the close of registration and shall only be allowed upon payment of the corresponding fee and letter approved by the college dean."]
+    },
+
+    {"tag": "shifting_of_course",
+        "patterns": ["How to shift courses?"],
+        "responses": ["The student shall file an application for this purpose through the Dean of the college where s/he is presently enrolled. This application shall be endorsed to the Dean of the college where s/he plans to continue the new course."]
+    },
+
+    {"tag": "leave_of_absence",
+        "patterns": ["How to file a leave of absense?"],
+        "responses": ["Leave of absence shall be granted through written petition to the college dean. The petition should state the reason and the period, which must not exceed a consecutive period of two terms/ semesters, subject to renewal for very meritorious reasons."]
+    },
+
+    {"tag": "academic_probation",
+        "patterns": ["I failed in one subject"],
+        "responses": ["A student who fails in one subject at any time shall in succeeding term carry a load which in one subject (of equivalent unit) less the load allowed for his course during the current semester."]
+    },
+
+    {"tag": "academic_probation01",
+        "patterns": ["I failed two of my subjects"],
+        "responses": ["A student who obtains two failing marks at the end of the term will be under probation during the following semester and may be allowed to take not more than seventy — five percent (75%) of the regular load for the semester."]
+    },
+
+    {"tag": "academic_dismissal",
+        "patterns": ["I'm on probation and failed another subject"],
+        "responses": ["A student who is under probation and still obtains a failing mark in one of his subjects at the end of the term shall be automatically dropped from the rolls of the college."]
+    },
+
+    {"tag": "academic_dismissal01",
+        "patterns": ["I failed three subjects"],
+        "responses": ["A student who obtains three or more failing grades at the end of the term shall be dropped from the rolls of the college."]
+    },
+
+    {"tag": "financial_information",
+        "patterns": ["Is there a tution fee in Bicol University?"],
+        "responses": ["By virtue of RA 10931 or the “Universal Access to Quality Tertiary Education Act,” all students pursuing a bachelor’s degree in the University are entitled to free tertiary education starting S.Y. 2018-2019."]
+    },
+
+    {"tag": "university_cultural_group",
+        "patterns": ["Are there cultural groups in the university?"],
+        "responses": ["These are the groups open for membership: BU Magayon DANCE TROUPE, TEATRO BUeño, BUNGCUL Singers, BU KUERDAS (Rondalla), BUGKOS Ginikanan - indigenous music ensemble, gamelan and UNIVERSITY MARCHING BAND."]
+    },
+
+    {"tag": "scholarship_categories",
+        "patterns": ["TES or Tertiary Education Subsidy"],
+        "responses": ["As part of the provisions of RA 10931, this subsidy is made available to students of Bicol University who are part of the DSWD Listahanan 2.0."]
+    },
+
+    {"tag": "nstp",
+        "patterns": ["Components of NSTP"],
+        "responses": ["The three components are: a. Civic Welfare Training Service (CWTS), b. Literacy Training Service (LTS), and c) Reserve Officers Training Corps (ROTC)."]
     }
+
 ]}
