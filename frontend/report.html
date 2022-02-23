@@ -11,13 +11,13 @@
             rel="stylesheet"
         />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <link href="gui/css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="">
         <!-- nav -->
         <div class="nav py-2 px-4 border-bottom flex-grow-1 position-relative">
             <div class="d-flex align-items-center py-1">
-                <a class="button-white px-3" href="about.html">
+                <a class="button-white px-1" href="about.html">
                     <span class="material-icons-sharp"> arrow_back </span>
                 </a>
                 <div class="flex-grow-1 pl-1">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- describing problem -->
-        <div class="container px-lg-5 p-5">
+        <div class=" container px-lg-5 p-5">
             <div id="problemDescription" class="">
                 <div class="py-2 px-4 flex-grow-1 position-relative">
                     <div class="container mt-1 text-left flex-grow-1">
@@ -35,73 +35,118 @@
                         </h4>
                     </div>
                 </div>
-                <div class="px-4 text-center">
+                <div class="px-4 text-center ">
                     <div class="row flex-grow-1">
                         <div
-                            class="form-outline container px-4 p-4 px-lg-5 text-center"
+                            class="container px-4 p-4 px-lg-5 text-center "
                         >
                         <form method="" action="" id="">
-                            <div class="form-group files"></div>
                                 <textarea
-                                    class="form-control-description"
+                                    class="form-control-report"
                                     id=""
                                     rows="4"
                                 ></textarea>
-                            </div>
-                        </form>
                         </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- attatch file -->
         <div class="container px-lg-5 p-5">
             <div class="mt-5" id="attachedFile">
                 <div class="py-2 px-4 flex-grow-1 position-relative">
                     <div class="container mt-1 text-left flex-grow-1">
                         <h4 for="" class="pt-4 mb-0 px-xl-4">
                             Add Attachments
-                            <!-- <a href="" class="position-absolute top-2 px-4">
-                                <span
-                                    class="material-icons-sharp"
-                                    style="color: orangered"
-                                >
-                                    add_circle
-                                </span>
-                            </a> -->
                         </h4>
                     </div>
                 </div>
-                <div class="px-4 text-center">
-                    <div class="row flex-grow-1 position-relative">
+                <!-- <div class="px-4">
+                    <div class="row flex-grow-1">
                         <div
-                            class="form-outline container px-4 p-4 px-lg-5 text-center"
+                            class="form-outline container px-4 p-4 px-lg-5"
                         >
                             <form method="" action="" id="">
-                                <div class="form-group files ">
-                                    <input
-                                        type="file"
-                                        class=""
-                                        multiple=""
-                                    />
+                                <div class="form-group files">
+                                    <input type="file" class="" multiple="" />
                                 </div>
                             </form>
                         </div>
                     </div>
+                </div> -->
+                <div class="px-4 ">
+                    <div class="row  ">
+                        <div
+                            class=" container px-4 p-4 px-lg-5"
+                        >
+                        <form method="" action="" id="" class="form-control-report py-4 text-center">
+                                <input type="file"
+                                    class="py-5"
+                                    id=""
+                                    rows="4"
+                                ></input>
+                        </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container p-5">
-            <div class="row p-5">
-                <div class="col-md-12 text-center p-5 mt-5">
+
+        <!-- savebutton -->
+        <div class="container p-1 mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center mt-5 ">
                     <!-- Button trigger modal -->
                     <button
                         type="button"
-                        class="btn btn-save btn-xl"
+                        class="btn btn-save btn-xl mt-5"
                         data-bs-toggle="modal"
-                        data-bs-target="#saveFeedback"
+                        data-bs-target="#saveReport"
                     >
                         Save
                     </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="saveReport"
+            tabindex="-1"
+            aria-labelledby="saveReportLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a
+                            type="button"
+                            class="btn-close button-white position-absolute top-2 end-0 px-4"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span
+                                class="material-icons-sharp p-1"
+                                style="color: white"
+                            >
+                                close
+                            </span>
+                        </a>
+                    </div>
+                    <div
+                        class="modal-body container px-4 p-4 px-lg-5 text-center"
+                    >
+                        <span
+                            class="material-icons-sharp mt-5"
+                            style="font-size: 100px; color: white"
+                        >
+                            insert_emoticon
+                        </span>
+                        <h3 class="mt-5" style="color: white">
+                            Your problem has been reported.
+                        </h3>
+                        <h3 style="color: white">Thank you!</h3>
+                    </div>
                 </div>
             </div>
         </div>
