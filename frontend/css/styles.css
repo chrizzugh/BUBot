@@ -413,9 +413,9 @@ th {
     display: flex;
     flex-direction: column;
     max-height: -webkit-fill-available, auto;
-    overflow-y: scroll;
     position: relative;
     overflow-wrap: break-word;
+    position: relative;
 }
 
 .chat-message-left,
@@ -427,13 +427,10 @@ th {
     position: relative;
 }
 .chat-message-left {
-    border-radius: 25px;
-    background-color: #3db2ff;
     margin-right: auto;
 }
 
 .chat-message-right {
-    background-color: #f37124;
     flex-direction: row-reverse;
     margin-left: auto;
 }
