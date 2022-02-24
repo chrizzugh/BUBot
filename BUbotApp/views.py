@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def landing(request):
-    return render(request, 'landing.html')
+    return render(request, 'index.html')
 
 def chat(request):
     return render(request, 'chat.html')
