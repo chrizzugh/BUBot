@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&1j+prsys@uao84ziawc*y8qe4d8^r4w7g^un=u-4#gn0h&pd2
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'bubotapp.herokuapp.com']
 
 
 # ALLOWED_HOSTS = []
