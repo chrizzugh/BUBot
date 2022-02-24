@@ -416,6 +416,7 @@ th {
     position: relative;
     overflow-wrap: break-word;
     position: relative;
+    margin: 15px 15px 5px 15px;
 }
 
 .chat-message-left,
@@ -425,6 +426,7 @@ th {
     border-radius: 25px;
     flex-shrink: 0;
     position: relative;
+    width: calc(100% - 50px);
 }
 .chat-message-left {
     margin-right: auto;
