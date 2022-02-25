@@ -1,1 +1,1 @@
-web: gunicorn BUbotProject.wsgi --log-file -
+web: gunicorn BUBot.wsgi --log-file -
