@@ -3,7 +3,7 @@
     "background_color": "#f69435",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/bubotapp",
+    "start_url": "/index.html",
     "name": "bubotapp",
     "short_name": "bubot",
     "description": "bicol university chatbot",
