@@ -6,7 +6,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import django_on_heroku
 from pathlib import Path
 
 
@@ -136,6 +136,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+os.path.join(BASE_DIR, 'static')
+
+
 # Configure Django App for Heroku.
-# import django_on_heroku
-# django_on_heroku.settings(locals())
+
+django_on_heroku.settings(locals())
