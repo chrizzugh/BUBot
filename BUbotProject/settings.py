@@ -24,7 +24,8 @@ SECRET_KEY = 'django-insecure-&1j+prsys@uao84ziawc*y8qe4d8^r4w7g^un=u-4#gn0h&pd2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bubotapp.herokuapp.com']
 
 
 # Application definition
