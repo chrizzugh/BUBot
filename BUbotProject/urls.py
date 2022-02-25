@@ -17,6 +17,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('BUbotApp.urls')),
-    path('', include('pwa.urls')),
+    # path('', include('pwa.urls')),
     path('admin/', admin.site.urls),
 ]
