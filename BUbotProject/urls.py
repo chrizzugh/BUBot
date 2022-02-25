@@ -15,7 +15,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from django.urls import re_path
+# from app.urls import app_urls
 
+# from django_urls import UrlManager
+# app_urls = UrlManager(views_root='dotted.path.to.app.views.module')
+
+# app_urls.extend(extra_urls_list)
 
 urlpatterns = [
     path('', include('BUbotApp.urls')),
