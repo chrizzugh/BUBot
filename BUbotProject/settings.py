@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import django_on_heroku
 
 from pathlib import Path
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -27,6 +27,8 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['bubotapp.herokuapp.com']
 
+#PWA
+PWA_APP_DEBUG_MODE = False
 
 # Application definition
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BUbotApp',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +129,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-import os
+
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
@@ -150,7 +153,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-import django_on_heroku
 
 from pathlib import Path
 
@@ -291,3 +293,50 @@ django_on_heroku.settings(locals())
 # import django_on_heroku
 # django_on_heroku.settings(locals())
 
+
+#for manifest
+PWA_APP_NAME = 'BUbotApp'
+PWA_APP_DESCRIPTION = "bicol university chatbot"
+PWA_APP_THEME_COLOR = '#f69435'
+PWA_APP_BACKGROUND_COLOR = '#f69435'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+            "src": "/static/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/assets/favicon.ico/apple-touch-icon.png',
+        'sizes': '160x160'
+    }
+]
+# PWA_APP_SPLASH_SCREEN = [
+#     {
+#         'src': '/static/images/icons/splash-640x1136.png',
+#         'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+#     }
+# ]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
