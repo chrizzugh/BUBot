@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
-{% load pwa %}
 <html lang="en">
     
     <head>
+        {% load pwa %}
         {% progressive_web_app_meta %}
         
-        <link rel="manifest" href="{% static 'manifest.json' %}">
+        <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/favicon.io/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static ' assets/favicon.io/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicon.io/favicon-16x16.png' %}">
