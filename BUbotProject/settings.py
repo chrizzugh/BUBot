@@ -143,6 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 os.path.join(BASE_DIR, 'static')
 
 
-# Configure Django App for Heroku.
 
-django_on_heroku.settings(locals())
