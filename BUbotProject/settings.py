@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BUbotApp',
+    # 'channels',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'BUbotProject.wsgi.application'
+# ASGI_APPLICATION = 'BUbotProject.asgi.application'
 
 
 # Database
