@@ -53,39 +53,11 @@
         </nav>
         <!-- chat section -->
         <form>
+            {% csrf_token %}
             <div class="position-relative">
                 <div class="chat-messages">
-                    <!-- user chat is chat-message-right -->
-                    <div class="chat-message-right pb-4">
-                        <div class="text-right p-4">
-                            <img
-                                src="{% static 'assets/user.png' %}"
-                                class="rounded-circle mr-1"
-                                alt="user"
-                                width="40"
-                                height="40"
-                            />
-                            <div class="text-muted small text-nowrap mt-2">
-                                2:33 am
-                            </div>
-                        </div>
-                        <div
-                            class="flex-shrink-1 py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-4"
-                            style="
-                                background: rgb(243, 113, 36);
-                                border-radius: 25px; ;
-                            "
-                        >
-                            Lorem ipsum dolor sit amet, vis erat denique in,
-                            dicunt prodesset te vix. Lorem ipsum dolor sit amet,
-                            vis erat denique in, dicunt prodesset te vix. Lorem
-                            ipsum dolor sit amet, vis erat denique in, dicunt
-                            prodesset te vix.
-                        </div>
-                    </div>
-
-                    <!-- bubot reply is chat-message-left -->
-                    <div class="chat-message-left pb-4">
+                    <!-- bubot default reply -->
+                    <div class="chat-message-left pb-2 mt-4">
                         <div class="text-left ml-3 mr-3">
                             <img
                                 src="{% static 'assets/BUbot-logo.png' %}"
@@ -98,35 +70,173 @@
                                 2:34 am
                             </div>
                         </div>
-                        <div
-                            class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
-                            style="
-                                background: rgb(61, 178, 255);
-                                border-radius: 25px;
-                            "
-                        >
-                            Sit meis deleniti eu, pri vidit meliore docendi ut,
-                            an eum erat animal commodo. Sit meis deleniti eu,
-                            pri vidit meliore docendi ut, an eum erat animal
-                            commodo. Sit meis deleniti eu, pri vidit meliore
-                            docendi ut, an eum erat animal commodo.
-                        </div>
+                        <form-group>
+                            <div
+                                class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
+                                style="
+                                    background: rgb(61, 178, 255);
+                                    border-radius: 25px;
+                                "
+                            >
+                                Hi! How can I help you?
+                            </div>
+                        </form-group>
                     </div>
+                    <!-- user chat is chat-message-right -->
+                    <div
+                        class="chat-message-right pb-4 userDiv"
+                        name="userDiv"
+                        id="userDiv"
+                        display=""
+                    >
+                        <div class="text-right mr-3 ml-3">
+                            <img
+                                src="{% static 'assets/user.png' %}"
+                                class="rounded-circle mr-1"
+                                alt="user"
+                                width="40"
+                                height="40"
+                            />
+                            <div class="text-muted small text-nowrap mt-2">
+                                2:33 am
+                            </div>
+                        </div>
+                        <form-group
+                            action=""
+                            method=""
+                            id="userQuery"
+                            name="userQuery"
+                        >
+                            <div
+                                class="flex-shrink-1 py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2"
+                                style="
+                                    background: rgb(243, 113, 36);
+                                    border-radius: 25px;
+                                "
+                                id="bubbleDiv"
+                                name="bubbleDiv"
+                            ></div>
+                        </form-group>
+                    </div>
+
+                    <!-- bubot reply is chat-message-left -->
+                    <!-- <div class="chat-message-left pb-4">
+                        <div class="text-left ml-3 mr-3">
+                            <img
+                                src="{% static 'assets/BUbot-logo.png' %}"
+                                class="rounded-circle mr-1"
+                                alt="BUbot"
+                                width="40"
+                                height="40"
+                            />
+                            <div class="text-muted small text-nowrap mt-2">
+                                2:34 am
+                            </div>
+                        </div>
+                        <form-group>
+                            <div
+                                class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
+                                style="
+                                    background: rgb(61, 178, 255);
+                                    border-radius: 25px;
+                                "
+                            >
+                                Sit meis deleniti eu, pri vidit meliore docendi
+                                ut, an eum erat animal commodo. Sit meis
+                                deleniti eu, pri vidit meliore docendi ut, an
+                                eum erat animal commodo. Sit meis deleniti eu,
+                                pri vidit meliore docendi ut, an eum erat animal
+                                commodo.
+                            </div>
+                        </form-group>
+                    </div> -->
                 </div>
             </div>
         </form>
         <!-- user asking query -->
-        <div class="py-3 px-4 input-group fixed-bottom">
-            <div class="input-group">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Type here..."
-                />
-                <button class="button-send">
-                    <span class="material-icons-sharp"> send </span>
-                </button>
+        <form id="form" method="post" action="">
+            {% csrf_token %}
+            <div class="py-3 px-4 input-group fixed-bottom">
+                <div class="input-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Type here..."
+                        id="userQuestion"
+                        name="userQuestion"
+                    />
+                    <button
+                        class="button-send"
+                        id="sendBtn"
+                        name="sendBtn"
+                        method=""
+                        type="button"
+                    >
+                        <span class="material-icons-sharp"> send </span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
+        <script>
+            var userQuestion;
+
+            function getuserQuestion() {
+                return document.getElementById("userQuestion").value;
+            }
+            var button = document.getElementById("sendBtn");
+            var bubbleDiv = document.getElementById("bubbleDiv");
+            button.addEventListener("click", function () {
+                var userQuestion = getuserQuestion();
+                bubbleDiv.innerHTML = userQuestion;
+                userQuestion.value = "";
+            });
+            // For showing only when div is not empty
+            // var userBubble = $("#userDiv");
+            // if (userBubble.text() == "") {
+            //     userBubble.hide();
+            // } else {
+            //     userBubble.show();
+            // }
+
+            // function showUserBubble(userDiv) {
+            //     var userBubble = document.getElementById(userDiv);
+            //     if (userBubble.style.display === "") {
+            //         userBubble.style.display = "block";
+            //     } else {
+            //         userBubble.style.display = "none";
+            //     }
+            // }
+            // $("div.userDiv:empty").hide();
+            // $("div.userDiv").show();
+
+            // var userBubble = document.getElementById("userDiv");
+            // if ($(userBubble).is(":empty")) {
+            //     hide();
+            // } else {
+            //     show();
+            // }
+
+            // if ($("userDiv").is(":empty")) {
+            //     $("userDiv").hide();
+            // } else {
+            //     $("userDiv").show();
+            // }
+
+            // var userBubble = document.getElementById("userDiv");
+            // if (userBubble.innerHTML == "") {
+            //     $("userBubble").css("display", "none");
+            //     $("userBubble").hide();
+            // } else {
+            //     $("userBubble").css("display", "block");
+            //     $("userBubble").show();
+            // }
+
+            // var isEmpty = document.getElementById("userDiv").innerHTML === "";
+            // if (isEmpty) {
+            //     hide();
+            // } else {
+            //     show();
+            // }
+        </script>
     </body>
 </html>
