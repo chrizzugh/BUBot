@@ -84,16 +84,19 @@ WSGI_APPLICATION = 'BUbotProject.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'bubotdatabase',
-        # 'CLIENT': {
-        #    'host': 'your-db-host',
-        # }
+        'CLIENT': {
+            'host': 'mongodb+srv://chriz:MbtFE28WQXjPenjV@cluster0.zdxg5.mongodb.net/bubotdatabase?retryWrites=true&w=majority',
+            'username': 'chriz',
+            'password': 'MbtFE28WQXjPenjV',
+            'authMechanism': 'SCRAM-SHA-1'
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

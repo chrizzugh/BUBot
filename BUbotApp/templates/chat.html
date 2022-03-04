@@ -178,65 +178,23 @@
             </div>
         </form>
         <script>
+            // For displaying query in bubbleDiv
             var userQuestion;
-
+            var userDiv;
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
             var button = document.getElementById("sendBtn");
-            var bubbleDiv = document.getElementById("bubbleDiv");
+            var bubbleDivVal = document.getElementById("bubbleDiv").value;
             button.addEventListener("click", function () {
                 var userQuestion = getuserQuestion();
-                bubbleDiv.innerHTML = userQuestion;
-                userQuestion.value = "";
+                document.getElementById("bubbleDiv").innerHTML = userQuestion;
+                $("#bubbleDiv").parent().parent().show();
             });
-            // For showing only when div is not empty
-            // var userBubble = $("#userDiv");
-            // if (userBubble.text() == "") {
-            //     userBubble.hide();
-            // } else {
-            //     userBubble.show();
-            // }
 
-            // function showUserBubble(userDiv) {
-            //     var userBubble = document.getElementById(userDiv);
-            //     if (userBubble.style.display === "") {
-            //         userBubble.style.display = "block";
-            //     } else {
-            //         userBubble.style.display = "none";
-            //     }
-            // }
-            // $("div.userDiv:empty").hide();
-            // $("div.userDiv").show();
-
-            // var userBubble = document.getElementById("userDiv");
-            // if ($(userBubble).is(":empty")) {
-            //     hide();
-            // } else {
-            //     show();
-            // }
-
-            // if ($("userDiv").is(":empty")) {
-            //     $("userDiv").hide();
-            // } else {
-            //     $("userDiv").show();
-            // }
-
-            // var userBubble = document.getElementById("userDiv");
-            // if (userBubble.innerHTML == "") {
-            //     $("userBubble").css("display", "none");
-            //     $("userBubble").hide();
-            // } else {
-            //     $("userBubble").css("display", "block");
-            //     $("userBubble").show();
-            // }
-
-            // var isEmpty = document.getElementById("userDiv").innerHTML === "";
-            // if (isEmpty) {
-            //     hide();
-            // } else {
-            //     show();
-            // }
+            // hide userDiv if empty
+            $("#bubbleDiv:empty").parent().parent().hide();
+            userQuestion = "";
         </script>
     </body>
 </html>

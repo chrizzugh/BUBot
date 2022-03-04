@@ -51,72 +51,103 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="stars">
-                        <form action="">
-                            <input
-                                class="star star-5"
-                                id="star-5"
-                                type="radio"
-                                name="star"
-                            />
-                            <label class="star star-5" for="star-5"></label>
-                            <input
-                                class="star star-4"
-                                id="star-4"
-                                type="radio"
-                                name="star"
-                            />
-                            <label class="star star-4" for="star-4"></label>
-                            <input
-                                class="star star-3"
-                                id="star-3"
-                                type="radio"
-                                name="star"
-                            />
-                            <label class="star star-3" for="star-3"></label>
-                            <input
-                                class="star star-2"
-                                id="star-2"
-                                type="radio"
-                                name="star"
-                            />
-                            <label class="star star-2" for="star-2"></label>
-                            <input
-                                class="star star-1"
-                                id="star-1"
-                                type="radio"
-                                name="star"
-                            />
-                            <label class="star star-1" for="star-1"></label>
-                        </form>
+                        <input
+                            class="star star-5"
+                            id="star-5"
+                            type="radio"
+                            name="star"
+                            form="save_feedback"
+                            value="5"
+                        />
+                        <label class="star star-5" for="star-5"></label>
+                        <input
+                            class="star star-4"
+                            id="star-4"
+                            type="radio"
+                            name="star"
+                            form="save_feedback"
+                            value="4"
+                        />
+                        <label class="star star-4" for="star-4"></label>
+                        <input
+                            class="star star-3"
+                            id="star-3"
+                            type="radio"
+                            name="star"
+                            form="save_feedback"
+                            value="3"
+                        />
+                        <label class="star star-3" for="star-3"></label>
+                        <input
+                            class="star star-2"
+                            id="star-2"
+                            type="radio"
+                            name="star"
+                            form="save_feedback"
+                            value="2"
+                        />
+                        <label class="star star-2" for="star-2"></label>
+                        <input
+                            class="star star-1"
+                            id="star-1"
+                            type="radio"
+                            name="star"
+                            form="save_feedback"
+                            value="1"
+                        />
+                        <label class="star star-1" for="star-1"></label>
+                        {% comment %}
+                        <input
+                            id="feedback_star"
+                            name="feedback_star"
+                            value="0"
+                            form="save_feedback"
+                        />
+                        {% endcomment %}
                     </div>
                 </div>
             </div>
         </div>
         <!-- comment area -->
-        <div class="container px-4 p-4 px-lg-5 text-center">
-            <div class="form-outline container px-4 p-4 px-lg-5 text-center">
-                <form>
-                    <textarea
-                        class="form-control-description"
-                        id=""
-                        rows="4"
-                        placeholder="Add Description here..."
-                    ></textarea>
-                </form>
+        <div class="container px-lg-5 p-5">
+            <div id="problemDescription" class="">
+                <div class="px-4 text-center">
+                    <div class="row flex-grow-1">
+                        <div class="container px-4 text-center">
+                            <textarea
+                                class="form-control-report"
+                                id="feedbackDescription"
+                                name="feedbackDescription"
+                                rows="4"
+                                placeholder="Add Description...."
+                                form="save_feedback"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container p-5">
             <div class="row p-5">
                 <div class="col-md-12 text-center p-5 mt-5">
                     <!-- Button trigger modal -->
-                    <button
-                        type="button"
-                        class="btn btn-save btn-xl"
-                        data-bs-toggle="modal"
-                        data-bs-target="#saveFeedback"
+                    <form
+                        action=""
+                        method="POST"
+                        id="save_feedback"
+                        name="save_feedback"
+                        enctype="multipart/form-data"
                     >
-                        Save
-                    </button>
+                        {% csrf_token %} {{ feedback }}
+                        <button
+                            type="submit"
+                            class="btn btn-save btn-xl"
+                            data-bs-toggle="modal"
+                            data-bs-target="#saveFeedback"
+                        >
+                            Save
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -133,7 +164,6 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <a
-                            href="{% url 'chat' %}"
                             type="button"
                             class="btn-close button-white position-absolute top-2 end-0 px-4"
                             data-bs-dismiss="modal"
@@ -164,5 +194,37 @@
                 </div>
             </div>
         </div>
+        <script>
+            var one = document.getElementById("star-1");
+            var two = document.getElementById("star-2");
+            var three = document.getElementById("star-3");
+            var four = document.getElementById("star-4");
+            var five = document.getElementById("star-5");
+            var zero = document.getElementById("feedback_star").value;
+            const getNumericValue = (stringValue) => {
+                let numericValue;
+                if (stringValue === "star-1") {
+                    numericValue = 1;
+                } else if (stringValue === "star-2") {
+                    numericValue = 2;
+                } else if (stringValue === "star-3") {
+                    numericValue = 3;
+                } else if (stringValue === "star-4") {
+                    numericValue = 4;
+                } else if (stringValue === "star-5") {
+                    numericValue = 5;
+                } else {
+                    numericValue = 0;
+                }
+                return numericValue;
+            };
+
+            var save_Feedback = getElementById("save_Feedback");
+            button.addEventListener("click", function () {
+                var numericValue = getNumericValue(this.numericValue);
+                document.getElementById("feedback_star").value =
+                    getNumericValue(this.numericValue);
+            });
+        </script>
     </body>
 </html>
