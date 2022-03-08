@@ -47,7 +47,7 @@ class feedbackView(View):
 
 import pickle
 import time
-# class getQuery(View):
+class getQuery(View):
     # def get(self, request, userQuestion, *args, **kwargs):
     #     userQuestion = request.GET('userQuestion')
     #     if userQuestion != None:
@@ -56,25 +56,25 @@ import time
         
     #     return userQuestion
     
-    # def post(self, request, *args, **kwargs):
-    #     if request.method == 'GET':
-    #         current_time = time.strftime("%I:%M %p")
-    #         bubbleDiv = request.POST['userQuestion']
-    #         context = {
-    #             "current_time": current_time,
-    #             "bubbleDiv": bubbleDiv
-    #         }
-    #         if bubbleDiv.is_valid():
-    #             print(bubbleDiv)
-    #             context.save()
-    #             return render(request, 'chat. html', context)
+    def post(self, request, *args, **kwargs):
+        if request.method == 'GET':
+            current_time = time.strftime("%I:%M %p")
+            bubbleDiv = request.POST['userQuestion']
+            context = {
+                "current_time": current_time,
+                "bubbleDiv": bubbleDiv
+            }
+            if bubbleDiv.is_valid():
+                print(bubbleDiv)
+                # context.save()
+                return render(request, 'chat. html', context)
             
-        # return render(request, 'chat.html')
+        return render(request, 'chat.html')
 
-def post(self, request, *args, **kwargs):
-    userInput = request.POST.get['userQuestion']
-    print(userInput)
-    return render(request, 'chat.html')
+# def post(self, request, *args, **kwargs):
+#     userInput = request.POST.get['userQuestion']
+#     print(userInput)
+#     return render(request, 'chat.html')
 
     
 

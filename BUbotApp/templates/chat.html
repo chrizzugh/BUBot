@@ -188,6 +188,23 @@
             $("#sendQuery").submit(function (e) {
                 e.preventDefault();
             });
+
+            {% comment %} $(document).ready(function () {
+                $("#userQuestion").submit(function (event) {
+                  $.ajax({
+                    type: "POST",
+                    url: "/edit_favorites/",
+                    data: {
+                      'userInput': $('#userQuestion').val() // from form
+                    },
+                    success: function () {
+                      $('#bubbleDiv').html
+                    }
+                  });
+                  return false;
+                });
+
+              }); {% endcomment %}
         </script>
     </body>
 </html>
