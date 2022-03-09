@@ -110,34 +110,33 @@
                 </div>
 
                 <!-- bubot reply is chat-message-left -->
-                <!-- <div class="chat-message-left pb-4">
-                        <div class="text-left ml-3 mr-3">
-                            <img
-                                src="{% static 'assets/BUbot-logo.png' %}"
-                                class="rounded-circle mr-1"
-                                alt="BUbot"
-                                width="40"
-                                height="40"
-                            />
-                            <div class="text-muted small text-nowrap mt-2">
-                                2:34 am
-                            </div>
+                <div
+                    class="chat-message-left pb-4"
+                    name="bubotReply"
+                    id="bubotReply"
+                >
+                    <div class="text-left ml-3 mr-3">
+                        <img
+                            src="{% static 'assets/BUbot-logo.png' %}"
+                            class="rounded-circle mr-1"
+                            alt="BUbot"
+                            width="40"
+                            height="40"
+                        />
+                        <div class="text-muted small text-nowrap mt-2">
+                            2:34 am
                         </div>
-                            <div
-                                class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
-                                style="
-                                    background: rgb(61, 178, 255);
-                                    border-radius: 25px;
-                                "
-                            >
-                                Sit meis deleniti eu, pri vidit meliore docendi
-                                ut, an eum erat animal commodo. Sit meis
-                                deleniti eu, pri vidit meliore docendi ut, an
-                                eum erat animal commodo. Sit meis deleniti eu,
-                                pri vidit meliore docendi ut, an eum erat animal
-                                commodo.
-                            </div>
-                    </div> -->
+                    </div>
+                    <div
+                        class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
+                        style="
+                            background: rgb(61, 178, 255);
+                            border-radius: 25px;
+                        "
+                        name="bubotDiv"
+                        id="bubotDiv"
+                    ></div>
+                </div>
             </div>
         </div>
         <!-- user asking query -->
@@ -156,30 +155,34 @@
                         class="button-send"
                         id="sendBtn"
                         name="sendBtn"
-                        method=""
                         type="submit"
+                        onclick="sendButton()"
                     >
                         <span class="material-icons-sharp"> send </span>
                     </button>
                 </form>
             </div>
         </div>
-        <script>
-            var userQuestion;
-            var userDiv;
+        <script type="text/javascript">
+            let userQuestion;
+            let userDiv;
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
-            var button = document.getElementById("sendBtn");
-            var bubbleDivVal = document.getElementById("bubbleDiv").value;
-            button.addEventListener("click", function () {
-                var userQuestion = getuserQuestion();
-                document.getElementById("bubbleDiv").innerHTML = userQuestion;
-                $("#bubbleDiv").parent().show();
-                document.getElementById("userQuestion").value = "";
-            });
-            //use js variable to django
-            var userQuestion = {{userInput}}
+
+            function displayUserQuestion() {
+                let button = document.getElementById("sendBtn");
+                let bubbleDivVal = document.getElementById("bubbleDiv").value;
+                button.addEventListener("click", function () {
+                    let userQuestion = getuserQuestion();
+                    document.getElementById("bubbleDiv").innerHTML =
+                        userQuestion;
+                    $("#bubbleDiv").parent().show();
+                    // document.getElementById("userQuestion").value = "";
+                });
+            }
+
+            displayUserQuestion();
 
             // hide userDiv if empty
             $("#bubbleDiv:empty").parent().hide();
@@ -189,22 +192,58 @@
                 e.preventDefault();
             });
 
-            {% comment %} $(document).ready(function () {
-                $("#userQuestion").submit(function (event) {
-                  $.ajax({
-                    type: "POST",
-                    url: "/edit_favorites/",
-                    data: {
-                      'userInput': $('#userQuestion').val() // from form
-                    },
-                    success: function () {
-                      $('#bubbleDiv').html
-                    }
-                  });
-                  return false;
-                });
+            function sampleResponse() {
+                if (input == "hello") {
+                    return "Hello there!";
+                } else if (input == "goodbye") {
+                    return "Talk to you later!";
+                } else if (input == "hello world") {
+                    return "Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo. Sit meis deleniti eu, pri vidit";
+                } else {
+                    return "Try asking something else!";
+                }
+            }
 
-              }); {% endcomment %}
+            function displayBubotReply() {
+                let button = document.getElementById("sendBtn");
+                let bubotReplyDiv = document.getElementById("bubotDiv").value;
+                button.addEventListener("click", function () {
+                    let bubotResponse = sampleResponse();
+                    document.getElementById("bubotDiv").innerHTML =
+                        bubotResponse;
+                    $("#bubotDiv").parent().show();
+                    // document.getElementById("userQuestion").value = "";
+                });
+            }
+
+            $("#bubotDiv:empty").parent().hide();
+
+            $("#userQuestion").keypress(function (e) {
+                if (e.which == 13) {
+                    displayBubotReply();
+                }
+            });
+
+            function sendButton() {
+                displayBubotReply();
+            }
+
+            //send userQuestion to django view
+            $(document).ready(function () {
+                $("#sendQuery").submit(function (event) {
+                    event.preventDefault();
+                    $.ajax({
+                        url: "/chat/",
+                        type: "GET",
+                        data: {
+                            userQuestion: $("#userQuestion").val().trim(),
+                        },
+                        // success: function (data) {
+                        //     console.log(data);
+                        // },
+                    }); // end ajax
+                });
+            });
         </script>
     </body>
 </html>
