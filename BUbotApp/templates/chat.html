@@ -80,7 +80,7 @@
                 </div>
                 <!-- user chat is chat-message-right -->
                 <div
-                    class="chat-message-right pb-4 userDiv"
+                    class="userDiv chat-message-right pb-4"
                     name="userDiv"
                     id="userDiv"
                 >
@@ -106,14 +106,12 @@
                         name="bubbleDiv"
                         form="sendQuery"
                         value="jdkasjdkahsd"
-                    >
-                        sdsaada
-                    </div>
+                    ></div>
                 </div>
 
                 <!-- bubot reply is chat-message-left -->
                 <div
-                    class="chat-message-left pb-4 bubotReply"
+                    class="bubotReply chat-message-left pb-4"
                     name="bubotReply"
                     id="bubotReply"
                 >
@@ -139,9 +137,7 @@
                         id="bubotDiv"
                         form="sendQuery"
                         value="hello"
-                    >
-                        dsadadasd
-                    </div>
+                    ></div>
                 </div>
             </div>
         </div>
@@ -170,13 +166,13 @@
         </div>
         <!-- script starts -->
         <script type="text/javascript">
-            let userQuestion;
-            let userDiv;
+            var userQuestion;
+            var userDiv;
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
-            let button = document.getElementById("sendBtn");
-            let bubbleDivVal = document.getElementById("bubbleDiv").value;
+            var button = document.getElementById("sendBtn");
+            var bubbleDivVal = document.getElementById("bubbleDiv").value;
 
             // hide bubbleDiv and bubotDiv if empty
             $("#bubbleDiv:empty").parent().hide();
@@ -193,17 +189,20 @@
                         },
                         success: function (data) {
                             // alert("success");
-                            let userQuestion = getuserQuestion();
+                            var userQuestion = getuserQuestion();
                             document.getElementById("bubbleDiv").innerHTML =
                                 userQuestion;
                             document.getElementById("bubotDiv").innerHTML =
                                 "Please wait...";
+                            // debugger;
                             $(".parentChat").append(
-                                $(".userDiv:last").clone(true)
+                                $(".userDiv:first").clone(true)
                             );
+                            // debugger;
                             $(".parentChat").append(
-                                $(".bubotReply:last").clone(true)
+                                $(".bubotReply:first").clone(true)
                             );
+                            // debugger;
                             $("#bubbleDiv").parent().show();
                             $("#bubotDiv").parent().show();
                             console.log(
