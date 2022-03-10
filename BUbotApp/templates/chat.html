@@ -53,7 +53,7 @@
         </nav>
         <!-- chat section -->
         <div class="position-relative">
-            <div class="chat-messages">
+            <div class="chat-messages parentChat">
                 <!-- bubot default reply -->
                 <div class="chat-message-left pb-2 mt-4">
                     <div class="text-left ml-3 mr-3">
@@ -83,7 +83,6 @@
                     class="chat-message-right pb-4 userDiv"
                     name="userDiv"
                     id="userDiv"
-                    display=""
                 >
                     <div class="text-right mr-3 ml-3">
                         <img
@@ -106,12 +105,15 @@
                         id="bubbleDiv"
                         name="bubbleDiv"
                         form="sendQuery"
-                    ></div>
+                        value="jdkasjdkahsd"
+                    >
+                        sdsaada
+                    </div>
                 </div>
 
                 <!-- bubot reply is chat-message-left -->
                 <div
-                    class="chat-message-left pb-4"
+                    class="chat-message-left pb-4 bubotReply"
                     name="bubotReply"
                     id="bubotReply"
                 >
@@ -135,7 +137,11 @@
                         "
                         name="bubotDiv"
                         id="bubotDiv"
-                    ></div>
+                        form="sendQuery"
+                        value="hello"
+                    >
+                        dsadadasd
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,79 +162,26 @@
                         id="sendBtn"
                         name="sendBtn"
                         type="submit"
-                        onclick="sendButton()"
                     >
                         <span class="material-icons-sharp"> send </span>
                     </button>
                 </form>
             </div>
         </div>
+        <!-- script starts -->
         <script type="text/javascript">
             let userQuestion;
             let userDiv;
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
+            let button = document.getElementById("sendBtn");
+            let bubbleDivVal = document.getElementById("bubbleDiv").value;
 
-            function displayUserQuestion() {
-                let button = document.getElementById("sendBtn");
-                let bubbleDivVal = document.getElementById("bubbleDiv").value;
-                button.addEventListener("click", function () {
-                    let userQuestion = getuserQuestion();
-                    document.getElementById("bubbleDiv").innerHTML =
-                        userQuestion;
-                    $("#bubbleDiv").parent().show();
-                    // document.getElementById("userQuestion").value = "";
-                });
-            }
-
-            displayUserQuestion();
-
-            // hide userDiv if empty
+            // hide bubbleDiv and bubotDiv if empty
             $("#bubbleDiv:empty").parent().hide();
-
-            //prevent refreshing when submit
-            $("#sendQuery").submit(function (e) {
-                e.preventDefault();
-            });
-
-            function sampleResponse() {
-                if (input == "hello") {
-                    return "Hello there!";
-                } else if (input == "goodbye") {
-                    return "Talk to you later!";
-                } else if (input == "hello world") {
-                    return "Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo. Sit meis deleniti eu, pri vidit";
-                } else {
-                    return "Try asking something else!";
-                }
-            }
-
-            function displayBubotReply() {
-                let button = document.getElementById("sendBtn");
-                let bubotReplyDiv = document.getElementById("bubotDiv").value;
-                button.addEventListener("click", function () {
-                    let bubotResponse = sampleResponse();
-                    document.getElementById("bubotDiv").innerHTML =
-                        bubotResponse;
-                    $("#bubotDiv").parent().show();
-                    // document.getElementById("userQuestion").value = "";
-                });
-            }
-
             $("#bubotDiv:empty").parent().hide();
 
-            $("#userQuestion").keypress(function (e) {
-                if (e.which == 13) {
-                    displayBubotReply();
-                }
-            });
-
-            function sendButton() {
-                displayBubotReply();
-            }
-
-            //send userQuestion to django view
             $(document).ready(function () {
                 $("#sendQuery").submit(function (event) {
                     event.preventDefault();
@@ -238,9 +191,25 @@
                         data: {
                             userQuestion: $("#userQuestion").val().trim(),
                         },
-                        // success: function (data) {
-                        //     console.log(data);
-                        // },
+                        success: function (data) {
+                            // alert("success");
+                            let userQuestion = getuserQuestion();
+                            document.getElementById("bubbleDiv").innerHTML =
+                                userQuestion;
+                            document.getElementById("bubotDiv").innerHTML =
+                                "Please wait...";
+                            $(".parentChat").append(
+                                $(".userDiv:last").clone(true)
+                            );
+                            $(".parentChat").append(
+                                $(".bubotReply:last").clone(true)
+                            );
+                            $("#bubbleDiv").parent().show();
+                            $("#bubotDiv").parent().show();
+                            console.log(
+                                document.getElementById("bubbleDiv").innerHTML
+                            );
+                        },
                     }); // end ajax
                 });
             });
