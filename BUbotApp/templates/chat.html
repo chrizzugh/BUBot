@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div
-                        class="flex-shrink-1 py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2"
+                        class="py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2"
                         style="
                             background: rgb(243, 113, 36);
                             border-radius: 25px;
@@ -105,8 +105,8 @@
                         id="bubbleDiv"
                         name="bubbleDiv"
                         form="sendQuery"
-                        value="jdkasjdkahsd"
                     ></div>
+                    <div id="bubbleDiv_" name="bubbleDiv_"></div>
                 </div>
 
                 <!-- bubot reply is chat-message-left -->
@@ -136,7 +136,6 @@
                         name="bubotDiv"
                         id="bubotDiv"
                         form="sendQuery"
-                        value="hello"
                     ></div>
                 </div>
             </div>
@@ -150,6 +149,7 @@
                     placeholder="Type here..."
                     id="userQuestion"
                     name="userQuestion"
+                    form="sendQuery"
                 />
                 <form action="" method="GET" id="sendQuery" name="sendQuery">
                     {% csrf_token %}
@@ -166,13 +166,14 @@
         </div>
         <!-- script starts -->
         <script type="text/javascript">
-            var userQuestion;
+            // var userQuestion;
             var userDiv;
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
             var button = document.getElementById("sendBtn");
             var bubbleDivVal = document.getElementById("bubbleDiv").value;
+            var counter = 1;
 
             // hide bubbleDiv and bubotDiv if empty
             $("#bubbleDiv:empty").parent().hide();
@@ -190,21 +191,28 @@
                         success: function (data) {
                             // alert("success");
                             var userQuestion = getuserQuestion();
+                            // $("#id")
+                            //     .clone()
+                            //     .attr("id", "#userDiv" + counter++)
+                            //     .insertAfter("[id^=#userDiv]:last")
+                            //     .text("Cloned " + (counter - 1));
+                            // $(".parentChat").append(
+                            //     $(".userDiv:first").clone(true)
+                            // );
+                            $("#userDiv")
+                                .clone(true)
+                                .attr("id", "userDiv" + counter++)
+                                .insertAfter("#bubbleDiv");
                             document.getElementById("bubbleDiv").innerHTML =
                                 userQuestion;
-                            document.getElementById("bubotDiv").innerHTML =
-                                "Please wait...";
-                            // debugger;
-                            $(".parentChat").append(
-                                $(".userDiv:first").clone(true)
-                            );
-                            // debugger;
                             $(".parentChat").append(
                                 $(".bubotReply:first").clone(true)
                             );
-                            // debugger;
+                            document.getElementById("bubotDiv").innerHTML =
+                                "Please wait...";
                             $("#bubbleDiv").parent().show();
                             $("#bubotDiv").parent().show();
+                            document.getElementById("userQuestion").value = "";
                             console.log(
                                 document.getElementById("bubbleDiv").innerHTML
                             );
