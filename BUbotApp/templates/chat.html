@@ -53,7 +53,11 @@
         </nav>
         <!-- chat section -->
         <div class="position-relative">
-            <div class="chat-messages parentChat">
+            <div
+                class="chat-messages parentChat"
+                id="parentChat"
+                name="parentChat"
+            >
                 <!-- bubot default reply -->
                 <div class="chat-message-left pb-2 mt-4">
                     <div class="text-left ml-3 mr-3">
@@ -182,6 +186,7 @@
             $(document).ready(function () {
                 $("#sendQuery").submit(function (event) {
                     event.preventDefault();
+
                     $.ajax({
                         url: "/chat/",
                         type: "GET",
@@ -190,21 +195,21 @@
                         },
                         success: function (data) {
                             // alert("success");
-                            var userQuestion = getuserQuestion();
-                            // $("#id")
-                            //     .clone()
+                            // $("#userDiv")
+                            //     .clone(true)
                             //     .attr("id", "#userDiv" + counter++)
-                            //     .insertAfter("[id^=#userDiv]:last")
-                            //     .text("Cloned " + (counter - 1));
-                            // $(".parentChat").append(
-                            //     $(".userDiv:first").clone(true)
-                            // );
-                            $("#userDiv")
-                                .clone(true)
-                                .attr("id", "userDiv" + counter++)
-                                .insertAfter("#bubbleDiv");
+                            //     .insertAfter("[id^=#userDiv]:last");
+                            var userQuestion = getuserQuestion();
+                            $(".parentChat").append(
+                                $(".userDiv:first").clone(true)
+                            );
+                            // $("#userDiv")
+                            //     .clone(true)
+                            //     .attr("id", "userDiv" + counter++)
+                            //     .insertAfter("#bubotReply");
                             document.getElementById("bubbleDiv").innerHTML =
                                 userQuestion;
+
                             $(".parentChat").append(
                                 $(".bubotReply:first").clone(true)
                             );
