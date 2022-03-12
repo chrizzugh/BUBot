@@ -1,6 +1,8 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<!-------------------------------------------------------------------------------------------------------------->
+
     <head>
         <meta charset="utf-8" />
         <title>BUbot</title>
@@ -26,7 +28,10 @@
             type="text/css"
         />
     </head>
+
     <body>
+<!-------------------------------------------------------------------------------------------------------------->
+
         <!-- nav -->
         <nav class="nav py-2 px-3 position-relative">
             <div class="d-flex align-items-center py-1">
@@ -51,15 +56,16 @@
                 </a>
             </div>
         </nav>
+<!-------------------------------------------------------------------------------------------------------------->
         <!-- chat section -->
         <div class="position-relative">
             <div
                 class="chat-messages parentChat"
                 id="parentChat"
-                name="parentChat"
-            >
+                name="parentChat">
+
                 <!-- bubot default reply -->
-                <div class="chat-message-left pb-2 mt-4">
+                <div class="chat-message-left pb-2 mt-4" id="bubot">
                     <div class="text-left ml-3 mr-3">
                         <img
                             src="{% static 'assets/BUbot-logo.png' %}"
@@ -82,68 +88,10 @@
                         Hi! How can I help you?
                     </div>
                 </div>
-                <!-- user chat is chat-message-right -->
-                <div
-                    class="userDiv chat-message-right pb-4"
-                    name="userDiv"
-                    id="userDiv"
-                >
-                    <div class="text-right mr-3 ml-3">
-                        <img
-                            src="{% static 'assets/user.png' %}"
-                            class="rounded-circle mr-1"
-                            alt="user"
-                            width="40"
-                            height="40"
-                        />
-                        <div class="text-muted small text-nowrap mt-2">
-                            2:33 am
-                        </div>
-                    </div>
-                    <div
-                        class="py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2"
-                        style="
-                            background: rgb(243, 113, 36);
-                            border-radius: 25px;
-                        "
-                        id="bubbleDiv"
-                        name="bubbleDiv"
-                        form="sendQuery"
-                    ></div>
-                    <div id="bubbleDiv_" name="bubbleDiv_"></div>
-                </div>
 
-                <!-- bubot reply is chat-message-left -->
-                <div
-                    class="bubotReply chat-message-left pb-4"
-                    name="bubotReply"
-                    id="bubotReply"
-                >
-                    <div class="text-left ml-3 mr-3">
-                        <img
-                            src="{% static 'assets/BUbot-logo.png' %}"
-                            class="rounded-circle mr-1"
-                            alt="BUbot"
-                            width="40"
-                            height="40"
-                        />
-                        <div class="text-muted small text-nowrap mt-2">
-                            2:34 am
-                        </div>
-                    </div>
-                    <div
-                        class="flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4"
-                        style="
-                            background: rgb(61, 178, 255);
-                            border-radius: 25px;
-                        "
-                        name="bubotDiv"
-                        id="bubotDiv"
-                        form="sendQuery"
-                    ></div>
-                </div>
-            </div>
-        </div>
+            </div><!-----------------First line-->
+
+
         <!-- user asking query -->
         <div class="py-3 px-4 input-group fixed-bottom">
             <div class="input-group">
@@ -167,21 +115,22 @@
                     </button>
                 </form>
             </div>
-        </div>
+        </div><!-- end of user asking query -->
+
+
         <!-- script starts -->
         <script type="text/javascript">
             // var userQuestion;
+
             var userDiv;
+            
+            
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
-            var button = document.getElementById("sendBtn");
-            var bubbleDivVal = document.getElementById("bubbleDiv").value;
+            
             var counter = 1;
 
-            // hide bubbleDiv and bubotDiv if empty
-            $("#bubbleDiv:empty").parent().hide();
-            $("#bubotDiv:empty").parent().hide();
 
             $(document).ready(function () {
                 $("#sendQuery").submit(function (event) {
@@ -194,33 +143,27 @@
                             userQuestion: $("#userQuestion").val().trim(),
                         },
                         success: function (data) {
-                            // alert("success");
-                            // $("#userDiv")
-                            //     .clone(true)
-                            //     .attr("id", "#userDiv" + counter++)
-                            //     .insertAfter("[id^=#userDiv]:last");
+                            
                             var userQuestion = getuserQuestion();
+
+
+                            var outgoing = "<div class=\"chat-message-right pb-4\"> <div class=\"text-right mr-3 ml-3\"> <img src=\"{% static 'assets/user.png' %}\" class=\"rounded-circle mr-1\" alt=\"user\" width=\"40\" height=\"40\" /><div class=\"text-muted small text-nowrap mt-2\"> 2:33 am </div></div><div class=\"py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2\" style=\" background: rgb(243, 113, 36); border-radius: 25px;\">"+ userQuestion + "</div></div>"
+                            
                             $(".parentChat").append(
-                                $(".userDiv:first").clone(true)
+                                outgoing
                             );
-                            // $("#userDiv")
-                            //     .clone(true)
-                            //     .attr("id", "userDiv" + counter++)
-                            //     .insertAfter("#bubotReply");
-                            document.getElementById("bubbleDiv").innerHTML =
-                                userQuestion;
+
+                            incoming_response = "Please wait..."
+                            var incoming = "<div class=\"bubotReply chat-message-left pb-4\"><div class= \"text-left ml-3 mr-3\"><img src=\"{% static 'assets/BUbot-logo.png' %}\" class=\"rounded-circle mr-1\" alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\"> 2:34 am </div> </div> <div class=\"flex-shrink-1 py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4\" style=\"background: rgb(61, 178, 255);border-radius: 25px;\">"+ incoming_response + "</div></div>"
 
                             $(".parentChat").append(
-                                $(".bubotReply:first").clone(true)
+                                incoming
                             );
-                            document.getElementById("bubotDiv").innerHTML =
-                                "Please wait...";
-                            $("#bubbleDiv").parent().show();
-                            $("#bubotDiv").parent().show();
+
                             document.getElementById("userQuestion").value = "";
-                            console.log(
-                                document.getElementById("bubbleDiv").innerHTML
-                            );
+                            // console.log(
+                            //     document.getElementById("bubbleDiv").innerHTML
+                            // );
                         },
                     }); // end ajax
                 });
