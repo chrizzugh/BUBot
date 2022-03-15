@@ -1,3 +1,4 @@
+from pdb import post_mortem
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import View
@@ -44,12 +45,19 @@ class feedbackView(View):
                 return redirect('/')
         return render(request, "feedback.html")
 
-def get_queryset(self):
-    userQuestion = self.request.GET.get('userInput', None)
-    self.queryset = Post.objects.filter(title__icontains=userQuestion)
-    return self.queryset
+import string
+def get_query(self, request):
+    # userQuestion = string(  self.request.GET.get('userQuestion', None))
+    # # print(userQuestion, "userQ")
+    # self.query = post_mortem.objects.filter(title__icontains=userQuestion)
+    # # print(self.query)
+    # # print(userQuestion, "userQuestion")
+    # return self.query
+    if request.GET.get('chat'):
+        message = 'You submitted: %r' % request.GET['chat']
+    else:
+        message = 'You submitted nothing!'
+        
+    print(message)
 
-import pickle
-def displayResponse(request, bubotReply):
-    model = pickle.load(open("saved_model.pb", "rb"))
-    metadata = pickle.load(open("keras_metadata1.pb", "rb"))
+

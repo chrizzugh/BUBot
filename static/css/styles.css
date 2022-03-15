@@ -379,6 +379,7 @@ figure {
 img,
 svg {
     vertical-align: middle;
+    vertical-align: bottom;
 }
 
 table {
@@ -417,24 +418,28 @@ th {
     overflow-wrap: break-word;
     position: relative;
     margin: 15px 15px 5px 15px;
+    padding-bottom: 75px;
 }
 
 .chat-message-left,
 .chat-message-right {
     display: flex;
     color: #fff;
-    border-radius: 25px;
+    border-radius: 20px;
     flex-shrink: 0;
     position: relative;
     width: calc(100% - 50px);
 }
 .chat-message-left {
     margin-right: auto;
+    margin-top: 5px;
+    padding-right: 150px;
 }
 
 .chat-message-right {
     flex-direction: row-reverse;
     margin-left: auto;
+    padding-left: 150px;
 }
 
 label {
@@ -5348,7 +5353,7 @@ fieldset:disabled .btn {
 }
 
 .mt-2 {
-    margin-top: 0.5rem !important;
+    margin-top: 0rem !important;
 }
 
 .mt-3 {
@@ -5605,7 +5610,7 @@ fieldset:disabled .btn {
 }
 
 .pb-4 {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 0px !important;
 }
 
 .pb-5 {
@@ -5900,6 +5905,9 @@ fieldset:disabled .btn {
 
 .rounded-circle {
     border-radius: 50% !important;
+    display: inline-block;
+    vertical-align: bottom;
+    pointer-events: auto;
 }
 
 .rounded-pill {
@@ -8625,6 +8633,7 @@ fieldset:disabled .btn {
 
     .flex-xxl-shrink-1 {
         flex-shrink: 1 !important;
+        margin-bottom: 50px; 
     }
 
     .flex-xxl-wrap {
