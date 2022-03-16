@@ -1,4 +1,5 @@
 from pdb import post_mortem
+from urllib import request
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import View
@@ -45,19 +46,47 @@ class feedbackView(View):
                 return redirect('/')
         return render(request, "feedback.html")
 
-import string
-def get_query(self, request):
-    # userQuestion = string(  self.request.GET.get('userQuestion', None))
-    # # print(userQuestion, "userQ")
-    # self.query = post_mortem.objects.filter(title__icontains=userQuestion)
-    # # print(self.query)
-    # # print(userQuestion, "userQuestion")
-    # return self.query
-    if request.GET.get('chat'):
-        message = 'You submitted: %r' % request.GET['chat']
-    else:
-        message = 'You submitted nothing!'
+# from BUbotApp.model.main import decoder
+from django.http import JsonResponse
+# class chatView(View):
+
+# class chatView(View):
+    # def get(self, request):
+    #     # chat(request)
+    #     # return render(request, "chat.html")
+    #     return HttpResponse(request.GET.get("userInput"))
+    
+def chat(request):
+    userInput= {}
+    print(request.GET.get("userInput"))
+    if request.method == "GET":
+        get_get = request.GET.get("userInput")
+        data  = {"test": get_get}
+        # return render(request.GET.get("userInput"), "chat.html")
+        print(get_get)
+        return JsonResponse(data)
+    # return render(request, "chat.html")
+
         
-    print(message)
+            # userQuestion = request.GET.get('userQuestion')
+            # query = post_mortem.objects.filter(title__icontains=userQuestion)
+                # # print(userQuestion, "userQ")
+                # print(self.query)
+                # print(userQuestion, "userQuestion")
+                # if request.GET.get('chat'):
+                #     message = 'You submitted: %r' % request.GET['chat']
+                # else:
+                #     message = 'You submitted nothing!'
+                    
+                # print(message)
+                # if request.is_ajax():
+                #     if request.method == 'POST':
+                #         print ('Raw Data: "%s"' % request.body)
+
+                #     decoded= decoder(request)
+
+                # return decoded
+
+
 
 

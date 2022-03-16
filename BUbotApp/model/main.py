@@ -372,66 +372,66 @@ if __name__ == "__main__":
     print("TESTING BUBOT.... \nPlease type your question....\nType 'EXIT' to quit program.") 
     print("------------------------------------------------------------")
     
-    from BUbotApp.views import get_query
-    
-    while True: 
-    
-        """
-            Get the user input, perform preprocessing
-            and necessary operations to transform output into machine-readable input
-        """
-        USER_INPUT = get_query()
-        # if USER_INPUT == 'EXIT':
-        #     break
-        print(USER_INPUT)
-        USER_INPUT = prep_ques(USER_INPUT)
+    def decoder(USER_INPUT):
+        while True: 
+        
+            """
+                Get the user input, perform preprocessing
+                and necessary operations to transform output into machine-readable input
+            """
+            
+            # if USER_INPUT == 'EXIT':
+            #     break
+            print(USER_INPUT)
+            USER_INPUT = prep_ques(USER_INPUT)
 
-        user = []
-        for token in USER_INPUT: 
-            try:
-                user.append(vocab[token])
-            except:
-                user.append(vocab['OUT'])
-        user = [user]    
+            user = []
+            for token in USER_INPUT: 
+                try:
+                    user.append(vocab[token])
+                except:
+                    user.append(vocab['OUT'])
+            user = [user]    
 
-        user = pad_sequences(user, 69, padding='post', truncating = 'post')
-    
-        encoder_model_outputs, states = encoder_model.predict( user )
-    
-        target_response = np.zeros((1,1)) 
-    
-        target_response[0, 0] = vocab['SOS']
+            user = pad_sequences(user, 69, padding='post', truncating = 'post')
+        
+            encoder_model_outputs, states = encoder_model.predict( user )
+        
+            target_response = np.zeros((1,1)) 
+        
+            target_response[0, 0] = vocab['SOS']
 
-        decoded = ''
+            decoded = ''
+        
+            while True :
+        
+                decoder_model_outputs , h, c= decoder_model.predict([ target_response] + states )
+        
+        
+                attention_op, attention_state = attention_layer([encoder_model_outputs, decoder_model_outputs])
+                decoder_concat_input = Concatenate(axis=-1)([decoder_model_outputs, attention_op])
+                decoder_concat_input = dec_dense(decoder_concat_input)
+        
+        
+                predicted = np.argmax( decoder_concat_input[0, -1, :] )
+        
+        
+                predicted_word = inverse_vocab[predicted] + ' '
+        
+        
+                if predicted_word != 'EOS ':
+                    decoded += predicted_word 
+        
+                if predicted_word == 'EOS ' or len(decoded.split()) > 70:
+                    break
+        
+                target_response = np.zeros( ( 1 , 1 ) )  
+                target_response[ 0 , 0 ] = predicted
+        
+                stat = [h, c]  
     
-        while True :
-    
-            decoder_model_outputs , h, c= decoder_model.predict([ target_response] + states )
-    
-    
-            attention_op, attention_state = attention_layer([encoder_model_outputs, decoder_model_outputs])
-            decoder_concat_input = Concatenate(axis=-1)([decoder_model_outputs, attention_op])
-            decoder_concat_input = dec_dense(decoder_concat_input)
-    
-    
-            predicted = np.argmax( decoder_concat_input[0, -1, :] )
-    
-    
-            predicted_word = inverse_vocab[predicted] + ' '
-    
-    
-            if predicted_word != 'EOS ':
-                decoded += predicted_word 
-    
-            if predicted_word == 'EOS ' or len(decoded.split()) > 70:
-                break
-    
-            target_response = np.zeros( ( 1 , 1 ) )  
-            target_response[ 0 , 0 ] = predicted
-    
-            stat = [h, c]  
-    
-        print("BUBOT : ", decoded)
-        print("============================================================") 
+            print("BUBOT : ", decoded)
+            print("============================================================") 
+            return decoded
     
     
