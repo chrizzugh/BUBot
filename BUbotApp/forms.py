@@ -13,6 +13,3 @@ class SaveFeedbackForm(forms.ModelForm):
         model = user_feedback
         fields = ["star" ,"feedbackDescription"]
         # exclude = ["reportDescription" ,"reportAttachment"]
-
-
-
