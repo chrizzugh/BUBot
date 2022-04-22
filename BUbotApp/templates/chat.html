@@ -74,8 +74,8 @@
                             width="40"
                             height="40"
                         />
-                        <div class="text-muted small text-nowrap mt-2">
-                            2:34 am
+                        <div class="text-muted small text-nowrap mt-2" id="default">
+                            
                         </div>
                     </div>
                     <div
@@ -119,51 +119,55 @@
 
         <!-- script starts -->
         <script type="text/javascript">
-            
+
+            const time = new Date().toLocaleString([], { hour: 'numeric', minute: 'numeric' });
+
             function getuserQuestion() {
                 return document.getElementById("userQuestion").value;
             }
-            // var bubotResponse = "{{bubotResponse}}";
+
+            document.getElementById("default").innerHTML = time;
+
             
+            var botResponse = document.getElementById("bubotDiv");
+
             $(document).ready(function () {
                 $("#sendQuery").submit(function (event) {
                     event.preventDefault();  
                     $.ajax({
                         url: "/chat/",
                         type: "POST",
-                        // headers: { 
-                        //             'Content-Type': 'application/json; charset=utf-8',
-                        //             'X-CSRFToken': '{{ csrf_token }}',
-                        //         },
                         data:{
                             userInput: $("#userQuestion").val(),
                             csrfmiddlewaretoken: '{{ csrf_token }}',
-                            // bubotReply: $("#bubotDiv")
                         },
                         success: function (response) {
-                            // alert(JSON.stringify(response));
-                            // console.log(JSON.stringify(response));
                             var userQuestion = getuserQuestion();
 
-                            var outgoing = "<div class=\"chat-message-right pb-4\"> <div class=\"text-right mr-3 ml-3\"> <img src=\"{% static 'assets/user.png' %}\" class=\"rounded-circle mr-1\" alt=\"user\" width=\"40\" height=\"40\" /><div class=\"text-muted small text-nowrap mt-2\"> 2:33 am </div></div><div class=\"py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2\" style=\" background: rgb(243, 113, 36); border-radius: 25px;\">"+ userQuestion + "</div></div>"
+                            var outgoing = "<div class=\"chat-message-right pb-4\"> <div class=\"text-right mr-3 ml-3\">" + 
+                                            "<img src=\"{% static 'assets/user.png' %}\" class=\"rounded-circle mr-1\" "+
+                                            " alt=\"user\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\">" 
+                                            + time + "</div></div><div class=\"py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2\" style=\" "+
+                                            " background: rgb(243, 113, 36); border-radius: 25px;\">" + userQuestion + "</div></div>"
                             
                             $(".parentChat").append(
                                 outgoing
-                            );
-
-                            var bubotResponse = "finallyyyyyyy"
-                            var incoming = "<div class=\"bubotReply chat-message-left pb-4\"><div class= \"text-left ml-3 mr-3\"><img src=\"{% static 'assets/BUbot-logo.png' %}\" class=\"rounded-circle mr-1\" alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\"> 2:34 am </div> </div> <div class=\"bubotDiv py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4\" id=\"bubotDiv\" name=\"bubotDiv\" style=\"background: rgb(61, 178, 255);border-radius: 25px;\">"+ bubotResponse + "</div></div>"
+                            ); 
+                            
+                            var incoming = "<div class=\"bubotReply chat-message-left pb-4\"> <div class= \"text-left ml-3 mr-3\">"+
+                                            "<img src=\"{% static 'assets/BUbot-logo.png' %}\" class=\"rounded-circle mr-1\" "+
+                                            "alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\">"
+                                            + time + "</div> </div><div class=\"bubotDiv py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4\" "+
+                                            "id=\"bubotDiv\" name=\"bubotDiv\" "+ "style=\"background: rgb(61, 178, 255);border-radius: 25px;\">"
+                                            + response + "</div></div>"
 
                             $(".parentChat").append(
                                 incoming
-                            );
+                            ); 
 
                             document.getElementById("parentChat").scrollIntoView({behavior:'smooth', block:'end'});
 
                             document.getElementById("userQuestion").value = "";
-                            // console.log(
-                            //     document.getElementById("bubbleDiv").innerHTML
-                            // );
                         },
                         error: function (response) {
                             console.log(response);

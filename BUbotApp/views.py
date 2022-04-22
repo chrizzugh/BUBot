@@ -5,10 +5,6 @@ from django.views.generic import View
 import tensorflow as tf
 from tensorflow import keras
 from .forms import *
-# import preprocessing
-from . import preprocessing
-# from . import main
-
 
 #!rendering landing and about
 def landing(request):
@@ -33,6 +29,7 @@ class reportView(View):
             
         return render(request, "report.html")
 
+
 class feedbackView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "feedback.html")
@@ -46,59 +43,85 @@ class feedbackView(View):
                 return redirect('/')
         return render(request, "feedback.html")
 
+from nltk.corpus import stopwords
+from nltk.tokenize import WhitespaceTokenizer
+from nltk.stem import WordNetLemmatizer
+tk = WhitespaceTokenizer()
+import re
+import string
+
+
+def prep_ques(txt, abbrev):
+
+    #A. converting text to lowercase
+    txt = txt.lower()
+
+    #C. noise removing where unnecessary symbols will be removed
+    txt = re.sub(r"'ll", " will",txt)
+    txt = re.sub(r"'m", " am",txt)
+    txt = re.sub(r"'s", " is", txt)
+    txt = re.sub(r"\'ve", " have", txt)
+    txt = re.sub(r"\'re", " are", txt)
+    txt = re.sub(r"\'d", " had", txt)
+    txt = re.sub(r"won't", "would not", txt)
+    txt = re.sub(r"'t", " not", txt)
+    txt = txt.translate(str.maketrans('', '', string.punctuation))
+    
+    lst = ''
+    for token in txt.split():
+        try:
+            temp = abbrev[token]
+        except:
+            temp = token
+        lst = lst + ' ' +temp
+    txt = lst
+    
+    #B. undergoing tokenization or splitting the sentences into words
+    txt = tk.tokenize(txt)
+    
+    #D. removing of stop words
+    txt = [word for word in txt if not word in stopwords.words()]
+    
+    #F. lemmatization 
+    lemmatizer = WordNetLemmatizer()
+    txt = [lemmatizer.lemmatize(token, pos="v") for token in txt]
+
+    return ' '.join(txt)
+
+#--------code for the website starts here------------
+import nltk 
+# nltk.download('stopwords') #for first run
+# nltk.download('punkt') #for first run
+# nltk.download('wordnet') #for first run
+# nltk.download('omw-1.4') #for first run
+
+import tensorflow as tf
+import logging
+import tensorflow_text  
+logging.getLogger('tensorflow').setLevel(logging.ERROR) 
+
+import json
+with open('D:/Documents/thesis/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
+    abbrev = json.loads(abbreviations.read())
+
+Bubot = tf.saved_model.load('D:/Documents/thesis/BUBot/BUbotApp/models/VanilaBUbot')
+
+
+# from langdetect import detect
+import langid
 #! chat
 def chat(request): 
-    userQuery = []
-    # userQuery = json.loads(request.body) 
     if request.method == "POST":
-        userQuery = request.POST['userInput']
-        
-        # load vocab
-        # json_file_path = "D:/Documents/thesis/BUBot/BUbotApp/training files/output/vocab.json"
-        # with open(json_file_path, 'r') as j:
-        #     vocab = json.loads(j.read())
-            
-        with open('D:/Documents/thesis/BUBot/BUbotApp/models/vocab.json', 'r') as vocabulary:
-            vocab = json.load(vocabulary)
-
-        with open('D:/Documents/thesis/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
-            abbrev = json.loads(abbreviations.read())
-        
-        
-        
-        
-        # userQuery = preprocessing.prep_ques(userQuery)
-        userQuery = preprocessing.prep_ques(userQuery)
-        user = []
-        for token in userQuery: 
-            try:
-                user.append(vocab[token])
-            except:
-                user.append(vocab['OUT'])
-        user = [user]   
-        print(userQuery)
-        print(user)
-        
-        model_path = r"D:/Documents/thesis/BUBot/BUbotApp/models/VanilaBUbot"
-        model = tf.keras.models.load_model(model_path)
-        # model.summary()
-        
-        # target_response = np.zeros((1,1)) 
-        
-        # target_response[0, 0] = vocab['SOS']
-        
-        # inverse_vocab = {index:word for word, index in vocab.items()}
-        
-        # bubotResponse = ''
-        
-        # bubotResponse = model.predict(user, batch_size=None, verbose=0, steps=None, callbacks=None)
-        # print(bubotResponse)
-        
-        
-        return JsonResponse(userQuery, safe=False)
+        userQuery = request.POST ['userInput']
+        lang = langid.classify(userQuery)[0]
+        # lang = detect(userQuery)
+        print(lang)
+        if lang != "en":
+            bubotResponse = "I apologize but I can only answer question in English language. Can you retype your question in that language?"
+        else:
+            userQuery = prep_ques(userQuery, abbrev)
+            predicted = Bubot(userQuery).numpy()
+            bubotResponse = predicted.decode()
+        return JsonResponse(bubotResponse, safe=False)
     
     return render(request, "chat.html")
-
-
-
-
