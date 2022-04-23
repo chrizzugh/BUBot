@@ -142,8 +142,6 @@ def chat(request):
     if request.method == "POST":
         userQuery = request.POST ['userInput']
         userQuery = prep_ques(userQuery, abbrev)
-        if userQuery == 'bucet':
-            userQuery = userQuery.replace('bucet','bucess')
         predicted = Bubot(userQuery).numpy()
         bubotResponse = predicted.decode()
         bubotResponse = prep_ans(bubotResponse)
