@@ -101,27 +101,20 @@ import tensorflow_text
 logging.getLogger('tensorflow').setLevel(logging.ERROR) 
 
 import json
-with open('D:/Documents/thesis/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
+with open('C:/CV/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
     abbrev = json.loads(abbreviations.read())
 
-Bubot = tf.saved_model.load('D:/Documents/thesis/BUBot/BUbotApp/models/VanilaBUbot')
+Bubot = tf.saved_model.load('C:/CV/BUBot/BUbotApp/models/VanilaBUbot')
 
 
-# from langdetect import detect
-# import langid
 #! chat
 def chat(request): 
     if request.method == "POST":
         userQuery = request.POST ['userInput']
-        # lang = langid.classify(userQuery)[0]
-        # # lang = detect(userQuery)
-        # print(lang)
-        # if lang != "en":
-        #     bubotResponse = "I apologize but I can only answer question in English language. Can you retype your question in that language?"
-        # else:
         userQuery = prep_ques(userQuery, abbrev)
         predicted = Bubot(userQuery).numpy()
         bubotResponse = predicted.decode()
+        
         return JsonResponse(bubotResponse, safe=False)
     
     return render(request, "chat.html")
