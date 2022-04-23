@@ -88,6 +88,36 @@ def prep_ques(txt, abbrev):
 
     return ' '.join(txt)
 
+
+def prep_ans(txt):
+
+    txt = txt.replace('how can you ', '')
+    txt = txt.replace('what are the ', '')
+    txt = txt.replace('who is the ', '')
+    txt = txt.replace('how can I ', '')
+    txt = txt.replace('can I ', '')
+    txt = txt.replace('why do ', '')
+    txt = txt.replace('what is ', '')
+    txt = txt.replace('what are ', '')
+    txt = txt.replace('what is ', '')
+    txt = txt.replace('who can ', '')
+    txt = txt.replace('is there ', '')
+    txt = txt.replace('do i need ', '')
+    txt = txt.replace('how to be ', '')
+    txt = txt.replace('what will ', '')
+    txt = txt.replace('how many ', '')
+    txt = txt.replace('how much is ', '')
+    txt = txt.replace('will ','')
+    txt = txt.replace('do I ', '')
+    txt = txt.replace('what time does', "Time")
+    txt = txt.replace('what medical services does the', 'Medical services')
+    txt = txt.replace('what dental services does the', 'Dental services')
+    
+    txt = txt.replace(', how can I help', '')
+    txt = txt.replace('?', '')
+    
+    return txt.capitalize()
+
 #--------code for the website starts here------------
 import nltk 
 # nltk.download('stopwords') #for first run
@@ -101,10 +131,10 @@ import tensorflow_text
 logging.getLogger('tensorflow').setLevel(logging.ERROR) 
 
 import json
-with open('C:/CV/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
+with open('D:/Documents/thesis/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
     abbrev = json.loads(abbreviations.read())
 
-Bubot = tf.saved_model.load('C:/CV/BUBot/BUbotApp/models/VanilaBUbot')
+Bubot = tf.saved_model.load('D:/Documents/thesis\BUBot/BUbotApp/models/VanilaBUbot')
 
 
 #! chat
@@ -114,7 +144,7 @@ def chat(request):
         userQuery = prep_ques(userQuery, abbrev)
         predicted = Bubot(userQuery).numpy()
         bubotResponse = predicted.decode()
-        
+        bubotResponse = prep_ans(bubotResponse)
         return JsonResponse(bubotResponse, safe=False)
     
     return render(request, "chat.html")
