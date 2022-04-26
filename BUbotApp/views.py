@@ -120,10 +120,10 @@ def prep_ans(txt):
 
 #--------code for the website starts here------------
 import nltk 
-nltk.download('stopwords') #for first run
-nltk.download('punkt') #for first run
-nltk.download('wordnet') #for first run
-nltk.download('omw-1.4') #for first run
+# nltk.download('stopwords') #for first run
+# nltk.download('punkt') #for first run
+# nltk.download('wordnet') #for first run
+# nltk.download('omw-1.4') #for first run
 
 import tensorflow as tf
 import logging
