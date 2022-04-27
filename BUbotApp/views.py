@@ -6,13 +6,15 @@ import tensorflow as tf
 from tensorflow import keras
 from .forms import *
 
-#!rendering landing and about
+#!rendering landing, about, and categories
 def landing(request):
     return render(request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')
 
+def categories(request):
+    return render(request, 'categories.html')
 
 #!Report and feedback class-based view 
 class reportView(View):

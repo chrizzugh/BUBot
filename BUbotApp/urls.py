@@ -7,4 +7,5 @@ urlpatterns =[
     path('feedback/', views.feedbackView.as_view(), name="feedback"),
     path('about/', views.about, name="about"),
     path('report/', views.reportView.as_view(), name="report"),
+    path('categories/', views.categories, name="categories"),
 ]
