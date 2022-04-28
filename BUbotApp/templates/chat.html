@@ -129,24 +129,9 @@
 
             document.getElementById("default").innerHTML = time;
 
-            
             var botResponse = document.getElementById("bubotDiv");
 
             $(document).ready(function () {
-                // $('#userQuestion').on('keyup', function(){
-                //     let empty = false;
-
-                //     $('#userQuestion').each(function(){
-                //         empty = $(this).val().trim().length == 0;
-                //     });
-
-                //     if (empty){
-                //         $('#sendBtn').attr('disabled', 'disabled');
-                //     } else {
-                //         $('#sendBtn').attr('disabled', false);
-                //     }
-                // })
-            
                 $("#sendQuery").submit(function (event) {
                     event.preventDefault();  
                     $.ajax({
@@ -157,11 +142,11 @@
                             csrfmiddlewaretoken: '{{ csrf_token }}',
                         },
                         success: function (response) {
+                            const time = new Date().toLocaleString([], { hour: 'numeric', minute: 'numeric' });
                             var userQuestion = getuserQuestion();
-
                             var outgoing = "<div class=\"chat-message-right pb-4\"> <div class=\"text-right mr-3 ml-3\">" + 
                                             "<img src=\"{% static 'assets/user.png' %}\" class=\"rounded-circle mr-1\" "+
-                                            " alt=\"user\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\">" 
+                                            " alt=\"user\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\" id= \"default\">" 
                                             + time + "</div></div><div class=\"py-2 px-3 mr-2 ml-5 ml-sm-5 mb-4 mt-2\" style=\" "+
                                             " background: rgb(243, 113, 36); border-radius: 25px;\">" + userQuestion + "</div></div>"
                             
@@ -171,11 +156,10 @@
                             
                             var incoming = "<div class=\"bubotReply chat-message-left pb-4\"> <div class= \"text-left ml-3 mr-3\">"+
                                             "<img src=\"{% static 'assets/BUbot-logo.png' %}\" class=\"rounded-circle mr-1\" "+
-                                            "alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\">"
+                                            "alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\" id= \"default\">"
                                             + time + "</div> </div><div class=\"bubotDiv py-2 px-3 mr-5 mr-sm-5 ml-3 mb-4\" "+
                                             "id=\"bubotDiv\" name=\"bubotDiv\" "+ "style=\"background: rgb(61, 178, 255);border-radius: 25px;\">"
                                             + response + "</div></div>"
-
                             $(".parentChat").append(
                                 incoming
                             ); 
