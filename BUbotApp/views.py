@@ -16,6 +16,12 @@ def about(request):
 def categories(request):
     return render(request, 'categories.html')
 
+def login(request):
+    return render(request, 'login.html')
+
+def admin(request):
+    return render(request, 'admin.html')
+
 #!Report and feedback class-based view 
 class reportView(View):
     def get(self, request, *args, **kwargs):

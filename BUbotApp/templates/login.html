@@ -54,43 +54,63 @@
         <!-- Header-->
         <div class="masthead d-flex align-items-center">
             <div class="container px-2 px-lg-5 text-center">
-                <h1 class="mb-1 pt-5">Hello!</h1>
-                <h2 class="">I'm BUbot, an AI-powered assistive chatbot.</h2>
-                <h2 class="mb-3">
-                    I can answer you Bicol University related questions.
-                </h2>
                 <div>
                     <img
-                        src="{% static 'assets/BUbot-logo.png' %}"
+                        src="{% static 'assets/admin.png' %}"
+                        width="20"
+                        height="20"
                         alt="logo"
                         class="image-container"
                     />
+                    <h3 class="mb-1 pt-2" style="color: white">
+                        LOGIN AS ADMINISTRATOR
+                    </h3>
                 </div>
-                <h3 class="py-3" style="color: white">You have questions?</h3>
-                <div class="pb-3">
-                    <a
-                        class="btn btn-primary btn-xl"
-                        style="width: 195px"
-                        href="{% url 'chat' %}"
-                        >Ask now</a
-                    >
+                <div>
+                    <div class="mt-4 mb-4">
+                        <input
+                            class=""
+                            type="text"
+                            id="username"
+                            required="required"
+                            placeholder="USERNAME"
+                            style="
+                                border: 1px solid;
+                                border-radius: 10px;
+                                width: 30%;
+                                height: 50px;
+                            "
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <input
+                            class=""
+                            type="password"
+                            id="password"
+                            required="required"
+                            placeholder="PASSWORD"
+                            style="
+                                border: 1px solid;
+                                border-radius: 10px;
+                                width: 30%;
+                                height: 50px;
+                            "
+                        />
+                    </div>
                 </div>
                 <div class="pb-2">
-                    <a
-                        class="btn btn-primary btn-xl"
-                        style="width: 195px"
-                        href="{% url 'login' %}"
+                    <a class="btn btn-primary btn-lg" href="{% url 'admin' %}"
                         >Login</a
                     >
                 </div>
-                <h3 class="py-3" style="color: white; font-size: 16px">
+                <p class="py-3" style="color: white; font-size: 12px">
                     <a
                         style="color: white; font-size: 20px"
                         href="{% url 'categories' %}"
                     >
-                        What questions can BUbot answer?
+                        Forgot Password
                     </a>
-                </h3>
+                </p>
             </div>
         </div>
         <!-- Bootstrap core JS-->
