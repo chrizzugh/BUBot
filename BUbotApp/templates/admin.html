@@ -26,11 +26,11 @@
         <!-- nav -->
         <nav class="nav py-2 px-3 position-relative">
             <div class="d-flex align-items-center py-1">
-                <a class="button-white px-1" href="{% url 'index' %}">
+                <a class="button-white px-1 pt-1" href="{% url 'index' %}">
                     <span class="material-icons-sharp"> arrow_back </span>
                 </a>
-                <div class="pl-1">
-                    <strong style="color: #fff">Admin</strong>
+                <div class="pl-2">
+                    <strong style="color: #fff">Home</strong>
                 </div>
                 <a
                     class="button-white position-absolute top-2 end-0 px-4"
@@ -44,11 +44,21 @@
         <div class="container px-4 p-2 text-center mb-3 mt-3">
             <h3 class="" style="color: black">Admin Page</h3>
         </div>
-        <div class="container text-center">
-            <table
-                class="table container text-center mt-5"
-                styles="border-collapse: collapse; border: 2px solid rgb(200, 200, 200); letter-spacing: 1px; font-size: 0.8rem;"
+        <div class="container">
+            <a
+                class="btn btn-primary btn-lg mb-5"
+                style="float: right"
+                href="{% url 'index' %}"
+                id="logOutBtn"
             >
+                Log out</a
+            >
+        </div>
+        <div class="container text-center" style="padding-bottom: 100px;">
+            <table class="table container text-center mt-5" 
+            styles="border-collapse: collapse; border: 2px solid rgb(200, 200, 200); letter-spacing: 1px; font-size: 0.8rem;"
+            >
+                
                 <thead
                     id="categories"
                     style="background-color: #3db2ff; color: #fff"
@@ -56,27 +66,48 @@
                     <th style="border: 1px solid black; padding: 10px 20px">
                         ITEM
                     </th>
-                    <th style="border: 1px solid black; padding: 10px 20px">
+                    <th style="border: 1px solid black; padding: 10px 20px; text-align: center;">
                         QUESTIONS
                     </th>
-                    <th style="border: 1px solid black; padding: 10px 20px">
+                    <th style="border: 1px solid black; padding: 10px 20px; text-align: center">
                         ANSWERS
                     </th>
                     <th
-                        style="border: 1px solid black; padding: 10px 20px"
+                        style="border: 1px solid black; padding: 10px 20px; text-align: center"
                     ></th>
                 </thead>
+
                 <!--Table inputs-->
-                <tbody id="mainTable"></tbody>
+                <tbody>
+                
+                    {% for qa in qa_num %}
+                        {% if qa.dynamic == 1 %}
+                        <tr> 
+                            <td style=" text-align: center; border: 1px solid black; font-size: 13px; padding: 10px 20px; background-color: #f37124; color: white; ">{{qa.id}}</td>
+                            <td style="text-align: left; border: 1px solid; padding: 10px 20px; font-size: 13px; width:50%">
+                                {{qa.question}}
+                            </td>
+                            <td style =" text-align: left; border: 1px solid; padding: 10px 20px; font-size: 13px; width:50%"> 
+                                {{qa.final_answer}}
+                            </td>
+                            <td class="b" style="border: 1px solid; font-size: 13px;">
+                                <a href="/edit/{{qa.id}}">Edit</a>
+                            </td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                
+                </tbody>
+            
             </table>
+
+           
+
         </div>
-        <!-- <div class="container">
-            <a class="btn btn-primary btn-lg mt-5" style="float: right"
-                >Compile</a
-            >
-        </div> -->
     </body>
     <script>
+        window.history.forward(-1);
+
         var depts = [
             {
                 items: "1",
@@ -145,13 +176,30 @@
                 $("#mainTable").append(table);
             }
         }
+
+        var logoutLink = document.getElementById("logOutBtn");
+        logoutLink.addEventListener("click", function (event) {
+            if (confirm("Do you really want to logout?")) return;
+            event.preventDefault();
+        });
     </script>
-    <style>
-        tr:nth-child(even) td {
-            background-color: rgb(250, 250, 250);
-        }
-        tr:nth-child(odd) td {
-            background-color: rgb(245, 245, 245);
-        }
-    </style>
+<style>
+    tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+    }
+    tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+    }
+    .btn{
+    transition-duration: 0.1s;
+    }
+
+    .btn:hover {
+    color: #0491f0;
+    }
+
+    .b:hover {
+        background-color:#f9f9f9;
+    }
+</style>
 </html>

@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'BUbotApp',
+    'BUbotApp.apps.BubotappConfig',
 ]
 
 MIDDLEWARE = [
@@ -72,36 +72,13 @@ WSGI_APPLICATION = 'BUbotProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'username$database_name',
-#         'USER': 'username',
-#         'PASSWORD': 'mysql_password',
-#         'HOST': 'mysql_hostname',
-#         }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'bubotdatabase',
-        'CLIENT': {
-            'host': 'mongodb+srv://chriz:MbtFE28WQXjPenjV@cluster0.zdxg5.mongodb.net/bubotdatabase?retryWrites=true&w=majority',
-            'username': 'chriz',
-            'password': 'MbtFE28WQXjPenjV',
-            'authMechanism': 'SCRAM-SHA-1'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

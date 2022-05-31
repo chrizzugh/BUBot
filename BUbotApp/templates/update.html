@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>EDIT {{qa.id}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="{% static 'assets/BUbot-logo.png' %}"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link
+            href="{% static 'css/styles.css' %}"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body>
+        <!-- nav -->
+        <nav class="nav py-2 px-3 position-relative">
+            <div class="d-flex align-items-center py-1">
+                <a class="button-white px-1" href="{% url 'admin' %}">
+                    <span class="material-icons-sharp"> arrow_back </span>
+                </a>
+                <div class="pl-1">
+                    <strong style="color: #fff">Admin</strong>
+                </div>
+                <a
+                    class="button-white position-absolute top-2 end-0 px-4"
+                    href="{% url 'about' %}"
+                >
+                    <span class="material-icons-sharp"> info </span>
+                </a>
+            </div>
+        </nav>
+        <!-- buttons -->
+        <div class="container px-4 p-2 text-center mt-3">
+            <h3 class="" style="color: black">Update Page</h3>
+        </div>
+        <div class="container">
+            <a
+                class="btn btn-primary btn-lg mb-5"
+                style="float: right"
+                href="{% url 'index' %}"
+                id="logOutBtn"
+            >
+                Log out</a
+            >
+        </div>
+        <!-- update table -->
+        <form action="/update/{{parallel_corpus.id}}" method="post">
+            {% csrf_token %}
+            <div class="container text-center">
+                <table
+                    class="table container text-center mt-5"
+                    styles="border-collapse: collapse; border: 2px solid rgb(200, 200, 200); letter-spacing: 1px; font-size: 0.8rem;"
+                >
+                    <thead
+                        id="categories"
+                        style="background-color: #3db2ff; color: #fff"
+                    >
+                        <th style="border: 1px solid black; padding: 10px 20px">
+                            ITEM
+                        </th>
+                        <th style="border: 1px solid black; padding: 10px 20px">
+                            QUESTIONS
+                        </th>
+                        <th style="border: 1px solid black; padding: 10px 20px">
+                            FINAL ANSWER
+                        </th>
+                    </thead>
+                    <!--Table inputs-->
+                    <tbody id="mainTable">
+                        <td name="id" style="
+                                        text-align: center;
+                                        border: 1px solid black;
+                                        width: 50px;
+                                        padding: 10px 20px;
+                                        background-color: #f37124;
+                                        color: white;" >
+                            {{parallel_corpus.id}}
+                            
+                        </td>
+                        <td name="question"  style="text-align: left;
+                                                    border: 1px solid black;
+                                                    width: 200px;
+                                                    padding: 10px 20px;
+                                                    background-color: #fff;
+                                                    color: black;">
+                                <span style = "align-items: flex-start; height: 100%;">{{parallel_corpus.question}}</span>
+                        </td>
+                        <td style="border: 1px solid black;
+                                    width: 200px;
+                                    padding: 10px 20px;
+                                    background-color: #fff;
+                                    color: black;">
+                            <textarea name="final_answer" class = "ta">{{parallel_corpus.final_answer}}</textarea>
+                        </td>
+                    </tbody>
+                </table>
+                <div class="container">
+                    <button
+                        class="btn btn-primary btn-lg mt-5"
+                        type="submit"
+                        style="float: right"
+                        value="UPDATE"
+                    >
+                        Update
+                    </button>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script>
+        function preventBack() {
+            window.history.forward();
+            setTimeout("preventBack()", 0);
+            window.onunload = function () {
+                null;
+            };
+        }
+
+        var logoutLink = document.getElementById("logOutBtn");
+        logoutLink.addEventListener("click", function (event) {
+            if (confirm("Do you really want to logout?")) return;
+            event.preventDefault();
+        });
+    </script>
+    <style>
+        tr:nth-child(even) td {
+            background-color: rgb(250, 250, 250);
+        }
+        tr:nth-child(odd) td {
+            background-color: rgb(245, 245, 245);
+        }
+        .ta
+        {
+        border:transparent;
+        min-height:50px;
+        max-height:250px;
+        min-width:100%;
+        max-width:100%;
+        }
+    </style>
+</html>

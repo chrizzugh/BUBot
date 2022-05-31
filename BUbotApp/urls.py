@@ -10,4 +10,6 @@ urlpatterns =[
     path('categories/', views.categories, name="categories"),
     path('login/', views.login, name="login"),
     path('admin/', views.admin, name="admin"),
+    path('edit/<int:id>', views.edit, name = 'edit'),
+	path('update/<int:id>', views.update, name = 'edit')
 ]

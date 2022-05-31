@@ -1,0 +1,52 @@
+{"intents": [
+    {"tag": "greeting",
+        "patterns": ["Hello", "Hi","Is anyone there?"],
+        "responses": ["Hello, how can I help?"]
+    },
+
+    {"tag": "greetings",
+        "patterns": ["Good day"],
+        "responses": ["Good day too, how can I help you?"]
+    },
+
+    {"tag": "greetingss",
+        "patterns": ["Good Evening"],
+        "responses": ["Good evening too!"]
+    },
+
+    {"tag": "greetingsss",
+        "patterns": ["Good Afternoon", "Good Morning"],
+        "responses": ["Good afternoon too, how can I help you?"]
+    },
+
+    {"tag": "greetingssss",
+        "patterns": ["Good Morning"],
+        "responses": ["Good morning too, how can I help you?"]
+    },
+
+    {"tag": "greetingsssss",
+        "patterns": ["How are you","Kamusta","How are you feeling Bubot?"],
+        "responses": ["I am fine, thank you for asking."]
+    },
+    
+    {"tag": "goodbye",
+        "patterns": ["Good bye", "Bye", "Good Night","Bye","See you later","Goodbye","Nice chatting to you, bye","Till next time"],
+        "responses": ["Thank you for visiting, bye!"]
+    },
+  
+    {"tag": "thanks",
+        "patterns": ["Thanks","Thank you","That is helpful","Awesome, thanks","Thanks for helping me"],
+        "responses": ["You're welcome and I'm happy to help!"]
+    },
+
+    {"tag": "options",
+        "patterns": ["How you could help me?","What you can do?","What help you provide?","How you can be helpful?","What support is offered","Who are you?"],
+        "responses": ["Hi! I'm BUbot, an AI-powered chatbot and I can answer your queries about Bicol University :)"]
+    },
+    
+    {"tag": "options",
+        "patterns": ["Who created you?", "Who made you?"],
+        "responses": ["I am a product of imagination and hardwork of Reden Mar Bellen, Chrizza Mae Ecal and Erica Vinas for their undergraduate thesis."]
+    }  
+
+]}

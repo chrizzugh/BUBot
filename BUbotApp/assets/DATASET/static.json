@@ -1,0 +1,1230 @@
+{"intents": [
+    {"tag": "vision",
+        "patterns": ["What is the Vision of Bicol University?"],
+        "responses": ["The university's vision is to become A World-Class University Producing Leaders and Change Agents for Social Transformation and Development."]
+    },
+    
+    {"tag": "mission",
+        "patterns": ["What is the Mission of Bicol University?"],
+        "responses": ["The mission of the university states that The Bicol University shall give professional and technical training, and provide advanced and specialized instruction in literature, philosophy, the sciences and arts, besides providing for the promotion of scientific and technological researches."]
+    },
+    
+    {"tag": "quality_policy",
+        "patterns": ["What is the Quality Policy of Bicol University?"],
+        "responses": ["It's quality policy states that, Bicol University commits to continually strive for excellence in Instruction, Research and Extension by meeting the highest level of clientele satisfaction and adhering to quality standards and applicable statutory and regulatory requirements."]
+    },
+    
+    {"tag": "goals_of_the_university",
+        "patterns": ["What are the goals of Bicol University"],
+        "responses": ["I apologize but it's too long and I can't display them entirely."]
+    },
+    
+    {"tag": "contact_details_of_registrar_of_Gubat Campus",
+        "patterns": ["How can I contact the registrar of Gubat Campus"],
+        "responses": ["Unfortunately, we have record as of the moment."]
+    },
+    
+    {"tag": "admission_to_undergraduate_programs",
+        "patterns": ["Can I enroll to undergraduate programs in BU?"],
+        "responses": ["Yes, and to qualify for admission, you need to pass the BUCET."]
+    },
+    
+    {"tag": "bucet",
+        "patterns": ["BUCET"],
+        "responses": ["BUCET or Bicol University Entrance Exam is a three-hour examination consisting of sub-tests in Language proficiency in English, Mathematics, Science and Reading Comprehension that needs to be taken in order to qualify for admission. "]
+    },
+
+    {"tag": "bucet01",
+    "patterns": ["When is the schedule for BUCET?"],
+    "responses": ["As of now BUCET is temporarily halted and BUCESS has been adopted for the admission because of the pandemic. No schedule yet announced by the university."]
+    },
+
+    {"tag": "bucet03",
+        "patterns": ["What are the requirements for BUCESS"],
+        "responses": ["Applicants must accomplish the Student Application Portfolio found in this link https://bit.ly/3ry0PTl and attach original copies of the documents indicated."]
+    },
+
+    {"tag": "bucet04",
+        "patterns": ["What are the documents needed for admission?","Requirements for enrollment"],
+        "responses": ["The requirements are, BUCESS Result, SHS Report Card, Medical and Dental Forms, PSA Birth Certificate, Good Moral Certificate, Police Clearance, Long Brown Envelope, 2 Long Folders, 2 pcs 2x2 pictures, mailing envelope with mailing stamps worth 40 pesos."]
+    },
+
+    {"tag": "bucet05",
+        "patterns": ["Where to send my admission requirements?","Where are the drop off points for admission requirements?"],
+        "responses": ["You can send your documents to the Office of the University Registrar, Bicol University, Legazpi City and other designated drop boxes located in BU Tabaco Campus, BU Gubat Campus, BU Polangui Campus and BU College of Agriculture and Forestry.."]
+    },
+
+    {"tag": "bucet06",
+        "patterns": ["How to set an appointment at the university registrar's office?"],
+        "responses": ["If you wish to set an appointment, access the appointment form through this link, https://bu-uro.appointlet.com and fill up the necessary information."]
+    },
+
+    {"tag": "bucet07",
+        "patterns": ["Contact information of the University Registrar's Office"],
+        "responses": ["You can contact them through their email address bu-uro@bicol-u.edu.ph or bu-uro@yahoo.com"]
+    },
+
+    {"tag": "bucet08",
+        "patterns": ["BUCESS"],
+        "responses": ["BUCESS or Bicol University College Entrance Exam is the adopted strategy of the university for admission of new students due to the pandemic."]
+    },
+
+    {"tag": "how_to_quality_for_admission",
+        "patterns": ["How can I qualify for freshmen admission?"],
+        "responses": ["The admission of new students is based on the applicants' Bicol University College Entrance Test (BUCET) Composite Rating consisting of the BUCET score and your general weighted average (GWA) from grade 9 to 11."]
+    },
+    
+    {"tag": "general_requirements_for_bucet",
+        "patterns": ["Can I take the BUCET?"],
+        "responses": ["You can take the BUCET if you are a senior high school seniors expecting to graduate at the end of the school year; OR Senior high school graduates who have not taken and/are not taking any college subject/s; AND Holders of Philippines Educational Placement Test/ Alternative Learning System (PEPT/ALS) certificates who are eligible for admission to college."]
+    },
+    
+    {"tag": "bucet_cutoff_rating",
+        "patterns": ["What is the cut-off rating for BUCET?"],
+        "responses": ["I do not have information for that because the BUCET cut-off rating are set by the Admissions Office."]
+    },
+    
+    {"tag": "transfer_instructions",
+        "patterns": ["How can I transfer to Bicol University?"],
+        "responses": ["You can transfer to BU from another university if there are available slots in the College where you wish to transfer to and only the Dean of the College shall declare the slot open or available. If you wish to transfer to BU, you must reach the Office of Admissions first in due time prior to the registration period together with the letter of intent for transfer."]
+    },
+    
+    {"tag": "transfer_requirements",
+        "patterns": ["What are the requirements for admission of transferees?"],
+        "responses": ["The requirements are Certification from the Dean/Director of availability of place/slot in the College or Unit you are transferring to; Certification of grades duly signed by the Registrar of the original school bearing the school's seal; or Official transcript of records (OTR) from the last school attended; and Certificate of honorable dismissal."]
+    },
+    
+    {"tag": "transfer_fee",
+        "patterns": ["Is there a processing fee for transfering to Bicol University?"],
+        "responses": ["You can ask directly to the registrar as the fees for processing of the transferees' documents will depend on the college because there is aptitude testing which some colleges require."]
+    },
+    
+    {"tag": "interview_for_transfer_applicants",
+        "patterns": ["Do I need to undergo interviews as transfer applicant?"],
+        "responses": ["Yes, you may still go through an interview in the college/unit you intend to transfer to or be subjected to other college/program requirements."]
+    },
+    
+    {"tag": "eligibility_for_admission of transferees",
+        "patterns": ["How can I be eligible for transfer admission to Bicol University?"],
+        "responses": ["You can be eligible for admission of transferees upon the result of multiple assessment procedures, including Course-program aptitude test, if required by the College/Unit/Department; Grade point average (GPA) of 2.0 or 89%; No failing grade in any of the courses taken; You shall not have finished more than twenty-five percent (25%) of the units required for the course; Interview; and/or Other assessment procedure(s) required by the College/Unit/Department."]
+    },
+    
+    {"tag": "transfer_credits",
+        "patterns": ["Will the university recognize my units earned from my previous college if I transfer?"],
+        "responses": ["Yes, but only course units earned from colleges/universities with the same program accreditation level as Bicol University or higher or those who are duly recognized by CHED will be credited."]
+    },
+    
+    {"tag": "transfer_credit_limits",
+        "patterns": ["What is the limit of transfer credits in Bicol University?"],
+        "responses": ["The transfer credits shall not exceed twenty-five percent (25%) of the total number of units required for the course you wish to transfer."]
+    },
+    
+    {"tag": "admission_of_graduates_of_tvl_courses",
+        "patterns": ["Can I be admitted to Bicol University if I am a graduate of Technical-Vocational course?"],
+        "responses": ["Yes you can and the documentary requirements and conditions set for transfer students will be applied to you."]
+    },
+    
+    {"tag": "shifters",
+        "patterns": ["How can I shift from one course program to another?"],
+        "responses": ["Yes, you will be allowed to shift given that there is an available slot in the college you wish to transfer to."]
+    },
+    
+    {"tag": "requirements_for_shifting",
+        "patterns": ["What are the requirements in shifting to another course?"],
+        "responses": ["The requirements are Letter of intent to transfer; Certification from the Dean/Director of the availability of slot; and Certification of grades duly signed by the College/Unit Registrar."]
+    },
+    
+    {"tag": "processing_fee_for_shifters",
+        "patterns": ["Is there a fee for shifting a course program?"],
+        "responses": ["There will be a payment for processing fee of Php 100.00."]
+    },
+    
+    {"tag": "returning_students",
+        "patterns": ["How can I be readmitted to Bicol University after I stopped schooling?"],
+        "responses": ["If you stopped schooling due to ill health or any other valid reason can seek readmission by presenting medical or other documents to support your reason/s for dropping out of school. The college/unit has the right to refuse enrollment/re-admission of old/returning student it is proven that you violated the school's rules and regulations or you have existing academic deficiency."]
+    },
+    
+    {"tag": "requirements_for_students_returning_from_leave_ob_abscence",
+        "patterns": ["How to be re-admitted upon returning from leave of absence?"],
+        "responses": ["If you're returning from leave of absence, you shall present supporting papers or documents."]
+    },
+    
+    {"tag": "requirements_for_returning_old_students",
+        "patterns": ["What are the requirements for returning old students?"],
+        "responses": ["An old student may be re-admitted upon presentation of his/her clearance duly signed by school officials concerned."]
+    },
+    
+    {"tag": "general_requirements_for_undergraduate_foreign_students",
+        "patterns": ["What are the requirements for admission of undergraduate foreign students?"],
+        "responses": ["The requirements are Original Transcript of Records (OTR); Personal Data; Affidavit of Support; Alien Certificate of Registration (ACR); Results of Test on English as a Foreign Language (TOEFL); Approved study permit from CHED; and an application fee of $50.00"]
+    },
+    
+    {"tag": "requirements_of_foreign_high_school_graduates_to_bicol_university",
+        "patterns": ["What are the requirements for admission of students from other nations who have graduated from high schools abroad?"],
+        "responses": ["Present a Certification of completion of a secondary curriculum where the applicant had his/her secondary education; Certification of proficiency in English based on the TOEFL score (for non-native speakers of English); Qualifying in the BUCET or any of the following International Foreign-based examination in lieu of the BUCET such as: Scholastic Aptitude Test (SAT) Advanced with a minimum combined score of 1200 in Mathematics, Critical Reading and Writing sub-test areas."]
+    },
+    
+    {"tag": "how_to_register_for_admission",
+        "patterns": ["How can I register for admission?"],
+        "responses": ["The registration process includes filling out the prescribed forms and paying the required fees but students enrolled during the preceding semester including summer session are re-enrolled upon being cleared by the Dean and other officials concerned."]
+    },
+    
+    {"tag": "late_registration",
+        "patterns": ["Can I enroll after the scheduled registration?"],
+        "responses": ["Unfortunately, you cannot be admitted past the admission or registration schedule."]
+    },
+    
+    {"tag": "maximum_residency_rule",
+        "patterns": ["How long can I stay in Bicol University?","Maximum Residency Rule"],
+        "responses": ["The maximum residency is the prescribed length of the program plus one year pursuant to the Universal Access to Quality Tertiary Education Act of 2017."]
+    },
+    
+    {"tag": "examinations",
+            "patterns": ["What are the types of exams?"],
+            "responses": ["There are two regular written examinations, the mid-term and the final examinations per semester plus oral or practical examinations upon the discretion of the subject instructor."]
+    },
+    
+    {"tag": "grading_system",
+        "patterns": ["What is the grading system?"],
+        "responses": ["There are five adjectival ratings, Outstanding, Superior, Very Satisfactory, Satisfactory, Fair or Average and Poor."]
+    },
+    
+    {"tag": "grading_system01",
+        "patterns": ["What is an outstanding rating?"],
+        "responses": ["Outstanding Grade is from 1.0 - 1.4 with equivalent values of 99-100, 98, 97, 96, and 95 subsequently."]
+    },
+    
+    {"tag": "grading_system02",
+        "patterns": ["What is a superior rating?"],
+        "responses": ["Superior Grade is from 1.5 - 1.7 with equivalent values of 94, 93, and 92 subsequently."]
+    },
+    
+    {"tag": "grading_system03",
+        "patterns": ["What is a very satisfactory rating?"],
+        "responses": ["Very Satisfactory Rating is from 1.8 - 2.5 with equivalent values of 91, 90, 89, 88, 87, 86, 85 and 84 subsequently."]
+    },
+    
+    {"tag": "grading_system04",
+        "patterns": ["What is a satisfactory rating?"],
+        "responses": ["Satisfactory Rating is from 2.6 - 2.8 with equivalent values of 82-83, 80-81, and 78-79 subsequently."]
+    },
+    
+    {"tag": "grading_system05",
+        "patterns": ["What is a fair or average rating?"],
+        "responses": ["Fair or Average Rating is from 2.9 - 3.0 with equivalent values of 76-77, and 75 subsequently."]
+    },
+    
+    {"tag": "grading_system06",
+        "patterns": ["What is a poor rating?"],
+        "responses": ["Poor Rating is from 3.1 - 4.0 with equivalent values of below 75."]
+    },
+    
+    {"tag": "grading_system07",
+        "patterns": ["What is the lowest possible grade or rating?"],
+        "responses": ["3.1-4.0 are the lowest possible midterm ratings and 5.0 or Failure is the lowest possible final rating"]
+    },
+    
+    {"tag": "grading_system08",
+        "patterns": ["How many times can I retake a subject?"],
+        "responses": ["If you incurred a FAILING MARK in any course work you are allowed to retake the subject not more than two times."]
+    },
+    
+    {"tag": "grading_system09",
+        "patterns": ["What is the maintaining grade in Graduate School?"],
+        "responses": ["The passing grade in the Graduate School is 3.0, but a graduate student has to maintain a general weighted average of 2.0."]
+    },
+    
+    {"tag": "grading_system10",
+        "patterns": ["What will happen if I did not achieve a passing grade?"],
+        "responses": ["You will not be allowed to take the comprehensive examination and will subsequently be disqualified from earning the degree."]
+    },
+    
+    {"tag": "the_grade_of_incomplete",
+        "patterns": ["What is the grade of incomplete?"],
+        "responses": ["An INC grade indicates incomplete course work until removed, the INC is not included in the computation of the students GWA."]
+    },
+    
+    {"tag": "the_grade_of_incomplete01",
+        "patterns": ["Can INC grade be removed?"],
+        "responses": ["You must contact your professor on how to remove your INC grade."]
+    },
+    
+    {"tag": "the_grade_of_incomplete02",
+        "patterns": ["How long can I remove my INC grade?"],
+        "responses": ["You will be given one school year for your completion of subjects."]
+    },
+    
+    {"tag": "the_grade_of_incomplete03",
+        "patterns": ["What will happen if I cannot complete an INC grade?"],
+        "responses": ["Your INC will be converted to a failing grade by the College Registrar upon written instruction from the concerned professor(s)."]
+    },
+    
+    {"tag": "the_grade_of_incomplete04",
+        "patterns": ["I can't contact my professor that gave me an INC grade"],
+        "responses": ["In the event that the concerned professor(s) cannot be contacted (due to resignation, retirement, death, etc.), the Dean is empowered to make decisions for the concerned professor(s) in consultation with the Department Chair."]
+    },
+    
+    {"tag": "graduation_requirements",
+        "patterns": ["What are the graduation requirements?"],
+        "responses": ["You will be recommended for graduation only after you have satisfied all academic and other requirements prescribed for graduation. You will not be allowed to graduate from the University unless you are in residence during the last two terms/semesters of his course."]
+    },
+    
+    {"tag": "graduation_with_honors",
+        "patterns": ["What qualifies as summa cum laude?"],
+        "responses": ["Summa Cum Laude is awarded to students with GWA ≤ 1.25, given that they have carried the regular load per semester."]
+    },
+    
+    {"tag": "graduation_with_honors01",
+        "patterns": ["What qualifies as magna cum laude?"],
+        "responses": ["Magna Cum Laude is awarded to students with 1.25 < GWA ≤ 1.45, given that they have carried the regular load per semester."]
+    },
+    
+    {"tag": "graduation_with_honors02",
+        "patterns": ["What qualifies as cum laude?"],
+        "responses": ["Cum Laude is awarded to students with 1.45 < GWA ≤ 1.75 , given that they have carried the regular load per semester."]
+    },
+    
+    {"tag": "graduation_with_honors03",
+        "patterns": ["I have met the required GWA for latin honors but I failed to meet the other requirements"],
+        "responses": ["If you are a graduating student who meets the required general weighted average (GWA) but fails to meet other requirements for the graduation with honors, you will be awarded 'with ACADEMIC DISTINCTION'."]
+    },
+    
+    {"tag": "graduation_with_honors04",
+        "patterns": ["What are the qualifications for Academic Distinction?"],
+        "responses": ["You must have no grade lower than 3.0 in any of the subjects regardless of whether that subject was taken in the University or elsewhere."]
+    },
+    
+    {"tag": "graduation_with_honors05",
+        "patterns": ["I am a transferee, can I be awarded with academic distinction?"],
+        "responses": ["If you were a transferee, you must have completed in the Bicol University at least seventy-five (75%) of the total number of units prescribed in your curriculum and must be in residence for at least six (6) semesters/terms immediately preceding graduation."]
+    },
+    
+    {"tag": "nonacademic_awards_or_incentives",
+        "patterns": ["Non-Academic Awards and Incentives for graduating students"],
+        "responses": ["The University also gives due recognition to a graduating student who excels in your academics, leadership, service and sports activities. Likewise, to winners in the regional, national competitions and to the topnotchers in board examinations."]
+    },
+    
+    {"tag": "ladderized_type_program_recognition",
+        "patterns": ["What are the awards and recognition during college recognition?"],
+        "responses": ["The awards are With highest honor for students with GWA ≤ 1.25, With higher honor for students with 1.25 < GWA ≤ 1.45, and With high honor for students with 1.45 < GWA ≤ 1.75"]
+    },
+    
+    {"tag": "transcript_diploma",
+        "patterns": ["How to get my transcript of records and diploma?"],
+        "responses": ["You must go to your respective registrars and make a request or application for a transcript of records. Present your student's clearance and official receipt of transcript payment."]
+    },
+    
+    {"tag": "opening_of_cost_recovery_courses",
+        "patterns": ["What are the procedures for cost recovery?"],
+        "responses": ["You must inform your registar, fill out the cost recovery form not later than two weeks before enrollment and keep in touch with your registrar."]
+    },
+    
+    {"tag": "opening_of_cost_recovery_courses01",
+        "patterns": ["How much is the cost for Cost Recovery Subjects?"],
+        "responses": ["The computation for payment of honorarium shall be as follows: Hourly rate of faculty times the number of hours divided by the number of students."]
+    },
+    
+    {"tag": "credit_unit",
+        "patterns": ["How many hours is one credit load or unit?"],
+        "responses": ["One unit of credit shall be at least eighteen (18) full hours of instruction per semester in the form of lecture, discussion, seminar, tutorial, or equivalent field or any combination of these forms."]
+    },
+    
+    {"tag": "academic_load",
+        "patterns": ["What is the Academic load limit per semester"],
+        "responses": ["The regular academic load for undergraduate students shall be that which is prescribed in the curriculum in a semester for a certain program/course"]
+    },
+    
+    {"tag": "academic_load01",
+        "patterns": ["Am I allowed to carry an additional load?"],
+        "responses": ["Only graduating students with satisfactory academic record may be permitted to carry an additional load of one or two subjects in their last semester and the total load does not exceed thirty-three (33) units per semester"]
+    },
+    
+    {"tag": "classification_of_students",
+        "patterns": ["What are the Classification of Students"],
+        "responses": ["Undergraduate students are classified as regular, irregular, non-regular, and foreign. Students are also classified, for purposes of registration as First Year, Sophomore, Junior, Senior and Pre-senior."]
+    },
+    
+    {"tag": "classification_of_students01",
+        "patterns": ["What are regular students?"],
+        "responses": ["A Regular Undergraduate Student is registered for formal academic credits, and carries the subjects called for by the curriculum for which they are registered in a given semester."]
+    },
+    
+    {"tag": "classification_of_students02",
+        "patterns": ["What are irregular students?"],
+        "responses": ["An Irregular Student is one who is registered for formal academic credits, but does not carry the full semester load called for by the curriculum for which you are registered in a given semester."]
+    },
+    
+    {"tag": "classification_of_students03",
+        "patterns": ["What are non-regular students?"],
+        "responses": ["A Non-Regular student is one who is registered for formal academic credits, but not for a degree or is registered but does not receive formal academic credit/s for subjects taken."]
+    },
+    
+    {"tag": "classification_of_students04",
+        "patterns": ["Who are considered as non-regular students?"],
+        "responses": ["Classified as non-regular students are the following: a) Non-degree students with credits b) Cross registrants with credits and c) Special students without credits."]
+    },
+    
+    {"tag": "classification_of_students05",
+        "patterns": ["Who are considered as foreign students?"],
+        "responses": ["A Foreign Student is one who is a citizen /subject or resident of another country qualified for admission and submitted all the documentary and other requirements of the University."]
+    },
+    
+    {"tag": "classification_of_students06",
+        "patterns": ["Who are considered as pre-senior students?"],
+        "responses": ["A student in a five-year degree program is classified as a pre-senior if you have completed not less than sixty (60) percent, but not more than eighty (80) percent of the total number of units required for the course. "]
+    }, 
+
+    {"tag": "libraries",
+        "patterns": ["How many libraries does BU have?","Number of Libraries of BU"],
+        "responses": ["The University Library System is composed of the University Library and ten (10) Unit/College libraries, namely, CE Library, CN Library, the ILS-Elementary Department Library and the ILS-High School Department which are located in the Main Campus; the East Campus Library (CEng & CIT), Daraga Campus Library (CSSP & CBEM), CAF Library, PC Library, TC Library and the GC Library."]
+    },
+    
+    {"tag": "libraries01",
+        "patterns": ["Who can use the libraries of the university?"],
+        "responses": ["All bona fide students of Bicol University (Graduate, Medicine, Undergraduate, Secondary and Elementary) are entitled to use the facilities of the libraries in all units/colleges provided that they present the library card duly validated"]
+    },
+    
+    {"tag": "library_card_application",
+        "patterns": ["How to apply for a library card?"],
+        "responses": ["You must secure an application form the unit/college librarian concerned by presenting the Certificate of Registration (COR). The library cards will then be issued in due time after the students have submitted the duly accomplished form together with two copies of recent 1x1 ID photos"]
+    },
+    
+    {"tag": "use_of_library_card",
+        "patterns": ["What is the purpose of my Library Card?"],
+        "responses": ["Your library card shall be used as an identification and passport when entering the unit/college libraries and in borrowing book/s for overnight or over-weekend use."]
+    },
+    
+    {"tag": "use_of_library_card1",
+        "patterns": ["What is the validity of my Library Card?"],
+        "responses": ["The library card issued to will be used throughout your stay in the University and is non-transferrable."]
+    },
+    
+    {"tag": "borrowing_procedure",
+        "patterns": ["How can I borrow a book from the Library?"],
+        "responses": ["To borrow a book you may present to the Librarian-in-charge the book with the signed book card together with the currently validated library card."]
+    },
+    
+    {"tag": "borrowing_procedure1",
+        "patterns": ["Can I borrow a book or other materials for someone else in the Library?"],
+        "responses": ["No, you can't borrow and/or sign for books and other library materials on behalf of someone else."]
+        },
+    
+    {"tag": "availment_of_library_facilities",
+        "patterns": ["Can I borrow other materials than books?"],
+        "responses": ["You can borrow other materials than books but General references like encyclopedias, dictionaries, indexes, yearbooks, handbooks, atlases, newspapers, magazines and journals are FOR ROOM USE ONLY."]
+    },    
+
+    {"tag": "availment_of_library_facilities101",
+        "patterns": ["Can I borrow dissertations?"],
+        "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+    },
+
+    {"tag": "availment_of_library_facilities102",
+        "patterns": ["Can I borrow journals?"],
+        "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+    },
+
+    {"tag": "availment_of_library_facilities103",
+        "patterns": ["Can I borrow a thesis?"],
+        "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+    },
+
+    {"tag": "availment_of_library_facilities104",
+        "patterns": ["Can I borrow feasibility studies?"],
+        "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+    },
+
+    {"tag": "availment_of_library_facilities1",
+        "patterns": ["Can I borrow manuscripts?"],
+        "responses": ["Yes, but they are FOR ROOM USE ONLY"]
+    },
+    
+    {"tag": "availment_of_library_facilities201",
+        "patterns": ["Can I photocopy dissertations?"],
+        "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+    },
+
+    {"tag": "availment_of_library_facilities202",
+        "patterns": ["Can I photocopy journals?"],
+        "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+    },
+
+    {"tag": "availment_of_library_facilities203",
+        "patterns": ["Can I photocopy a thesis?"],
+        "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+    },
+
+    {"tag": "availment_of_library_facilities204",
+        "patterns": ["Can I photocopy feasibility studies?"],
+        "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+    },
+
+    {"tag": "availment_of_library_facilities1",
+        "patterns": ["Can I photocopy manuscripts?"],
+        "responses": ["No, Special collections like dissertations, theses, project feasibility studies and other rare book collections and manuscripts are NOT ALLOWED TO BE PHOTOCOPIED. You are required to comply with the copyright law."]
+    },
+    
+    {"tag": "availment_of_library_facilities3",
+        "patterns": ["How many days am I allowed to keep the book I borrowed?"],
+        "responses": ["A Reserved book may be borrowed for overnight or week-end use at the last hour before closing time to be returned on or before 9:00 A.M. the following school day"]
+    },
+    
+    {"tag": "availment_of_library_facilities4",
+        "patterns": ["Can I borrow more than one book?"],
+        "responses": ["You can borrow a maximum of two (2) Non-reserved Circulation books for overnight or weekend use to be returned on or before 9:00 A.M. the following school day."]
+    },
+    
+    {"tag": "availment_of_library_facilities5",
+        "patterns": ["Can I borrow a book for a week?"],
+        "responses": ["Only a Fiction book may be borrowed for a week and may be renewed for another week, unless a borrower signifies to borrow the same."]
+    },
+    
+    {"tag": "library_hours",
+        "patterns": ["What are the university library hours?"],
+        "responses": ["The university library is open on Mondays-Friday from 8:00 AM - 7:00 PM and on Saturdays from 8:00 AM - 5:00 PM"]
+    },
+    
+    {"tag": "library_hours1",
+        "patterns": ["Is the university library open on weekends?"],
+        "responses": ["Yes, the university library is open during Saturdays from 8:00 AM - 5:00 PM"]
+    },
+
+    {"tag": "library_hours02",
+        "patterns": ["What are the tabaco campus library hours?", "What time does the tabaco campus Library opens and closes?"],
+        "responses": ["The Tabaco Campus Library is open during Weekdays: 8:00 AM - 6:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours03",
+        "patterns": ["What is the east campus library hours?", "What time does the east campus Library opens and closes?"],
+        "responses": ["The East Campus Library is open on Weekdays: 8:00 AM - 6:00 PM (no NOON BREAK) and closed on Saturdays"]
+    },
+    
+    {"tag": "library_hours04",
+        "patterns": ["What are the college of nursing library hours?", "What time does the College of nursing Library opens and closes?"],
+        "responses": ["College of Nursing Library is open on Weekdays: 8:00 AM - 6:00 PM (no NOON BREAK) and closed on Saturdays"]
+    },
+    
+    {"tag": "library_hours05",
+        "patterns": ["What are the ILS-Children's Library hours?", "What time does the  ILS-Children's Library opens and closes?"],
+        "responses": ["The ILS-Children's Library is open on Weekdays: 7:40 AM - 5:00 PM (no NOON BREAK) and closed on Saturdays"]
+    },
+    
+    {"tag": "library_hours06",
+        "patterns": ["What are the ILS - High School Library hours ?", "What time does the BUGC Library opens and closes?"],
+        "responses": ["The ILS - High School Library is open on Weekdays: 8:00 AM - 5:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours07",
+        "patterns": ["What are the college of education or CE library hours?", "What time does the College of education Library opens and closes?"],
+        "responses": ["The College of Education Library is open on Weekdays: 8:00 AM - 6:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours08",
+        "patterns": ["What are the daraga campus library hours?", "What time does the Daraga campus Library opens and closes?"],
+        "responses": ["The Daraga Campus Library is open on Weekdays: 8:00 AM - 6:00 PM (no NOON BREAK) and Saturdays: 9:00 AM - 4:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours09",
+        "patterns": ["What are the BUCAF library hours?", "What time does the BUCAF Library opens and closes?"],
+        "responses": ["The BUCAF library is open on Weekdays: 7:00 AM - 6:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours10",
+        "patterns": ["What are the BUPC library hours?", "What time does the BUPC Library opens and closes?"],
+        "responses": ["The BUPC library is open on Weekdays: 8:00 AM - 5:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "library_hours11",
+        "patterns": ["What are the Gubat campus or BUGC library hours?", "What time does the BUGC Library opens and closes?"],
+        "responses": ["The BUGC Library is open on Weekdays: 8:00 AM - 5:00 PM (no NOON BREAK) and Saturdays: 8:00 AM - 5:00 PM (no NOON BREAK)"]
+    },
+    
+    {"tag": "other_researchers",
+        "patterns": ["Are outsiders allowed to enter the university library?"],
+        "responses": ["Yes, but must pay for a library fee depending on the classification of the researcher or external user."]
+    },
+    
+    {"tag": "other_researchers01",
+        "patterns": ["What are the requirements for outsiders in entering the university library?"],
+        "responses": ["You must present your Validated School/Office ID, Referral letter issued by your librarian or administrator and any Valid ID (Voter's, Postal, Driver's License) for Walk-in/Non-Academe-based Researchers and Out-of-School Youths"]
+    },
+    
+    {"tag": "other_researchers02",
+        "patterns": ["How much is the library fee for outsiders or external researchers?"],
+        "responses": ["The researcher's fee (1) Undergraduate - Php 30.00/day, (2) Graduate - Php 50.00/day, (3) Walk-in/Non-academe based - Php 100.00/day"]
+    },
+
+    {"tag": "other_researchers04",
+        "patterns": ["Bicol University Library website"],
+        "responses": ["Here's the link to the website: https://sites.google.com/bicol-u.edu.ph/buls/home"]
+    },
+        
+    {"tag": "medical_and_dental_services",
+        "patterns": ["What medical services does the BU Medical Clinic offers?"],
+        "responses": ["The Medical & Dental Clinic provides the basic health services to the students and personnel namely: 1. Conduct of Physical Health Examination; 2. Giving attention to daily consultations and treatments; 3. Issuance of medical certificates; . Giving attention to emergency cases/during athletics; 5. Making referrals of special cases to proper authorities; 6. Conduct of lectures/counseling on management of illness; and 7. Establishment of linkages among other health agencies."]
+    },
+    
+    {"tag": "medical_and_dental_services1",
+        "patterns": ["What dental services does the BU Dental Clinic offers?"],
+        "responses": ["The Medical and Dental Clinic provides services like: 1. Conduct of Annual Dental Examination for Elementary, High School & Senior High School Students; 2. Giving attention to dental consultations and treatments; 3. Performance of oral prophylaxis; 4. Performance of dental extraction; 5. Making referrals of special cases to proper authorities; 6. Conduct of chair side instruction/ lectures; and 6. Issuance of dental certificates."]
+    },
+    
+    {"tag": "medical_and_dental_services2",
+        "patterns": ["How can I avail the medical and dental services from BU Medical and Dental Clinic?"],
+        "responses": ["You are required to present your university ID to avail of these free health services."]
+    },
+    
+    {"tag": "medical_and_dental_services3",
+        "patterns": ["What are the university Medical and Dental Clinic hours?"],
+        "responses": ["The university Medical and Dental Clinic is open from Monday to Friday (8:00-12:00 AM, 1:00-8:00 PM) and Saturday (8:00-12:00 AM)."]
+    },
+
+    {"tag": "medical_and_dental_services4",
+        "patterns": ["Where is the BU Medical & Dental Services (Main Clinic) is located"],
+        "responses": ["The BU Medical & Dental Services (Main Clinic) is located in the BUCE Campus and it has six sub- clinics situated in the different campuses ready to serve the university populace namely: BUPC- Polangui, BUCAF-Guinobatan, BUCBEM & BUCSSP in Daraga, BUGC in Gubat, BUCIT-BUCEng in Albay, and BUTC - Tabaco City."]
+    },
+    
+    {"tag": "medical_and_dental_services5",
+        "patterns": ["Is there a random drug testing in Bicol University?"],
+        "responses": ["Yes, the University also conforms to the Comprehensive Dangerous Drugs Act of 2002 (R.A. 9165) and will abide with the provisions stipulated therein. Provided that all drug testing expenses whether in public or private schools under this section will be borne by the government."]
+    },
+
+    {"tag": "sports_and_recreational_facilities",
+        "patterns": ["Can the students use the Sports and Recreational Facilities of the university?"],
+        "responses": ["Yes, the sports and recreational facilities as basketball courts, oval for track and field, volleyball court, soccer field and swimming pool can be availed of by students and personnel. The students' ID cards issued by Bicol University entitle them to use these facilities."]
+    },
+    
+    {"tag": "minor_offenses",
+        "patterns": ["What are the sanctions or penalties for violating the university rules and regulation?"],
+        "responses": ["The sanction for First Offense is Reprimand, for Second Offense is Written Warning, and for Third Offense is Community Service and for Fourth Offense - Suspension for 7 to 14 days"]
+    },
+
+    {"tag": "minor_offences01",
+        "patterns": [" Is Bicol University smoke free?"],
+        "responses": ["Yes, Bicol University strictly observes a smoke-free environment and smoking at any time within the university premises is prohibited."]
+    },
+    
+    {"tag": "minor_offenses02",
+        "patterns": ["Are students required to attend university academic activities?"],
+        "responses": ["Yes, students are required to attend university academic activities conducted within the university and even those activities conducted by the university outside its premises."]
+    },
+    
+    {"tag": "minor_offenses03",
+        "patterns": ["Are students excused from classes if they participate in co-curricular activities?"],
+        "responses": ["Their participation shall excuse them only for the time missed in class and shall not excuse them from fulfilling other requirements by the university. Their participation shall be their own personal responsibility."]
+    },
+    
+    {"tag": "minor_offenses04",
+        "patterns": ["Are students allowed to participate in activities outside the university?"],
+        "responses": ["No student may participate in an outside activity (contest, play, band, orchestra, choir conference, congress) nor may join any association, club and similar groups as a representative of the Bicol University without being so authorized in writing by the Dean of the College/Unit."]
+    },
+    
+    {"tag": "minor_offenses05",
+        "patterns": ["Can I wear my PE uniform in attending my classes?"],
+        "responses": ["The P.E. uniform is to be worn only during P.E. classes or games on the campus, not during academic classes. Students are required to wear the prescribed uniform while inside the premises of the university, except during non-uniform days."]
+    },
+    
+    {"tag": "minor_offenses06",
+        "patterns": ["What are the inappropriate attires not allowed to wear on wash day?"],
+        "responses": ["Inappropriate attire are those that are contrary to the culturally acceptable attire which includes but not limited to the following: blouse with bare back, bare midriffs, low or plunging neckline, spaghetti straps, haltered, hanging blouse, see-through garments, sleeveless shirt (for men), very short skits/dresses, very low-rise jeans, shorts, beach and Japanese sandals and slippers."]
+    },
+    
+    {"tag": "minor_offenses07",
+        "patterns": ["I lost my ID"],
+        "responses": ["If you lost your ID card, you must be reported immediately to OSAS or Office of the Student Affairs and Services."]
+    },
+    
+    {"tag": "major_offenses",
+        "patterns": ["What are the sanctions or penalties for bullying?"],
+        "responses": ["The sanctions for Bullying in First Offense is Reprimand, for Second Offense is Suspension of 3 months and 1 day to 6 months, and for Third Offense is Suspension of 6 months and 1 day to 1 year."]
+    },
+    
+    {"tag": "major_offenses1",
+        "patterns": ["What are the sanctions or penalties for Carrying of firearms and other Dangerous Weapons?"],
+        "responses": ["The sanctions for Carrying of firearms and other Dangerous Weapons in First Offense is Suspension of 1 week - 6 months, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense - Dismissal."]
+    },
+    
+    {"tag": "major_offenses2",
+        "patterns": ["What are the sanctions or penalties for Creating Disorder or Disturbance within the University?"],
+        "responses": ["The sanctions for Creating Disorder or Disturbance within the University in First Offense is Suspension of 1 week - 6 months, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses3",
+        "patterns": ["What are the sanctions or penalties for Destruction of Any Property of the University, Its Guests, Employees or Students?"],
+        "responses": ["The sanctions for Destruction of Any Property of the University, Its Guests, Employees or Students in First Offense is Suspension of 1 week - 6 months and payment of the value involved and/or replacement of the damaged property, for Second Offense is Suspension of 6 months and 1 day to 1 year and payment of the value involved and/or replacement of the damaged property, and for Third Offense is Dismissal"]
+    },
+    
+    {"tag": "major_offenses4",
+        "patterns": ["What are the sanctions or penalties for Drinking of Alcoholic Beverages or Manifesting Drunken Behavior within the university premises?"],
+        "responses": ["The sanction for Drinking of Alcoholic Beverages or Manifesting Drunken Behavior within the university premises in First Offense is Reprimand, for Second Offense is Suspension of 3 months and 1 day to 6 months, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses5",
+        "patterns": ["What are the sanctions or penalties for Falsification of Official Document?"],
+        "responses": ["The sanction for Falsification of Official Document in First Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses6",
+        "patterns": ["What are the sanctions or penalties for Gambling?"],
+        "responses": ["The sanction for Gambling in First Offense is Reprimand, for Second Offense is Suspension of 3 months and 1 day to 6 months and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses7",
+        "patterns": ["What are the sanctions or penalties for Hazing of any variety inside or outside the premises of the Bicol University by any fraternity or sorority or individual or a group representing an accredited B.U. Organization?"],
+        "responses": ["The sanction for Hazing of any variety inside or outside the premises of the Bicol University by any fraternity or sorority or individual or a group representing an accredited B.U. Organization in First Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses8",
+        "patterns": ["What are the sanctions or penalties for Malversation or Unlawful Disbursement of school funds?"],
+        "responses": ["The sanction for Unlawful Disbursement of school funds in First Offense is Suspension 1 week - 6 months and payment of the value involved, for Second Offense is Suspension 6 months and 1 day to 1 year and payment of the value involved, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses9",
+        "patterns": ["What are the sanctions or penalties for Plagiarism?"],
+        "responses": ["The sanctions for Plagiarism in First Offense are 1. Written warning; or 2. Loss of credit for the work involved; 3. Reduction of grades; or 4. All of the foregoing penalties - depending on the extent of the act committed, subject to the discretion of the investigating committee, for Second Offense is Suspension 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses10",
+        "patterns": ["What are the sanctions or penalties for Possession of prohibited drugs or chemicals?"],
+        "responses": ["The sanction for Possession of prohibited drugs or chemicals in First Offense is Suspension of 1 week to 6 months, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses11",
+        "patterns": ["What are the sanctions or penalties for Photo or Video Voyeurism?"],
+        "responses": ["The sanction for Photo or Video Voyeurism in First Offense is Suspension 6 months and 1 day to 1 year, and for Second Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses12",
+        "patterns": ["What are the sanctions or penalties for Sexual Harassment?"],
+        "responses": ["The sanction for Sexual Harassment in First Offense is Suspension of not more than 30 calendar days, for Second Offense is Suspension of 1 to 2 semesters, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses13",
+        "patterns": ["What are the sanctions or penalties for Stalking?"],
+        "responses": ["The sanction for Stalking in First Offense is Reprimand, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses14",
+        "patterns": ["What are the sanctions or penalties for Theft of property belonging to the University community or a guest of the University?"],
+        "responses": ["The sanction for Theft of property belonging to the University community or a guest of the University in First Offense is Suspension of 1 week to 6 months, for Second Offense is Suspension 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses15",
+        "patterns": ["What are the sanctions or penalties for Unauthorized solicitation of contribution/ donation using the name of the University?"],
+        "responses": ["The sanction for Unauthorized solicitation of contribution/ donation using the name of the University in First Offense is Suspension 1 week to 6 months, for Second Offense is Suspension 6 months and 1 day to 1 year , and for Third Offense is Dismissal."]
+    },
+
+    {"tag": "bu_icto",
+    "patterns": ["How to contact the BU ICTO?","Contact Number of BU ICTO", "Email Address of BU Information and Communications Technology Office"],
+    "responses": ["You may contact them through email bu-icto@bicol-u.edu.ph or ictohelpdesk@bicol-u.edu.ph and contact number 09686883046."]
+    },
+
+    {"tag": "bu_icto01",
+        "patterns": ["I have a problem with my BU email", "I have a problem with my ORS"],
+        "responses": ["Please contact the BU ICTO for your technical concerns. You can also fill up this form https://forms.gle/QDvNLK8eCSDWxs3r9"]
+    },
+
+    {"tag": "major_offenses16",
+        "patterns": ["What are the sanctions or penalties for Discourtesy to Superior?"],
+        "responses": ["The sanction for Discourtesy to Superior in First Offense is Reprimand, for Second Offense is Suspension of 1 week to 6 months, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses17",
+        "patterns": ["What are the sanctions or penalties for Disgraceful and immoral conduct?"],
+        "responses": ["The sanction for Disgraceful and immoral conduct in First Offense is Suspension of 1 week to 6 months, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses18",
+        "patterns": ["What are the levels of Dishonesty?"],
+        "responses": ["There are 3 levels of dishonesty: Serious, Less Serious and Simple Dishonesty. What level of dishonesty?"]
+    },
+    
+    {"tag": "major_offenses19",
+        "patterns": ["What are the sanctions or penalties for Serious Dishonesty?"],
+        "responses": ["The sanction for Serious Dishonesty in First Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses20",
+        "patterns": ["What are the sanctions or penalties for Less Serious Dishonesty"],
+        "responses": ["The sanction for Less Serious Dishonesty in First Offense is Suspension of 6 months and 1 day for 1 year, and for Second Offense is Dismissal."]
+    },
+    
+    {"tag": "major_offenses21",
+        "patterns": ["What are the sanctions or penalties for Simple Dishonesty"],
+        "responses": ["The sanction for Simple Dishonesty in First Offense is Suspension of 1 month and 1 day to 6 months, for Second Offense is Suspension of 6 months and 1 day to 1 year, and for Third Offense is Dismissal."]
+    },
+    
+    {"tag": "scholarships",
+        "patterns": ["What are the scholarship opportunities for students?", "Available Scholarships"],
+        "responses": ["There are a total of 31 Externally-Funded Scholarships. You can inquire directly at the OSAS for available scholarship and their requirements."]
+    },
+
+    {"tag": "who_is_BU",
+        "patterns": ["Core values of Bicol University"],
+        "responses": ["The core values of the university are Scholarship, Leadership, Character, and Service."]
+    },
+
+    {"tag": "governing_board",
+        "patterns": ["What is board of regents?"],
+        "responses": ["The Board of Regents is the highest policy making body of a chartered State University."]
+    },
+
+    {"tag": "governing_board02",
+        "patterns": ["Are students represented in the board of regents?", "Representations of students in board of regents"],
+        "responses": ["The duly elected Chairperson of the Bicol University Student Council who shall serve as the Student Regent represents the Students in the Board of Regents."]
+    },
+
+    {"tag": "cross_registration",
+        "patterns": ["Are students allowed to do a cross registration within the university?"],
+        "responses": ["Yes, a student who needs to register in two or more colleges within the University must seek the permission of his/her College Dean in writing."]
+    },
+
+    {"tag": "cross_registration01",
+        "patterns": ["What to write in permission letter for cross registration?"],
+        "responses": ["The written permission should state the total number unit-credits for which a student may register in two or more colleges in the University and should not exceed that which is prescribed in the curriculum for his/her course."]
+    },
+
+    {"tag": "cross_registration02",
+        "patterns": ["Are students outside bicol university allowed to do a cross registration?"],
+        "responses": ["A student registered in an institution outside the University who wishes to cross- register in the Bicol University must present a permit from his/her Dean or registrar."]
+    },
+
+    {"tag": "cross_registration03",
+        "patterns": ["What to write in cross registration permission letter for students outside bicol university?"],
+        "responses": ["The permit should state in writing the total number of units which the student is allowed and the subjects that s/he is authorized to take."]
+    },
+
+    {"tag": "cross_registration04",
+        "patterns": ["Are bicol university students allowed to do a cross registration outside the university?"],
+        "responses": ["The University gives no credit for any course taken by any of its students in any other institution outside the University unless the taking of such course was authorized by the College Dean and the University Registrar."]
+    },
+
+    {"tag": "changing_of_subjects",
+        "patterns": ["Are students allowed to change their subjects?"],
+        "responses": ["Yes, changing of subjects shall be within a week after the close of registration and shall only be allowed upon payment of the corresponding fee and letter approved by the college dean. "]
+    },
+
+    {"tag": "adding_of_subjects",
+        "patterns": ["Are students allowed to add subjects to their academic load?"],
+        "responses": ["Yes, adding of subjects shall be within a week after the close of registration and shall only be allowed upon payment of the corresponding fee and letter approved by the college dean."]
+    },
+
+    {"tag": "shifting_of_course",
+        "patterns": ["How to shift courses?"],
+        "responses": ["You shall file an application for this purpose through the Dean of the college where you are presently enrolled to be endorsed to the Dean of the college where you plan to continue the new course."]
+    },
+
+    {"tag": "leave_of_absence",
+        "patterns": ["How to file a leave of absence?", "File a LOA"],
+        "responses": ["You will be granted a Leave of absence through written petition to the college dean stating the reason and the period, which must not exceed a consecutive period of two terms/ semesters, subject to renewal for very meritorious reasons."]
+    },
+
+    {"tag": "academic_probation",
+        "patterns": ["I failed in one subject"],
+        "responses": ["If you fail in one subject at any time, in succeeding term, you must carry a load which in one subject (of equivalent unit) less the load allowed for your course during the current semester."]
+    },
+
+    {"tag": "academic_probation01",
+        "patterns": ["I failed two of my subjects"],
+        "responses": ["If you obtained two failing marks at the end of the term will be under probation during the following semester and may be allowed to take not more than seventy — five percent (75%) of the regular load for the semester."]
+    },
+
+    {"tag": "academic_dismissal",
+        "patterns": ["I'm on probation and failed another subject"],
+        "responses": ["If you are under probation and still obtains a failing mark in one of his subjects at the end of the term shall be automatically dropped from the rolls of the college."]
+    },
+
+    {"tag": "academic_dismissal01",
+        "patterns": ["I failed three subjects"],
+        "responses": ["If you obtained three or more failing grades at the end of the term you will be dropped from the rolls of the college."]
+    },
+
+    {"tag": "financial_information",
+        "patterns": ["Is there a tuition fee in Bicol University?"],
+        "responses": ["By virtue of RA 10931 or the Universal Access to Quality Tertiary Education Act, all students pursuing a bachelor’s degree in the University are entitled to free tertiary education starting S.Y. 2018-2019."]
+    },
+
+    {"tag": "university_cultural_group",
+        "patterns": ["Are there cultural groups in the university?"],
+        "responses": ["There are the groups open for membership: BU Magayon DANCE TROUPE, TEATRO BUeño, BUNGCUL Singers, BU KUERDAS (Rondalla), BUGKOS Ginikanan - indigenous music ensemble, gamelan and UNIVERSITY MARCHING BAND."]
+    },
+
+    {"tag": "scholarship_categories",
+        "patterns": ["TES or Tertiary Education Subsidy"],
+        "responses": ["As part of the provisions of RA 10931, this subsidy is made available to students of Bicol University who are part of the DSWD Listahanan 2.0."]
+    },
+
+    {"tag": "nstp",
+        "patterns": ["Components of NSTP"],
+        "responses": ["The three components are: a. Civic Welfare Training Service (CWTS), b. Literacy Training Service (LTS), and c) Reserve Officers Training Corps (ROTC)."]
+    },
+
+    {"tag": "nstp01",
+        "patterns": ["How to enlist in NSTP?"],
+        "responses": ["The University NSTP Office shall forward the schedule of NSTP orientation of the different units/colleges of the University to all incoming first year."]
+    },
+
+    {"tag": "nstp02",
+        "patterns": ["What is CWTS?"],
+        "responses": ["CWTS refers to the program component or activities contributory to the general welfare and the betterment of life for the members of the community or the enrichment of the facilities."]
+    },
+
+    {"tag": "nstp03",
+        "patterns": ["What is LTS?"],
+        "responses": ["LTS refers to the program component designed to train the students to teach literacy and numeracy skills to school children, out-of-school youths and other segments of society in need of their services."]
+    },
+
+    {"tag": "nstp04",
+        "patterns": ["What is ROTC?"],
+        "responses": ["ROTC is a program component designed to provide military training to tertiary level students in order to motivate, train, organize and mobilize them for national defense preparedness."]
+    },
+
+    {"tag": "nstp05",
+        "patterns": ["Are students required to enroll in NSTP?"],
+        "responses": ["In accordance to  Republic Act 9163, all incoming first year are required to take up NSTP as a requirement for graduation in the course that they have enrolled in."]
+    },
+
+    {"tag": "f2f_classes",
+        "patterns": ["Are face to face classes allowed?","Conduct of face to face", "Start of f2f Classes"],
+        "responses": ["The lifting of Suspension for face to face classes is only applicable to Nursing programs in the university."]
+    },
+
+    {"tag": "uni_recommended_textile_and_color",
+        "patterns": ["Bicol University Uniform recommended textile and color", "BU uniform color"],
+        "responses": ["The recommended color for Bicol University undergraduate uniform is Midnight blue and recommended textiles are peach twill or rottenberg fine wool."]
+    },
+
+    {"tag": "bu_mascot",
+        "patterns": ["Bicol University Mascot"],
+        "responses": ["The name of BU mascot is Isko."]
+    },
+
+    {"tag": "publication",
+        "patterns": ["University and College Student Publications", "official student publication of the University"],
+        "responses": ["The official student publication of the University is the Bicol Universitarian, known also as Unibe while the different colleges and departments within them may also have their own student publications, governed by their respective editorial policies, and with the supervision of a technical adviser."]
+    },
+
+    {"tag": "USC",
+        "patterns": ["University Student Council", "USC"],
+        "responses": ["University Student Council is the official governmental organization for all Bicol University students."]
+    },
+
+    {"tag": "usc_role",
+        "patterns": ["roles of University student council or USC"],
+        "responses": ["It serves the community by assisting with issues and problems involving students and the Bicol University community. It provides channels of communication between the students and the University."]
+    },
+
+    {"tag": "curricular activities",
+        "patterns": ["curricular activities in Bicol University"],
+        "responses": ["Curricular activities are required off-campus activities and are an integral part of the institutional program such as educational tours, field trips, and field study/ Experiential Learning/ Related Learning experience."]
+    },
+
+    {"tag": "Field Trips",
+        "patterns": ["What are Field Trips"],
+        "responses": ["Field Trips refer to off-campus learning activities of relatively shorter duration usually lasting only one (1) day and with fewer places of destination."]
+    },
+
+    {"tag": "Educational Tours",
+        "patterns": ["What are educational tours"],
+        "responses": ["Educational tours refer to off-campus learning activities involving mobility of students with the supervision of authorized personnel outside the premises of the institution that last for more than one (1) day."]
+    },
+
+    {"tag": "Field Study/ Experiential Learning/ Related Learning Experience",
+        "patterns": [" what is field study", "what is Experiential Learning", "what is RLE or Related Learning Experience"],
+        "responses": ["Field Study or Experiential Learning or Related Learning Experience refers to off- campus activities which are congruent to the learning outcomes of the course in terms of time and context."]
+    },
+
+    {"tag": "non curricular activities",
+        "patterns": ["what are non-curricular activities"],
+        "responses": ["Non-Curricular Activities refers to off-campus activities that are considered as no curricular or non-program-based activities, and are left to the discretion of the University for the strategies of implementation as long as the safety and security of the students are ensured."]
+    },
+
+    {"tag": "bubot",
+        "patterns": ["Bubot", "are you an AI or artificial intelligence"],
+        "responses": ["I am Bubot, an AI chatbot. I learned general information from bicol university."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 1",
+        "patterns": ["Fraternity"],
+        "responses": ["Fraternity are organizations primarily engaged in the promotion of camaraderie and friendship with the distinction to uphold the maxims and virtues of their code of brotherhood."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 1",
+        "patterns": ["Sorority"],
+        "responses": ["Sorority are organizations primarily engaged in the promotion of camaraderie and friendship with the distinction to uphold the maxims and virtues of their code of brotherhood."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 2",
+        "patterns": ["Academic Student Organizations"],
+        "responses": ["Academic are groups organized in furtherance of the subject matter or course, department, academic, and year level concerns."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 3",
+        "patterns": ["Political students organizations or groups"],
+        "responses": ["Political Groups are organizations of people who share similar views about the way governance and power should be used and expressed in society."]
+
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 4",
+        "patterns": ["Socio-Civic student groups"],
+        "responses": ["Socio-Civic are groups that actively engage in promoting the civic and social interests of their members."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 5",
+        "patterns": ["Lifestyle student organizations"],
+        "responses": ["Lifestyle are group of people/students brought together by a shared advocacy that affirms adequate standards of living and promotes positive expressions of individual and collective creativity."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 6",
+        "patterns": ["Environmental students organizations"],
+        "responses": ["Environmental are organizations engaged in enforcing the protection of public health and environment through the promotion of valuable resource conservation and recovery method."]
+    },
+
+    {"tag": "Classification of Recognized Student Organizations 7",
+        "patterns": ["Spiritual or Religious student organizations"],
+        "responses": ["Spiritual/Religious are association/organization that actively promotes among their members the value of spiritual growth and the enrichment of faith."]
+    },
+
+    {"tag": "loss of accreditation",
+        "patterns": ["student organizations violating policies, rules and regulations of the University"],
+        "responses": ["Any student organization found violating policies, rules, and regulations of the University may loss accreditation."]
+    },
+
+    {"tag": "Amphitheater and Audio-Visual Center and Language Laboratory",
+        "patterns": ["Amphitheater and Audio-Visual Center and Language Laboratory"],
+        "responses": ["The amphitheater, located in the Multi-Purpose building serves as a center for cultural presentations, convocations, meetings, debates and other similar activities."]
+    },
+
+    {"tag": "how to be enlisted to nstp",
+        "patterns": ["how to be enlisted or enrolled in nstp"],
+        "responses": ["The incoming first year students are required to attend NSTP orientation for it includes enlistment to the different components of their choice. The enlistment shall be on a first come, first serve basis."]
+    },
+
+    {"tag": "financial aid",
+        "patterns": ["what are the financial aids in Bicol University", "student assistantships", "student assistants"],
+        "responses": ["Student Assistantship provide the students with an experience where they could earn while studying."]
+    },
+
+    {"tag": "student assistantship General Qualification Requirements",
+        "patterns": ["how to apply for student assistantship", "how to be an student assistant"],
+        "responses": ["Students who wish to apply as student assistant must be officially enrolled, not a dependent of BU personnel, be of good moral character, and not have obtained a FAILING or an INCOMPLETE during the previous semester."]
+    },
+
+    {"tag": "student assistantship working hours",
+        "patterns": ["working hours of student assistants", "how many hours should an student assistants render monthly"],
+        "responses": ["A student assistant may render up to a maximum of 100 hours per month but not to exceed four (4) hours a day."]
+    },
+
+    {"tag": "academic distinctions 1",
+        "patterns": ["general weighted average of president's lister"],
+        "responses": ["A student can receive academic distinction such as President's Lister with no grades lower than 2.4 and with GWA equal to 1.00 or greater than or equal to 1.45."]
+    },
+
+    {"tag": "academic distinctions 2",
+        "patterns": ["general weighted average of dean's lister"],
+        "responses": ["A student can receive academic distinction such as Dean's Lister with no grades lower than 2.4 and with GWA of greater than or equal to 1.75 but not higher than 1.45."]
+    },
+
+    {"tag": "scholarship applications",
+        "patterns": ["how to apply for scholarships"],
+        "responses": ["Scholarship applicants must submit a duly accomplished scholarship form and other requirements with the BU Office of Student Affairs and Services and Services (BU-OSAS)."]
+    },
+
+    {"tag": "grading_system01_reversed01",
+        "responses": ["That is an Outstanding Rating."],
+        "patterns": ["My rating is 1.0", "My rating is 1.1", "My rating is 1.2", "My rating is 1.3", "My rating is 1.4"]
+    },
+
+    {"tag": "grading_system01_reversed02",
+        "responses": ["That is equivalent to 99-100"],
+        "patterns": ["Equivalence of 1.0 rating."]
+    },
+
+    {"tag": "grading_system01_reversed03",
+        "responses": ["That is equivalent to 98"],
+        "patterns": ["Equivalence of 1.1 rating."]
+    },
+
+    {"tag": "grading_system01_reversed04",
+        "responses": ["That is equivalent to 97"],
+        "patterns": ["Equivalence of 1.2 rating."]
+    },
+
+    {"tag": "grading_system01_reversed05",
+        "responses": ["That is equivalent to 96"],
+        "patterns": ["Equivalence of 1.3 rating."]
+    },
+
+    {"tag": "grading_system01_reversed06",
+        "responses": ["That is equivalent to 95"],
+        "patterns": ["Equivalence of 1.4 rating."]
+    },
+
+    {"tag": "grading_system02_reversed",
+        "responses": ["That is a superior rating."],
+        "patterns": ["My rating is 1.5", "My rating is 1.6", "My rating is 1.7"]
+    },
+
+    {"tag": "grading_system02_reversed01",
+        "responses": ["That is equivalent to 94"],
+        "patterns": ["Equivalence of 1.5 rating."]
+    },
+
+    {"tag": "grading_system02_reversed02",
+        "responses": ["That is equivalent to 93"],
+        "patterns": ["Equivalence of 1.6 rating."]
+    },
+
+    {"tag": "grading_system02_reversed03",
+        "responses": ["That is equivalent to 92"],
+        "patterns": ["Equivalence of 1.7 rating."]
+    },
+
+    {"tag": "grading_system03_reversed",
+        "responses": ["That is a very satisfactory rating."],
+        "patterns": ["My rating is 1.8", "My rating is 1.9", "My rating is 2.0", "My rating is 2.1", "My rating is 2.2", "My rating is 2.3", "My rating is 2.4", "My rating is 2.5"]
+    },
+
+    {"tag": "grading_system03_reversed02",
+        "responses": ["That is equivalent to 91"],
+        "patterns": ["Equivalence of 1.8 rating."]
+    },
+
+    {"tag": "grading_system03_reversed03",
+        "responses": ["That is equivalent to 90"],
+        "patterns": ["Equivalence of 1.9 rating."]
+    },
+
+    {"tag": "grading_system03_reversed04",
+        "responses": ["That is equivalent to 89"],
+        "patterns": ["Equivalence of 2.0 rating."]
+    },
+
+    {"tag": "grading_system03_reversed05",
+        "responses": ["That is equivalent to 88"],
+        "patterns": ["Equivalence of 2.1 rating."]
+    },
+
+    {"tag": "grading_system03_reversed06",
+        "responses": ["That is equivalent to 87"],
+        "patterns": ["Equivalence of 2.2 rating."]
+    },
+
+    {"tag": "grading_system03_reversed07",
+        "responses": ["That is equivalent to 86"],
+        "patterns": ["Equivalence of 2.3 rating."]
+    },
+
+    {"tag": "grading_system03_reversed08",
+        "responses": ["That is equivalent to 85"],
+        "patterns": ["Equivalence of 2.4 rating."]
+    },
+
+    {"tag": "grading_system03_reversed09",
+        "responses": ["That is equivalent to 84"],
+        "patterns": ["Equivalence of 2.5 rating."]
+    },
+
+    {"tag": "grading_system04_reversed",
+        "responses": ["That is a satisfactory rating."],
+        "patterns": ["My rating is 2.6", "My rating is 2.7", "My rating is 2.8"]
+    },
+
+    {"tag": "grading_system04_reversed01",
+        "responses": ["That is equivalent to 82-83"],
+        "patterns": ["Equivalence of 2.6 rating."]
+    },
+
+    {"tag": "grading_system04_reversed02",
+        "responses": ["That is equivalent to 80-81"],
+        "patterns": ["Equivalence of 2.7 rating."]
+    },
+
+    {"tag": "grading_system04_reversed03",
+        "responses": ["That is equivalent to 78-79"],
+        "patterns": ["Equivalence of 2.8 rating."]
+    },
+
+    {"tag": "grading_system05_reversed",
+        "responses": ["That is a fair or average rating."],
+        "patterns": ["My rating is 2.9", "My rating is 3.0"]
+    },
+
+    {"tag": "grading_system05_reversed01",
+        "responses": ["That is equivalent to 76-77."],
+        "patterns": ["Equivalence of 2.9 rating."]
+    },
+
+    {"tag": "grading_system05_reversed02",
+        "responses": ["That is equivalent to 75."],
+        "patterns": ["Equivalence of 3.0 rating."]
+    },
+
+    {"tag": "grading_system06_reversed",
+        "responses": ["Ratings from 3.1-4.0 are the lowest possible midterm ratings."],
+        "patterns": ["Equivalence of 4.0 rating."]
+    },
+
+    {"tag": "availment_of_library_facilities_reversed",
+        "responses": ["Yes you can and the borrowing procedures are the same with books."],
+        "patterns": ["Can I borrow encyclopedias" , "Can I borrow dictionaries", "Can I borrow indexes", "Can I borrow yearbooks", "Can I borrow handbooks", "Can I borrow atlases", "Can I borrow newspapers", "Can I borrow magazines"]
+    },
+
+    {"tag": "library_hours01_reversed",
+        "responses": ["Yes, Tabaco Campus Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the Tabaco Campus Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours02_reversed",
+        "responses": ["No, East Campus Library is closed on Saturdays."],
+        "patterns": ["Is the East Campus Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours03_reversed",
+        "responses": ["No, College of Nursing Library is closed on Saturdays."],
+        "patterns": ["Is the College of Nursing Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours04_reversed",
+        "responses": ["No, ILS-Children's Library is closed on Saturdays."],
+        "patterns": ["Is the ILS-Children's Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours05_reversed",
+        "responses": ["Yes, ILS - High School Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the ILS - High School Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours06_reversed",
+        "responses": ["Yes, College of Education Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the College of Education Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours07_reversed",
+        "responses": ["Yes, Daraga Campus Library is open on Saturdays from 8:00 AM - 4:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the Daraga Campus Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours08_reversed",
+        "responses": ["Yes, BUCAF Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the BUCAF Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours09_reversed",
+        "responses": ["Yes, BUPC Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the BUPC Library open on Saturday?"]
+    },
+
+    {"tag": "library_hours10_reversed",
+        "responses": ["Yes, BUGC Library is open on Saturdays from 8:00 AM - 5:00 PM (no NOON BREAK)."],
+        "patterns": ["Is the BUGC Library open on Saturday?"]
+    },
+
+    {"tag": "medical_and_dental_services3_reversed",
+        "responses": ["Yes, the University Medical and Dental Clinic is open on Saturdays from 8:00 AM - 12:00 nn."],
+        "patterns": ["Is the university Medical and Dental Clinic open on Saturday?"]
+    }
+
+
+]}
+

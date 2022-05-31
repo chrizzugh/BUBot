@@ -128,6 +128,14 @@
                 return document.getElementById("userQuestion").value;
             }
 
+            function urlify(text) {
+                var urlRegex = /(https?:\/\/[^\s]+)/g;
+                return text.replace(urlRegex, function(url) {
+                    return '<a href="' + url + '">' + url + '</a>';
+                })
+                
+            }
+            
             document.getElementById("default").innerHTML = time;
 
             var botResponse = document.getElementById("bubotDiv");
@@ -155,6 +163,9 @@
                                 outgoing
                             ); 
                             
+                            
+                            response = urlify(response);
+
                             var incoming = "<div class=\"bubotReply chat-message-left pb-4\"> <div class= \"text-left ml-3 mr-3\">"+
                                             "<img src=\"{% static 'assets/BUbot-logo.png' %}\" class=\"rounded-circle mr-1\" "+
                                             "alt=\"BUbot\" width=\"40\" height=\"40\" /> <div class=\"text-muted small text-nowrap mt-2\" id= \"default\">"

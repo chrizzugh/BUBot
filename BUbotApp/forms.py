@@ -1,6 +1,5 @@
 from django import forms
-  
-# import feedback_report from models.py
+from BUbotApp.models import parallel_corpus 
 from .models import *
 
 class SaveReportForm(forms.ModelForm):
@@ -12,4 +11,8 @@ class SaveFeedbackForm(forms.ModelForm):
     class Meta:
         model = user_feedback
         fields = ["star" ,"feedbackDescription"]
-        # exclude = ["reportDescription" ,"reportAttachment"]
+
+class qaform(forms.ModelForm):
+    class Meta:
+        model = parallel_corpus
+        fields = ["final_answer"]

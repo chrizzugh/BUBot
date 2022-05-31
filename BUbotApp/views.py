@@ -4,7 +4,9 @@ from django.shortcuts import render, redirect
 from django.views.generic import View
 import tensorflow as tf
 from tensorflow import keras
-from .forms import *
+from BUbotApp.forms import qaform
+from django.contrib import messages
+import re
 
 #!rendering landing, about, and categories
 def landing(request):
@@ -22,32 +24,55 @@ def login(request):
 def admin(request):
     return render(request, 'admin.html')
 
-#!Report and feedback class-based view 
+from BUbotApp.models import parallel_corpus
+def admin(request):
+    data =  parallel_corpus.objects.all()
+    qa = {
+        "qa_num": data
+    }
+    return render(request, "admin.html", qa)
+
+def edit(request, id):
+    disp = parallel_corpus.objects.get(id=id)
+    return render(request, "update.html", {"parallel_corpus": disp} )
+
+
+def update(request, id):
+    update = parallel_corpus.objects.get(id=id)
+    form = qaform(request.POST, instance=update)
+
+
+    if form.is_valid:
+        form.save()
+        data = parallel_corpus.objects.all()
+        qa = {
+            "qa_num": data
+        }
+        return render(request, "admin.html", qa)
 class reportView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "report.html")
-    
+
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
             form = SaveReportForm(request.POST, request.FILES)
             if form.is_valid():
-                form.save() 
-                # print(request.POST)
+                form.save()
+                
                 return redirect('/')
-            
+
         return render(request, "report.html")
 
 
 class feedbackView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "feedback.html")
-    
+
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
             feedback = SaveFeedbackForm(request.POST)
             if feedback.is_valid():
-                feedback.save() 
-                # print(request.POST) 
+                feedback.save()
                 return redirect('/')
         return render(request, "feedback.html")
 
@@ -58,13 +83,18 @@ tk = WhitespaceTokenizer()
 import re
 import string
 
+def remove_noise(txt, vocab):
+    lst = []
+    for item in txt.split():
+        if item in vocab:
+            lst.append(item)
+        else:
+            pass
+
+    return ' '.join(lst)
 
 def prep_ques(txt, abbrev):
-
-    #A. converting text to lowercase
     txt = txt.lower()
-
-    #C. noise removing where unnecessary symbols will be removed
     txt = re.sub(r"'ll", " will",txt)
     txt = re.sub(r"'m", " am",txt)
     txt = re.sub(r"'s", " is", txt)
@@ -74,7 +104,6 @@ def prep_ques(txt, abbrev):
     txt = re.sub(r"won't", "would not", txt)
     txt = re.sub(r"'t", " not", txt)
     txt = txt.translate(str.maketrans('', '', string.punctuation))
-    
     lst = ''
     for token in txt.split():
         try:
@@ -83,76 +112,120 @@ def prep_ques(txt, abbrev):
             temp = token
         lst = lst + ' ' +temp
     txt = lst
-    
-    #B. undergoing tokenization or splitting the sentences into words
     txt = tk.tokenize(txt)
-    
-    #D. removing of stop words
     txt = [word for word in txt if not word in stopwords.words()]
-    
-    #F. lemmatization 
     lemmatizer = WordNetLemmatizer()
     txt = [lemmatizer.lemmatize(token, pos="v") for token in txt]
-
     return ' '.join(txt)
 
+def connects(txt):
+    txt = txt.replace('[unk]','')
+    return txt
+from collections import Counter
+import math
 
-def prep_ans(txt):
+def length_similarity(l1, l2):
+    lenc1 = 4
+    lenc2 = 6
+    return min(lenc1, lenc2) / float(max(lenc1, lenc2))
 
-    txt = txt.replace('how can you ', '')
-    txt = txt.replace('what are the ', '')
-    txt = txt.replace('who is the ', '')
-    txt = txt.replace('how can I ', '')
-    txt = txt.replace('can I ', '')
-    txt = txt.replace('why do ', '')
-    txt = txt.replace('what is ', '')
-    txt = txt.replace('what are ', '')
-    txt = txt.replace('what is ', '')
-    txt = txt.replace('who can ', '')
-    txt = txt.replace('is there ', '')
-    txt = txt.replace('do i need ', '')
-    txt = txt.replace('how to be ', '')
-    txt = txt.replace('what will ', '')
-    txt = txt.replace('how many ', '')
-    txt = txt.replace('how much is ', '')
-    txt = txt.replace('will ','')
-    txt = txt.replace('do I ', '')
-    txt = txt.replace('what time does', "Time")
-    txt = txt.replace('what medical services does the', 'Medical services')
-    txt = txt.replace('what dental services does the', 'Dental services')
-    
-    txt = txt.replace(', how can I help', '')
-    txt = txt.replace('?', '')
-    
-    return txt.capitalize()
+def counter_cosine_similarity(c1, c2):
+    terms = set(c1).union(c2)
+    dotprod = sum(c1.get(k, 0) * c2.get(k, 0) for k in terms)
+    magA = math.sqrt(sum(c1.get(k, 0)**2 for k in terms))
+    magB = math.sqrt(sum(c2.get(k, 0)**2 for k in terms))
+    return dotprod / (magA * magB)
 
-#--------code for the website starts here------------
-import nltk 
-# nltk.download('stopwords') #for first run
-# nltk.download('punkt') #for first run
-# nltk.download('wordnet') #for first run
-# nltk.download('omw-1.4') #for first run
+def similarity_score(l1, l2):
+    c1, c2 = Counter(l1), Counter(l2)
+    return length_similarity(len(l1), len(l2)) * counter_cosine_similarity(c1, c2)
+
 
 import tensorflow as tf
 import logging
-import tensorflow_text  
-logging.getLogger('tensorflow').setLevel(logging.ERROR) 
+import tensorflow_text
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
+#------load necessary files------------------------------
 import json
-with open('D:/Documents/thesis/BUBot/BUbotApp/models/abbrev.json', 'r', encoding="utf8") as abbreviations:
+with open('BUbotApp/assets/abbrev.json', 'r', encoding="utf8") as abbreviations:
     abbrev = json.loads(abbreviations.read())
 
-Bubot = tf.saved_model.load('D:/Documents/thesis\BUBot/BUbotApp/models/VanilaBUbot')
+#Bubot vocab
+with open("BUbotApp/assets/vocab.json", "r") as vocab_file:
+    vocab = json.loads(vocab_file.read())
 
+Bubot = tf.saved_model.load('BUbotApp/assets/Bubot')
+
+with open('BUbotApp/assets/PAPER ESSENTIALS/preprocessed_questions.txt', 'r') as ques:
+    questions = ques.read().split('\n')
+
+#Bubot one_tokens
+with open("BUbotApp/assets/s_vocab.json", "r") as vocab_file:
+    one = json.loads(vocab_file.read())
+
+single_tokens_dict = {}
+
+for key in one.keys():
+    single_tokens_dict [key] = ''.join((one[key]).split())
 
 #! chat
-def chat(request): 
+def chat(request):
     if request.method == "POST":
-        userQuery = request.POST ['userInput']
-        userQuery = prep_ques(userQuery, abbrev)
-        predicted = Bubot(userQuery).numpy()
-        bubotResponse = predicted.decode()
-        bubotResponse = prep_ans(bubotResponse)
+        query = request.POST ['userInput']
+        bubotResponse = ''
+        flag = 0
+        temp = query.lower()
+        temp = temp.translate(str.maketrans('', '', string.punctuation))
+
+        if ''.join(temp.split()) in single_tokens_dict.values():
+            predicted = Bubot(query).numpy()
+            bubotResponse = predicted.decode()
+            flag = 1
+
+        else:
+            
+            query = prep_ques(query, abbrev)
+            query = remove_noise(query, vocab)
+
+            if len(query.split()) == 0:
+                bubotResponse = 'Sorry, but can you retype your question because I cannot understand you? Thank you.'
+
+            elif len(query.split()) > 0:
+                
+                score = 0
+            
+                for line in questions:
+                    temp2 = line.split()
+                    similarity = similarity_score(query.split(), temp2)
+                    if(similarity > score):
+                        score = similarity
+                    
+                if score > 0.41:
+                    predicted = Bubot(query).numpy()
+                    bubotResponse = predicted.decode()
+                    flag = 1
+                else:
+                    bubotResponse = 'Sorry, can\'t understand you.'
+
+        if flag == 1:
+            bubotResponse = ''.join(bubotResponse.split(' '))
+            bubotResponse = ' '.join(bubotResponse.split('+'))      
+
+        data =  parallel_corpus.objects.all()
+        
+        for d in data:
+            a = d.answer
+            a = ''.join(a.split())
+            a = a.replace('ñ', 'n')
+            a = a.translate(str.maketrans('', '', string.punctuation))
+            b = bubotResponse
+            b = ''.join(b.split())
+            b = b.translate(str.maketrans('', '', string.punctuation))
+
+            if a == b:
+                bubotResponse = d.final_answer
+                break   
+
         return JsonResponse(bubotResponse, safe=False)
-    
     return render(request, "chat.html")
